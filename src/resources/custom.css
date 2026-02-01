@@ -1,0 +1,49 @@
+:root {
+  /* LinkedIn Blue Inspired Brand */
+  --scheme-brand-100: #001e33;
+  --scheme-brand-200: #003355;
+  --scheme-brand-300: #004d80;
+  --scheme-brand-400: #0066aa;
+  --scheme-brand-500: #0077b5;
+  /* Primary */
+  --scheme-brand-600: #3399cc;
+  --scheme-brand-700: #66b3e6;
+  --scheme-brand-800: #99ccee;
+  --scheme-brand-900: #cce6ff;
+  --scheme-brand-1000: #e6f2ff;
+  --scheme-brand-1100: #f0f7ff;
+  --scheme-brand-1200: #ffffff;
+  --scheme-brand-600-10: rgba(51, 153, 204, 0.1);
+  --scheme-brand-600-30: rgba(51, 153, 204, 0.3);
+  --scheme-brand-600-50: rgba(51, 153, 204, 0.5);
+
+  /* Clean Slate Accent */
+  --scheme-accent-100: #0f172a;
+  --scheme-accent-200: #1e293b;
+  --scheme-accent-300: #334155;
+  --scheme-accent-400: #475569;
+  --scheme-accent-500: #64748b;
+  --scheme-accent-600: #94a3b8;
+  --scheme-accent-700: #cbd5e1;
+  --scheme-accent-800: #e2e8f0;
+  --scheme-accent-900: #f1f5f9;
+  --scheme-accent-1000: #f8fafc;
+  --scheme-accent-1100: #ffffff;
+  --scheme-accent-1200: #ffffff;
+  --scheme-accent-600-10: rgba(148, 163, 184, 0.1);
+  --scheme-accent-600-30: rgba(148, 163, 184, 0.3);
+  --scheme-accent-600-50: rgba(148, 163, 184, 0.5);
+}
+
+/* Smooth Navigation & Interactions */
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  transition: all 0.2s ease;
+}
+
+a {
+  transition: color 0.2s ease, background 0.2s ease;
+}
