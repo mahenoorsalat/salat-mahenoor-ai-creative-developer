@@ -15,7 +15,7 @@ import { Schemes } from "@once-ui-system/core";
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://www.mahenoor.dev";
+const baseURL: string = "https://salat-mahenoor-ai-creative-develope.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -189,7 +189,7 @@ const schema: SchemaConfig = {
   logo: "/images/avatar.jpg",
   type: "Person",
   name: "Salat Mahenoor",
-  description: "Creative Full-Stack Developer & AI Specialist helping businesses scale with Next.js, Python, and 3D Web Experiences.",
+  description: "Hire Salat Mahenoor, a top-ranked Freelance Full-Stack Developer and AI Architect specializing in high-performance Next.js apps and AI/3D interactive web solutions for businesses and agencies.",
   email: "salatmahenoor7.8.6@gmail.com",
 };
 

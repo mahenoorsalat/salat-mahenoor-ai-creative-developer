@@ -3,14 +3,21 @@ import { baseURL, about, person, work, home } from "@/resources";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: work.title,
     description: work.description,
     baseURL: baseURL,
     image: home.image,
     path: work.path,
   });
+
+  return {
+    ...metadata,
+    keywords: work.keywords,
+  };
 }
+
+
 
 export default function Work() {
   return (

@@ -37,6 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {video ? (
                 <video
                     src={video}
+                    title={title}
                     style={{
                         borderRadius: "var(--radius-l)",
                         border: "1px solid var(--neutral-alpha-weak)",
@@ -49,7 +50,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     loop
                     muted
                     playsInline
+                    preload="metadata"
                 />
+
             ) : (
                 <Carousel
                     sizes="(max-width: 960px) 100vw, 960px"

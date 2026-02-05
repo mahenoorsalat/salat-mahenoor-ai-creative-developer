@@ -57,11 +57,11 @@ export default async function RootLayout({
       {
         "@type": "ProfessionalService",
         "@id": `${baseURL}/#service`,
-        name: `${person.name} Development Services`,
+        name: `${person.name} | Freelance AI & Web Agency`,
         url: baseURL,
         logo: `${baseURL}/images/avatar.jpg`,
         image: `${baseURL}/images/cover.jpg`,
-        description: "Premium Full-Stack Development and AI Solutions Agency.",
+        description: "Hire a top Freelance Full-Stack Developer and AI Architect. Specialized in building premium Next.js websites, AI automation, and 3D web experiences for businesses and agencies.",
         priceRange: "$$$",
         address: {
           "@type": "PostalAddress",
@@ -74,6 +74,7 @@ export default async function RootLayout({
           "@id": `${baseURL}/#person`
         }
       }
+
     ]
   };
 

@@ -1,7 +1,8 @@
+import { MetadataRoute } from 'next';
 import { getPosts } from "@/utils/utils";
 import { baseURL, routes as routesConfig } from "@/resources";
 
-export default async function sitemap() {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
     url: `${baseURL}/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
@@ -23,3 +24,4 @@ export default async function sitemap() {
 
   return [...routes, ...blogs, ...works];
 }
+

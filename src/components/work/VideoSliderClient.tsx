@@ -41,6 +41,7 @@ export const VideoSliderClient: React.FC<VideoSliderClientProps> = ({ videoProje
                 <video
                     key={currentProject.metadata.video}
                     src={currentProject.metadata.video}
+                    title={currentProject.metadata.title}
                     style={{
                         width: "100%",
                         height: "100%",
@@ -63,12 +64,14 @@ export const VideoSliderClient: React.FC<VideoSliderClientProps> = ({ videoProje
                     style={{ pointerEvents: "none" }}
                 >
                     <IconButton
+                        aria-label="Previous video"
                         icon="chevronLeft"
                         onClick={prevVideo}
                         variant="secondary"
                         style={{ pointerEvents: "auto" }}
                     />
                     <IconButton
+                        aria-label="Next video"
                         icon="chevronRight"
                         onClick={nextVideo}
                         variant="secondary"
@@ -89,11 +92,14 @@ export const VideoSliderClient: React.FC<VideoSliderClientProps> = ({ videoProje
                             width="8"
                             height="8"
                             radius="full"
+                            aria-label={`Go to video ${i + 1}`}
                             background={i === activeIndex ? "neutral-strong" : "neutral-alpha-medium"}
-                            style={{ transition: "background 0.3s ease" }}
+                            style={{ transition: "background 0.3s ease", cursor: 'pointer' }}
+                            onClick={() => setActiveIndex(i)}
                         />
                     ))}
                 </Row>
+
             </Flex>
 
             <Flex

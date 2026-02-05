@@ -18,14 +18,21 @@ import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: about.title,
     description: about.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(about.title)}`,
     path: about.path,
   });
+
+  return {
+    ...metadata,
+    keywords: about.keywords,
+  };
 }
+
+
 
 export default function About() {
   const structure = [
@@ -135,6 +142,7 @@ export default function About() {
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
                 <Row paddingX="8">Schedule a call</Row>
                 <IconButton
+                  aria-label="Schedule a call"
                   href={about.calendar.link}
                   data-border="rounded"
                   variant="secondary"
@@ -182,6 +190,7 @@ export default function About() {
                           </Row>
                           <Row hide s={{ hide: false }}>
                             <IconButton
+                              aria-label={item.name}
                               size="l"
                               key={`${item.name}-icon`}
                               href={item.link}

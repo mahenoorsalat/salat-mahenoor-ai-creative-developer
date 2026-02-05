@@ -4,14 +4,21 @@ import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, newsletter } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: blog.title,
     description: blog.description,
     baseURL: baseURL,
     image: `/api/og/generate?title=${encodeURIComponent(blog.title)}`,
     path: blog.path,
   });
+
+  return {
+    ...metadata,
+    keywords: blog.keywords,
+  };
 }
+
+
 
 export default function Blog() {
   return (

@@ -12,3 +12,5 @@ export { ThemeToggle } from "./ThemeToggle";
 export { CustomMDX } from "./mdx";
 export { StructuredData } from "./StructuredData";
 export { VideoSlider } from "./work/VideoSlider";
+export { FAQ } from "./FAQ";
+

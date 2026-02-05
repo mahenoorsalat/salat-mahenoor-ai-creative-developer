@@ -43,14 +43,21 @@ export async function generateMetadata({
 
   if (!post) return {};
 
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
     path: `${work.path}/${post.slug}`,
   });
+
+  return {
+    ...metadata,
+    keywords: post.metadata.tag ? [post.metadata.tag] : [],
+  };
 }
+
+
 
 export default async function Project({
   params,

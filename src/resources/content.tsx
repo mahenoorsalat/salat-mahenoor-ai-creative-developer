@@ -58,14 +58,15 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `${person.name} | Expert Full-Stack Developer & AI Architect`,
+  title: `Hire ${person.name} | Top Freelance Full-Stack Developer & AI Architect`,
   featured: {
     display: false,
     title: "New 3D Project",
     href: "/work/project-001",
   },
 
-  description: `Hire ${person.name}, a top-tier Full-Stack Developer and AI Architect specializing in Next.js, Python, Three.js 3D web experiences, and scalable AI integration. Delivering high-performance web apps for global clients.`,
+  description: `Hire ${person.name}, a top-tier Freelance Full-Stack Developer and AI Architect specializing in Next.js, Python, and 3D web experiences. Partner with an expert developer to scale your business or agency with high-performance AI solutions.`,
+  keywords: ["Hire Freelance Developer", "Next.js Expert Freelancer", "AI Full-Stack Developer", "Hire AI Architect", "Creative Web Agency", "Next.js Agency", "Portfolio", "Freelance Web Designer", "Mahenoor Salat"],
   headline: <>Crafting the future of AI & Interactive 3D Web</>,
   subline: (
     <>
@@ -93,13 +94,49 @@ const home: Home = {
       <Text variant="heading-strong-l" onBackground="neutral-strong">SaaS MVP Development</Text>
       <Text variant="body-default-m" onBackground="neutral-weak">Rapidly prototyping and launching scalable Minimum Viable Products to validate business ideas.</Text>
     </>
+  ],
+  faq: [
+    {
+      question: "How do I hire you for my project?",
+      answer: (
+        <>
+          You can start by <Text variant="body-default-s" onBackground="neutral-strong">scheduling a call</Text> or sending an email. I specialize in working with businesses and agencies that need high-end Next.js, AI, or 3D web solutions.
+        </>
+      ),
+    },
+    {
+      question: "What is your typical project timeline?",
+      answer: (
+        <>
+          Timelines vary by complexity. A standard <Text variant="body-default-s" onBackground="neutral-strong">Next.js MVP</Text> typically takes 2-4 weeks, while immersive 3D experiences or complex AI integrations may take 6-10 weeks.
+        </>
+      ),
+    },
+    {
+      question: "Do you work with agencies?",
+      answer: (
+        <>
+          Yes, I frequently partner with <Text variant="body-default-s" onBackground="neutral-strong">creative agencies</Text> as a specialist technical lead for AI and 3D web projects, ensuring their clients receive cutting-edge digital products.
+        </>
+      ),
+    },
+    {
+      question: "What tech stack do you recommend for SEO?",
+      answer: (
+        <>
+          For maximum search visibility and performance, I recommend <Text variant="body-default-s" onBackground="neutral-strong">Next.js (App Router)</Text>, Tailwind CSS, and optimized assets. This ensures fast Core Web Vitals, which is critical for Google ranking.
+        </>
+      ),
+    }
   ]
 };
 
+
 const about: About = {
   label: "About",
-  title: `About ${person.name} | Senior Full-Stack Developer Resume`,
-  description: `Experience and Resume of ${person.name}, a Full-Stack Developer and UI/UX Designer with expertise in MERN, Django, AI Automation, and Web3 development.`,
+  title: `Salat Mahenoor | About & Experience`,
+  description: `View the portfolio and resume of ${person.name}, a Senior Freelance Full-Stack Developer and AI Expert. Specializing in MERN, Next.js, and scaling AI-driven businesses and agencies.`,
+  keywords: ["Hire Developer Resume", "Senior Freelance Portfolio", "AI Developer Experience", "Full-Stack Engineer for Hire", "Next.js Developer Rajkot"],
   path: "/about",
   tableOfContent: {
     display: true,
@@ -334,10 +371,10 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "MongoDB", icon: "mongodb" },
-          { name: "PostgreSQL", icon: "database" },
-          { name: "Supabase", icon: "supabase" },
-          { name: "Vercel", icon: "cloud" },
+          { name: "MongoDB", icon: "grid" },
+          { name: "PostgreSQL", icon: "disc" },
+          { name: "Supabase", icon: "terminal" },
+          { name: "Vercel" as any, icon: "globe" },
         ],
       },
       {
@@ -348,9 +385,9 @@ const about: About = {
           </>
         ),
         tags: [
-          { name: "Flutter", icon: "mobile" },
-          { name: "Shopify", icon: "cart" },
-          { name: "WordPress", icon: "wordpress" },
+          { name: "Flutter", icon: "play" },
+          { name: "Shopify", icon: "book" },
+          { name: "WordPress", icon: "code" },
         ],
       },
     ],
@@ -360,14 +397,16 @@ const about: About = {
 const blog: Blog = {
   label: "Blog",
   title: "Writing & Insights",
-  description: `Read about AI, 3D design, and elite web engineering by ${person.name}.`,
+  description: `Read about AI, 3D design, and elite web engineering by ${person.name}. Get insights into building high-performance solutions for businesses.`,
+  keywords: ["AI Engineering Blog", "Next.js Development Tips", "3D Web Design Insights", "Modern Web Engineering", "Mahenoor Salat Writing"],
   path: "/blog",
 };
 
 const work: Work = {
   label: "Work",
   title: "Selected Projects",
-  description: `A showcase of high-end projects involving AI, 3D, and premium frontend design by ${person.name}.`,
+  description: `A showcase of high-end projects involving AI, 3D, and premium frontend design by ${person.name}. Hire an expert for your next project.`,
+  keywords: ["Full-Stack Portfolio", "AI Project Showcase", "Next.js Web Apps", "Three.js Work", "Digital Agency Portfolio"],
   path: "/work",
 };
 
@@ -375,7 +414,8 @@ const testimonials: Testimonials = {
   path: "/testimonials",
   label: "Testimonials",
   title: `Client Testimonials – ${person.name}`,
-  description: `What clients say about working with ${person.name}`,
+  description: `What clients say about working with Mahenoor Salat. Read reviews from founders and engineers about high-quality AI and web development services.`,
+  keywords: ["Client Testimonials", "Freelance Developer Reviews", "Salat Mahenoor Feedback", "Professional Recommendations", "AI Project Reviews"],
   items: [
     {
       name: "Murtaza Ali",

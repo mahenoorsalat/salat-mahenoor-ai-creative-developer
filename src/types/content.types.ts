@@ -80,7 +80,10 @@ export interface BasePageConfig {
   description: string;
   /** OG Image should be put inside `public/images` folder */
   image?: `/images/${string}` | string;
+  /** Keywords for SEO */
+  keywords?: string[];
 }
+
 
 /**
  * Home page configuration.
@@ -103,7 +106,13 @@ export interface Home extends BasePageConfig {
   subline: React.ReactNode;
   /** Services section configuration */
   services: React.ReactNode[];
+  /** FAQ section configuration */
+  faq?: Array<{
+    question: string;
+    answer: React.ReactNode;
+  }>;
 }
+
 
 /**
  * About page configuration.
