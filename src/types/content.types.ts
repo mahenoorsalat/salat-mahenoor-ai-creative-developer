@@ -105,11 +105,16 @@ export interface Home extends BasePageConfig {
   /** The sub text which appears below the headline */
   subline: React.ReactNode;
   /** Services section configuration */
-  services: React.ReactNode[];
+  services: Array<{
+    title: string;
+    description: string;
+    content?: React.ReactNode;
+  }>;
   /** FAQ section configuration */
   faq?: Array<{
     question: string;
     answer: React.ReactNode;
+    answerPlain?: string;
   }>;
 }
 
@@ -248,5 +253,6 @@ export interface Testimonials extends BasePageConfig {
     avatar?: string;
     /** Testimonial text */
     content: React.ReactNode;
+    contentPlain?: string;
   }>;
 }

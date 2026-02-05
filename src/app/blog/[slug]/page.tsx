@@ -100,16 +100,50 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
           <StructuredData
             data={{
               "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              headline: post.metadata.title,
-              description: post.metadata.summary,
-              image: post.metadata.image,
-              datePublished: post.metadata.publishedAt,
-              author: {
-                "@type": "Person",
-                name: person.name,
-                url: `${baseURL}${about.path}`,
-              },
+              "@graph": [
+                {
+                  "@type": "BlogPosting",
+                  headline: post.metadata.title,
+                  description: post.metadata.summary,
+                  image: post.metadata.image || `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
+                  datePublished: post.metadata.publishedAt,
+                  author: {
+                    "@type": "Person",
+                    name: person.name,
+                    url: `${baseURL}${about.path}`,
+                  },
+                  publisher: {
+                    "@id": `${baseURL}/#person`,
+                  },
+                  mainEntityOfPage: {
+                    "@type": "WebPage",
+                    "@id": `${baseURL}${blog.path}/${post.slug}`,
+                  },
+                },
+                {
+                  "@type": "BreadcrumbList",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      name: "Home",
+                      item: baseURL,
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 2,
+                      name: "Blog",
+                      item: `${baseURL}/blog`,
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 3,
+                      name: post.metadata.title,
+                      item: `${baseURL}/blog/${post.slug}`,
+                    },
+                  ],
+                },
+              ],
             }}
           />
           <Column maxWidth="s" gap="16" horizontal="center" align="center">

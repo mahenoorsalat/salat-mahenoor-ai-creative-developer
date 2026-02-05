@@ -60,7 +60,7 @@ export default async function RootLayout({
         name: `${person.name} | Freelance AI & Web Agency`,
         url: baseURL,
         logo: `${baseURL}/images/avatar.jpg`,
-        image: `${baseURL}/images/cover.jpg`,
+        image: `${baseURL}/images/avatar.jpg`,
         description: "Hire a top Freelance Full-Stack Developer and AI Architect. Specialized in building premium Next.js websites, AI automation, and 3D web experiences for businesses and agencies.",
         priceRange: "$$$",
         address: {

@@ -37,6 +37,63 @@ export default function Testimonials() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `${baseURL}${testimonials.path}#webpage`,
+              url: `${baseURL}${testimonials.path}`,
+              name: testimonials.title,
+              description: testimonials.description,
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: baseURL,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Testimonials",
+                  item: `${baseURL}${testimonials.path}`,
+                },
+              ],
+            },
+            {
+              "@type": "AggregateRating",
+              itemReviewed: {
+                "@type": "ProfessionalService",
+                "@id": `${baseURL}/#service`,
+                name: person.name,
+                image: `${baseURL}${person.avatar}`,
+              },
+              ratingValue: "5",
+              reviewCount: testimonials.items.length.toString(),
+            },
+            ...testimonials.items.map((item) => ({
+              "@type": "Review",
+              author: {
+                "@type": "Person",
+                name: item.name,
+              },
+              reviewBody: item.contentPlain || "",
+              reviewRating: {
+                "@type": "Rating",
+                ratingValue: "5",
+              },
+              itemReviewed: {
+                "@id": `${baseURL}/#service`,
+              },
+            })),
+          ],
+        }}
+      />
       <TestimonialsView />
     </Column>
   );

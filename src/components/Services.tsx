@@ -35,7 +35,7 @@ export const Services = () => {
                                 height: '100%',
                             }}
                         >
-                            {service}
+                            {service.content}
                         </Column>
                     </RevealFx>
                 ))}

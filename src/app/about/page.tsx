@@ -13,6 +13,7 @@ import {
   Row,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
+import { StructuredData } from "@/components";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
@@ -70,6 +71,40 @@ export default function About() {
           name: person.name,
           url: `${baseURL}${about.path}`,
           image: `${baseURL}${person.avatar}`,
+        }}
+      />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "AboutPage",
+              "@id": `${baseURL}${about.path}#webpage`,
+              url: `${baseURL}${about.path}`,
+              name: about.title,
+              description: about.description,
+              mainEntity: {
+                "@id": `${baseURL}/#person`,
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: baseURL,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "About",
+                  item: `${baseURL}${about.path}`,
+                },
+              ],
+            },
+          ],
         }}
       />
       {about.tableOfContent.display && (

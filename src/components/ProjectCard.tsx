@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             {video ? (
                 <video
                     src={video}
-                    title={title}
+                    title={`Video demonstration of ${title} project`}
                     style={{
                         borderRadius: "var(--radius-l)",
                         border: "1px solid var(--neutral-alpha-weak)",
@@ -56,9 +56,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             ) : (
                 <Carousel
                     sizes="(max-width: 960px) 100vw, 960px"
-                    items={images.map((image) => ({
+                    items={images.map((image, index) => ({
                         slide: image,
-                        alt: title,
+                        alt: `Preview of ${title} project - image ${index + 1}`,
                     }))}
                 />
             )}

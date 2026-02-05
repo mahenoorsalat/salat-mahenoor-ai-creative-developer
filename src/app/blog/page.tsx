@@ -1,5 +1,5 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { Mailchimp } from "@/components";
+import { Mailchimp, StructuredData } from "@/components";
 import { Posts } from "@/components/blog/Posts";
 import { baseURL, blog, person, newsletter } from "@/resources";
 
@@ -24,7 +24,7 @@ export default function Blog() {
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema
-        as="blogPosting"
+        as="webPage"
         baseURL={baseURL}
         title={blog.title}
         description={blog.description}
@@ -34,6 +34,26 @@ export default function Blog() {
           name: person.name,
           url: `${baseURL}/blog`,
           image: `${baseURL}${person.avatar}`,
+        }}
+      />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: baseURL,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Blog",
+              item: `${baseURL}${blog.path}`,
+            },
+          ],
         }}
       />
       <Heading marginBottom="l" variant="heading-strong-xl" marginLeft="24">

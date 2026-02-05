@@ -58,42 +58,90 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `Hire ${person.name} | Top Freelance Full-Stack Developer & AI Architect`,
+  title: `Hire ${person.name} | Top-Ranked Full-Stack Developer & AI Architect`,
   featured: {
-    display: false,
-    title: "New 3D Project",
-    href: "/work/project-001",
+    display: true,
+    title: "New: Technical SEO Blueprint for #1 Ranking",
+    href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire ${person.name}, a top-tier Freelance Full-Stack Developer and AI Architect specializing in Next.js, Python, and 3D web experiences. Partner with an expert developer to scale your business or agency with high-performance AI solutions.`,
-  keywords: ["Hire Freelance Developer", "Next.js Expert Freelancer", "AI Full-Stack Developer", "Hire AI Architect", "Creative Web Agency", "Next.js Agency", "Portfolio", "Freelance Web Designer", "Mahenoor Salat"],
-  headline: <>Crafting the future of AI & Interactive 3D Web</>,
+  description: `Hire ${person.name}, an elite Full-Stack Developer and AI Architect. Specialized in Next.js, Python, and 3D web experiences. Get custom AI solutions, high-performance SaaS apps, and #1 Google ranking strategies.`,
+  keywords: [
+    "Hire Elite Full-Stack Developer",
+    "Top Next.js Freelancer India",
+    "AI Architect for Startups",
+    "Hire AI Engineer",
+    "Premium Web Design Agency",
+    "Next.js SEO Expert",
+    "3D Web Developer Portfolio",
+    "Custom AI Integration Services",
+    "SaaS MVP Developer",
+    "Mahenoor Salat Portfolio",
+    "Vibe Coder",
+    "Fullstack AI Engineer",
+    "Premium UI/UX Designer"
+  ],
+  headline: <>Architecting the future of AI & Interactive 3D Web</>,
   subline: (
     <>
       I’m Mahenoor, a <Text variant="body-default-s" onBackground="neutral-strong">Creative Developer</Text> and
       <Text variant="body-default-s" onBackground="neutral-strong"> AI Architect</Text> building
-      high-performance digital solutions. From <Text variant="body-default-s" onBackground="neutral-strong">Next.js</Text> platforms to immersive <Text variant="body-default-s" onBackground="neutral-strong">WebGL</Text> experiences.
+      high-performance digital solutions that dominate search results. From <Text variant="body-default-s" onBackground="neutral-strong">Next.js</Text> elite platforms to immersive <Text variant="body-default-s" onBackground="neutral-strong">WebGL</Text> experiences.
     </>
   ),
   image: "/images/avatar.jpg",
   path: "/",
   services: [
-    <>
-      <Text variant="heading-strong-l" onBackground="neutral-strong">AI Integration</Text>
-      <Text variant="body-default-m" onBackground="neutral-weak">Implementing LLMs (ChatGPT, Claude) for dynamic content generation, chatbots, and personalized user experiences.</Text>
-    </>,
-    <>
-      <Text variant="heading-strong-l" onBackground="neutral-strong">3D Web Experiences</Text>
-      <Text variant="body-default-m" onBackground="neutral-weak">Building immersive, high-performance 3D environments with Three.js and WebGL to captivate audiences.</Text>
-    </>,
-    <>
-      <Text variant="heading-strong-l" onBackground="neutral-strong">Premium Frontend & Backend Dev</Text>
-      <Text variant="body-default-m" onBackground="neutral-weak">Crafting pixel-perfect, responsive, and accessible user interfaces using Next.js and Tailwind CSS.</Text>
-    </>,
-    <>
-      <Text variant="heading-strong-l" onBackground="neutral-strong">SaaS MVP Development</Text>
-      <Text variant="body-default-m" onBackground="neutral-weak">Rapidly prototyping and launching scalable Minimum Viable Products to validate business ideas.</Text>
-    </>
+    {
+      title: "AI & LLM Integration",
+      description: "Implementing cutting-edge LLMs (GPT-4, Claude 3) for automated content, chatbots, and personalized user flows.",
+      content: (
+        <>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">AI Integration</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Implementing LLMs (ChatGPT, Claude) for dynamic content generation, chatbots, and personalized user experiences.</Text>
+        </>
+      )
+    },
+    {
+      title: "3D Web Experiences",
+      description: "Crafting immersive, high-performance 3D environments with Three.js and WebGL to boost engagement and brand authority.",
+      content: (
+        <>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">3D Web Experiences</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Building immersive, high-performance 3D environments with Three.js and WebGL to captivate audiences.</Text>
+        </>
+      )
+    },
+    {
+      title: "Next.js Full-Stack Dev",
+      description: "Elite frontend and backend development using Next.js App Router for maximum performance and SEO supremacy.",
+      content: (
+        <>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">Premium Full-Stack Dev</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Crafting pixel-perfect, responsive, and accessible user interfaces using Next.js and Tailwind CSS.</Text>
+        </>
+      )
+    },
+    {
+      title: "SaaS MVP Development",
+      description: "Rapidly prototyping and launching scalable Minimum Viable Products for startups to validate and scale at lightspeed.",
+      content: (
+        <>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">SaaS MVP Development</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Rapidly prototyping and launching scalable Minimum Viable Products to validate business ideas.</Text>
+        </>
+      )
+    },
+    {
+      title: "Premium UI/UX Design",
+      description: "Designing high-end, luxury digital interfaces with a focus on motion, typography, and sensory user engagement.",
+      content: (
+        <>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">Premium UI/UX Design</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Creating weighted, expensive-feeling digital experiences that command attention and build trust.</Text>
+        </>
+      )
+    }
   ],
   faq: [
     {
@@ -103,6 +151,7 @@ const home: Home = {
           You can start by <Text variant="body-default-s" onBackground="neutral-strong">scheduling a call</Text> or sending an email. I specialize in working with businesses and agencies that need high-end Next.js, AI, or 3D web solutions.
         </>
       ),
+      answerPlain: "You can start by scheduling a call or sending an email. I specialize in working with businesses and agencies that need high-end Next.js, AI, or 3D web solutions.",
     },
     {
       question: "What is your typical project timeline?",
@@ -111,6 +160,7 @@ const home: Home = {
           Timelines vary by complexity. A standard <Text variant="body-default-s" onBackground="neutral-strong">Next.js MVP</Text> typically takes 2-4 weeks, while immersive 3D experiences or complex AI integrations may take 6-10 weeks.
         </>
       ),
+      answerPlain: "Timelines vary by complexity. A standard Next.js MVP typically takes 2-4 weeks, while immersive 3D experiences or complex AI integrations may take 6-10 weeks.",
     },
     {
       question: "Do you work with agencies?",
@@ -119,6 +169,7 @@ const home: Home = {
           Yes, I frequently partner with <Text variant="body-default-s" onBackground="neutral-strong">creative agencies</Text> as a specialist technical lead for AI and 3D web projects, ensuring their clients receive cutting-edge digital products.
         </>
       ),
+      answerPlain: "Yes, I frequently partner with creative agencies as a specialist technical lead for AI and 3D web projects, ensuring their clients receive cutting-edge digital products.",
     },
     {
       question: "What tech stack do you recommend for SEO?",
@@ -127,6 +178,7 @@ const home: Home = {
           For maximum search visibility and performance, I recommend <Text variant="body-default-s" onBackground="neutral-strong">Next.js (App Router)</Text>, Tailwind CSS, and optimized assets. This ensures fast Core Web Vitals, which is critical for Google ranking.
         </>
       ),
+      answerPlain: "For maximum search visibility and performance, I recommend Next.js (App Router), Tailwind CSS, and optimized assets. This ensures fast Core Web Vitals, which is critical for Google ranking.",
     }
   ]
 };
@@ -328,7 +380,7 @@ const about: About = {
         tags: [
           { name: "MERN Stack", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
-          { name: "Django", icon: "python" },
+          { name: "Django", icon: "rocket" },
           { name: "FastAPI", icon: "rocket" },
           { name: "Node.js", icon: "node" },
         ],
@@ -344,8 +396,8 @@ const about: About = {
         tags: [
           { name: "OpenAI API", icon: "rocket" },
           { name: "LangChain", icon: "grid" },
-          { name: "Automation", icon: "gear" },
-          { name: "Python", icon: "python" },
+          { name: "Automation", icon: "grid" },
+          { name: "Python", icon: "rocket" },
         ],
       },
       {
@@ -427,6 +479,7 @@ const testimonials: Testimonials = {
           and her willingness to take on challenges. Strongly recommend her.
         </>
       ),
+      contentPlain: "I’ve worked closely with Mahenoor. She’s fast-learning, reliable, and delivers with ownership exactly the kind of talent early-stage teams need. I’ve been impressed by her growth, her attitude, and her willingness to take on challenges. Strongly recommend her.",
     },
     {
       name: "Radu Marias",
@@ -438,6 +491,7 @@ const testimonials: Testimonials = {
           clear and visually appealing platforms. Her work on my portfolio site was a testament to her reliability.
         </>
       ),
+      contentPlain: "Mahenoor's expertise in web development, SEO, and design was exceptional. She created professional, user-friendly websites for rencfs and genie-do, translating complex technical concepts into clear and visually appealing platforms. Her work on my portfolio site was a testament to her reliability.",
     },
     {
       name: "Alexene Tomate",
@@ -449,6 +503,7 @@ const testimonials: Testimonials = {
           recommendations that elevated the project. Her initiative and sense of ownership is admirable.
         </>
       ),
+      contentPlain: "Mahenoor is not only quick to execute tasks but also incredibly proactive, constantly volunteering to take on responsibilities and delivering results efficiently. She consistently offered thoughtful recommendations that elevated the project. Her initiative and sense of ownership is admirable.",
     },
     {
       name: "Dr. Bruno Woltzenlogel Paleo",
@@ -460,6 +515,7 @@ const testimonials: Testimonials = {
           persistent to achieve the end goal. We are grateful for her contribution.
         </>
       ),
+      contentPlain: "Mahenoor replaced the landing page of our hodlCoin staking protocol with a completely new and nice-looking page using v0.dev, Next.js and Tailwind CSS. She was attentive to feedback and persistent to achieve the end goal. We are grateful for her contribution.",
     },
     {
       name: "Nathan Wong",
@@ -471,6 +527,7 @@ const testimonials: Testimonials = {
           overall great experience. She thoughtfully listens to the client's wants and needs.
         </>
       ),
+      contentPlain: "It was a pleasure working with Mahenoor. She has exceeded my expectations and went above and beyond to provide a better user experience. Her creativity and attention to detail provide users with an overall great experience. She thoughtfully listens to the client's wants and needs.",
     },
     {
       name: "Dhrumilkumar Patel",
@@ -482,6 +539,7 @@ const testimonials: Testimonials = {
           delivering user-friendly experiences. She’s a true asset and a joy to work with.
         </>
       ),
+      contentPlain: "Mahenoor stands out for her creative approach and front-end expertise. She has consistently demonstrated exceptional design skills, innovative problem-solving, and a genuine passion for delivering user-friendly experiences. She’s a true asset and a joy to work with.",
     },
   ],
 };

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getPosts } from "@/utils/utils";
+import { StructuredData } from "@/components";
 import {
   Meta,
   Schema,
@@ -17,7 +18,7 @@ import {
 } from "@once-ui-system/core";
 import { baseURL, about, person, work, home } from "@/resources";
 import { formatDate } from "@/utils/formatDate";
-import { ScrollToHash, CustomMDX, StructuredData } from "@/components";
+import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
 
@@ -100,16 +101,50 @@ export default async function Project({
       <StructuredData
         data={{
           "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          headline: post.metadata.title,
-          description: post.metadata.summary,
-          image: post.metadata.image,
-          datePublished: post.metadata.publishedAt,
-          author: {
-            "@type": "Person",
-            name: person.name,
-            url: `${baseURL}${about.path}`,
-          },
+          "@graph": [
+            {
+              "@type": "CreativeWork",
+              headline: post.metadata.title,
+              description: post.metadata.summary,
+              image: post.metadata.image || post.metadata.images?.[0] || `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
+              datePublished: post.metadata.publishedAt,
+              author: {
+                "@type": "Person",
+                name: person.name,
+                url: `${baseURL}${about.path}`,
+              },
+              publisher: {
+                "@id": `${baseURL}/#person`,
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${baseURL}${work.path}/${post.slug}`,
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: baseURL,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Work",
+                  item: `${baseURL}/work`,
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: post.metadata.title,
+                  item: `${baseURL}/work/${post.slug}`,
+                },
+              ],
+            },
+          ],
         }}
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">

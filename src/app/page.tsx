@@ -50,6 +50,53 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": `${baseURL}/#website`,
+              url: baseURL,
+              name: person.name,
+              description: home.description,
+              publisher: {
+                "@id": `${baseURL}/#person`,
+              },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: baseURL,
+                },
+              ],
+            },
+            ...home.services.map((service, index) => ({
+              "@type": "Service",
+              name: service.title,
+              description: service.description,
+              provider: {
+                "@id": `${baseURL}/#person`,
+              },
+            })),
+            {
+              "@type": "FAQPage",
+              mainEntity: home.faq?.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answerPlain || "",
+                },
+              })),
+            },
+          ],
+        }}
+      />
       <Column fillWidth horizontal="center" gap="m">
         <Column maxWidth="s" horizontal="center" align="center">
           {home.featured.display && (
@@ -134,31 +181,6 @@ export default function Home() {
       )}
       <ContactForm />
       <FAQ />
-      {home.faq && (
-        <>
-          <Schema
-            as="webPage"
-            baseURL={baseURL}
-            path={home.path}
-            title={home.title}
-            description={home.description}
-          />
-          <StructuredData
-            data={{
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: home.faq.map((item) => ({
-                "@type": "Question",
-                name: item.question,
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: item.answer?.toString() || "", // Basic text fallback
-                },
-              })),
-            }}
-          />
-        </>
-      )}
       <ContactCTA />
     </Column>
 
