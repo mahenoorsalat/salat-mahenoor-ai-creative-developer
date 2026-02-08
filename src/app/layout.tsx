@@ -18,13 +18,21 @@ import { Analytics } from "@vercel/analytics/next";
 import { baseURL, effects, fonts, style, dataStyle, home, person, social } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: home.title,
     description: home.description,
     baseURL: baseURL,
     path: home.path,
     image: home.image,
   });
+
+  return {
+    ...metadata,
+    metadataBase: new URL(baseURL),
+    alternates: {
+      canonical: home.path,
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -57,12 +65,54 @@ export default async function RootLayout({
       {
         "@type": "ProfessionalService",
         "@id": `${baseURL}/#service`,
-        name: `${person.name} | Freelance AI & Web Agency`,
+        name: `${person.name} | Global AI & Web Development Agency`,
         url: baseURL,
         logo: `${baseURL}/images/avatar.jpg`,
         image: `${baseURL}/images/avatar.jpg`,
-        description: "Hire a top Freelance Full-Stack Developer and AI Architect. Specialized in building premium Next.js websites, AI automation, and 3D web experiences for businesses and agencies.",
+        description: "Elite Global AI & Web Agency. Delivering premium Next.js platforms, AI automation, and 3D web experiences for high-ticket clients across the USA, Europe, Asia, and globally. Specialized in high-performance digital solutions that dominate search results.",
         priceRange: "$$$",
+        areaServed: [
+          { "@type": "Country", "name": "US" },
+          { "@type": "Country", "name": "DE" },
+          { "@type": "Country", "name": "GB" },
+          { "@type": "Country", "name": "CA" },
+          { "@type": "Country", "name": "AU" },
+          { "@type": "Country", "name": "CH" },
+          { "@type": "Country", "name": "FR" },
+          { "@type": "Country", "name": "NL" },
+          { "@type": "Country", "name": "SG" },
+          { "@type": "Country", "name": "AE" },
+          { "@type": "Country", "name": "SE" },
+          { "@type": "Country", "name": "NO" },
+          { "@type": "Country", "name": "DK" },
+          { "@type": "Country", "name": "Global" }
+        ],
+        offers: [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom AI & LLM Integration",
+              "description": "Enterprise-grade AI solutions using GPT-4 and Claude 3."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Elite Next.js Development",
+              "description": "High-performance, SEO-optimized full-stack platforms."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "3D Web Experiences",
+              "description": "Immersive WebGL and Three.js environments for premium brands."
+            }
+          }
+        ],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Rajkot",
