@@ -48,13 +48,16 @@ export async function generateMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+    image: post.metadata.image || post.metadata.images?.[0] || home.image,
     path: `${work.path}/${post.slug}`,
   });
 
   return {
     ...metadata,
     keywords: post.metadata.tag ? [post.metadata.tag] : [],
+    alternates: {
+      canonical: `${baseURL}/work/${post.slug}`,
+    },
   };
 }
 
@@ -106,7 +109,7 @@ export default async function Project({
               "@type": "CreativeWork",
               headline: post.metadata.title,
               description: post.metadata.summary,
-              image: post.metadata.image || post.metadata.images?.[0] || `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
+              image: post.metadata.image || post.metadata.images?.[0] || home.image,
               datePublished: post.metadata.publishedAt,
               author: {
                 "@type": "Person",

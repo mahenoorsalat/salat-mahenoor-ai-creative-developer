@@ -29,14 +29,6 @@ export async function generateMetadata() {
   return {
     ...metadata,
     metadataBase: new URL(baseURL),
-    alternates: {
-      canonical: home.path,
-      languages: {
-        'en-US': `${baseURL}${home.path}`,
-        'de-DE': `${baseURL}${home.path}`,
-        'en-AE': `${baseURL}${home.path}`,
-      },
-    },
   };
 }
 

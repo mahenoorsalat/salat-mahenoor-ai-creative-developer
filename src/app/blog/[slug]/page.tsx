@@ -48,13 +48,16 @@ export async function generateMetadata({
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
+    image: post.metadata.image || home.image,
     path: `${blog.path}/${post.slug}`,
   });
 
   return {
     ...metadata,
     keywords: post.metadata.tag ? [post.metadata.tag] : [],
+    alternates: {
+      canonical: `${baseURL}/blog/${post.slug}`,
+    },
   };
 }
 
@@ -105,7 +108,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
                   "@type": "BlogPosting",
                   headline: post.metadata.title,
                   description: post.metadata.summary,
-                  image: post.metadata.image || `${baseURL}/api/og/generate?title=${encodeURIComponent(post.metadata.title)}`,
+                  image: post.metadata.image || home.image,
                   datePublished: post.metadata.publishedAt,
                   author: {
                     "@type": "Person",

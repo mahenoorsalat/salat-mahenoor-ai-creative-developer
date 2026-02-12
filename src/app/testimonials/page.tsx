@@ -16,6 +16,9 @@ export async function generateMetadata() {
   return {
     ...metadata,
     keywords: testimonials.keywords,
+    alternates: {
+      canonical: `${baseURL}${testimonials.path}`,
+    },
   };
 }
 

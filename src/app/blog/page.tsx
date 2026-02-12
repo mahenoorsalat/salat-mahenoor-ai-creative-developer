@@ -1,20 +1,23 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
 import { Mailchimp, StructuredData } from "@/components";
 import { Posts } from "@/components/blog/Posts";
-import { baseURL, blog, person, newsletter } from "@/resources";
+import { baseURL, blog, person, newsletter, home } from "@/resources";
 
 export async function generateMetadata() {
   const metadata = Meta.generate({
     title: blog.title,
     description: blog.description,
     baseURL: baseURL,
-    image: `/api/og/generate?title=${encodeURIComponent(blog.title)}`,
+    image: home.image,
     path: blog.path,
   });
 
   return {
     ...metadata,
     keywords: blog.keywords,
+    alternates: {
+      canonical: `${baseURL}${blog.path}`,
+    },
   };
 }
 
@@ -29,7 +32,7 @@ export default function Blog() {
         title={blog.title}
         description={blog.description}
         path={blog.path}
-        image={`/api/og/generate?title=${encodeURIComponent(blog.title)}`}
+        image={home.image}
         author={{
           name: person.name,
           url: `${baseURL}/blog`,

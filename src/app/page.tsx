@@ -29,6 +29,9 @@ export async function generateMetadata() {
   return {
     ...metadata,
     keywords: home.keywords,
+    alternates: {
+      canonical: baseURL,
+    },
   };
 }
 
