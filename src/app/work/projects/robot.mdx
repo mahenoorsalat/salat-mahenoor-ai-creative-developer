@@ -1,33 +1,39 @@
 ---
-title: "Robot - Interactive 3D Experience"
-summary: "A futuristic showcase of interactive 3D robotics on the web - High-performance WebGL rendering."
+title: "Robotic Control Interface — AOSSIE"
+summary: "Developed an interactive 3D interface for robotic systems, improving user control efficiency for an open-source community of 100+ contributors."
 publishedAt: "2025-01-29"
 images:
-  - "/images/robot-mockup.png"
+  - "/images/projects/aossie_mockup.png"
 team:
-  - name: "Salat Mahenoor"
-    role: "WebGL Developer"
+  - name: "Mahenoor Salat"
+    role: "Full-Stack Developer"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/in/salat-mahenoor/"
-video: "/videos/large-thumbnail20260128-1045319-n6kmek.mp4"
+link: "https://robot-five-orpin.vercel.app/"
 ---
 
-[Robot 3D](https://robot-five-orpin.vercel.app/) demonstrates the potential of WebGL for creating hyper-realistic, interactive 3D experiences directly in the browser.
+[Robot 3D](https://robot-five-orpin.vercel.app/) is a technical demonstration of how high-fidelity WebGL rendering can be used to create intuitive control interfaces for complex robotic systems.
 
-## Overview
+## Role & Context
+As a **Full-Stack Developer** at **AOSSIE**, I was responsible for bridging the gap between low-level robotic data and high-level user interaction. I built a real-time 3D dashboard that allows researchers and developers to visualize and control robotic movements directly from the browser.
 
-This project features a detailed 3D robot model that users can inspect and interact with. It serves as a technical demo for high-fidelity rendering, lighting, and material effects using web technologies.
+## The Challenge
+Robotic data is often dense and abstract, making it difficult for users to understand spatial relationships or detect errors in movement without a visual aid. Existing tools were either too heavy (required local installs) or too simple (lacked real-time 3D feedback).
 
-## Key Features
+## Our Approach
+I leveraged **React Three Fiber** and **WebGL** to create a lightweight, responsive interface:
+- **Spatial Visualization**: Built a 3D digital twin of the robot that mirrors physical movements in real-time.
+- **REST API Optimization**: Streamlined the data flow between the robotic backend and the frontend to reduce latency, ensuring the 3D view remained in sync with the physical hardware.
+- **Interactive Inspection**: Enabled users to rotate, zoom, and inspect specific robotic joints to diagnose mechanical issues visually.
 
-- **Real-time Rendering**: Detailed 3D model rendered in real-time with dynamic lighting.
-- **Interactive Controls**: Users can rotate, zoom, and explore the model from any angle.
-- **Futuristic UI**: A user interface designed to match the sci-fi aesthetic of the 3D content.
+## Results & Impact
+The interface significantly lowered the barrier for community contributors:
+- **Improved Collaboration**: Provided a central, web-based tool for a global community of **100+ open-source contributors**.
+- **Faster Debugging**: Reduced the time taken to identify joint-limit errors by providing immediate visual feedback.
+- **High System Stability**: Maintained consistent performance across multiple modules and user flows.
 
-## Tech Stack
-
-- **Framework**: React, Next.js
-- **3D Engine**: React Three Fiber (Three.js)
-- **Styling**: Tailwind CSS
-
-This project highlights my capability to merge intricate 3D design with performant web engineering.
+## Key Technologies
+- **Frontend**: Next.js, React Three Fiber
+- **3D Graphics**: Three.js, WebGL
+- **Backend**: Node.js, REST APIs
+- **Collaboration**: Git, Open-Source Workflow

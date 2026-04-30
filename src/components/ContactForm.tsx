@@ -51,9 +51,9 @@ export const ContactForm = () => {
     return (
         <Column fillWidth gap="24" padding="xl" radius="l" background="surface" border="neutral-alpha-weak">
             <Column gap="8">
-                <Heading variant="display-strong-xs">Get in Touch</Heading>
+                <Heading variant="display-strong-xs">Start your transformation</Heading>
                 <Text variant="body-default-m" onBackground="neutral-weak">
-                    Have a project in mind? Let's build something extraordinary together.
+                    Looking for a high-performance partner to scale your SaaS or AI product? Let's talk.
                 </Text>
             </Column>
             <form onSubmit={handleSubmit} style={{ width: '100%' }}>

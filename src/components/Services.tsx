@@ -9,12 +9,12 @@ export const Services = () => {
             <Column horizontal="center" gap="16">
                 <RevealFx translateY="8">
                     <Heading variant="display-strong-s" align="center">
-                        Services
+                        Strategic Expertise
                     </Heading>
                 </RevealFx>
                 <RevealFx translateY="8" delay={0.2}>
                     <Text variant="body-default-l" onBackground="neutral-weak" align="center">
-                        High-impact solutions for digital growth.
+                        Elite engineering for global dominance.
                     </Text>
                 </RevealFx>
             </Column>

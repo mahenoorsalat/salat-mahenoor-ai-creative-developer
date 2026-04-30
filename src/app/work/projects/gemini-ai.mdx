@@ -1,0 +1,39 @@
+---
+title: "Gemini AI — Conversational Interface Demo"
+summary: "Built a high-fidelity demonstration of Google's Gemini AI capabilities, featuring real-time stream processing and modal UI."
+publishedAt: "2026-02-05"
+images:
+  - "/images/projects/gemini_mockup.png"
+team:
+  - name: "Mahenoor Salat"
+    role: "Full-Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/salat-mahenoor/"
+link: "https://gemini-ai-demo.vercel.app/"
+---
+
+[Gemini AI Demo](https://gemini-ai-demo.vercel.app/) is a technical showcase of the integration between modern frontend frameworks and Google's powerful Gemini LLM.
+
+## Role & Context
+As **Full-Stack Engineer**, I developed this demo to explore the UX possibilities of large language models. The goal was to create a conversational interface that felt as responsive and intuitive as a local application while handling complex AI reasoning in the background.
+
+## The Challenge
+Integrating LLMs into the web often results in "choppy" user experiences due to high latency and large data payloads. The challenge was to implement real-time streaming and a fluid modal UI that kept the user engaged while the AI processed their request.
+
+## Our Approach
+I implemented a stream-first technical strategy:
+- **Real-Time Streaming**: Leveraged Vercel's AI SDK and server actions to stream responses from Gemini in real-time, significantly reducing the perceived wait time for users.
+- **Modal-First UI**: Designed a minimalist, distraction-free modal interface that prioritizes the conversation and makes the AI feel like an integrated part of the OS.
+- **State Management**: Used React hooks to manage complex chat histories and streaming states without causing unnecessary re-renders.
+
+## Results & Impact
+The demo successfully showcased the future of AI-driven interfaces:
+- **Instant Response Perception**: Streaming reduced the time-to-first-token to under 300ms, making the conversation feel natural and immediate.
+- **Highly Scalable Architecture**: Built on a serverless foundation that can handle thousands of concurrent users without degrading performance.
+- **Educational Resource**: Served as a blueprint for other developers looking to integrate Google's AI models into their own Next.js applications.
+
+## Key Technologies
+- **AI Model**: Google Gemini API
+- **Framework**: Next.js, Vercel AI SDK
+- **Backend**: Server Actions
+- **Styling**: Tailwind CSS, Framer Motion

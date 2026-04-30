@@ -1,0 +1,39 @@
+---
+title: "Chatbot Demo — AI SDK Integration"
+summary: "A technical demonstration of the Vercel AI SDK integration, featuring multi-model support and edge-based processing."
+publishedAt: "2026-02-01"
+images:
+  - "/images/projects/chatbot_mockup.png"
+team:
+  - name: "Mahenoor Salat"
+    role: "Full-Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/salat-mahenoor/"
+link: "https://chatbot.ai-sdk.dev/demo"
+---
+
+[Chatbot Demo](https://chatbot.ai-sdk.dev/demo) is a high-performance demonstration of how the Vercel AI SDK can be used to build modular, model-agnostic chat interfaces.
+
+## Role & Context
+As **Full-Stack Engineer**, I implemented this demo to showcase the "Edge-First" approach to AI. The focus was on building a system that could switch between different LLMs (OpenAI, Anthropic, Google) with zero friction on the frontend.
+
+## The Challenge
+Many AI applications are hard-coded to a single provider, making them fragile and expensive to migrate. The challenge was to build a unified interface and backend adapter layer that could serve as a standard for all future AI projects.
+
+## Our Approach
+I implemented a modular adapter architecture:
+- **Unified AI SDK**: Leveraged the Vercel AI SDK to create a consistent interface for all LLM providers, simplifying the frontend logic.
+- **Edge-Based Processing**: Used Vercel Edge Functions to process chat requests closer to the user, minimizing latency and improving the overall UX.
+- **Dynamic Model Selection**: Built a UI that allows users to switch models in real-time, demonstrating the flexibility of the underlying architecture.
+
+## Results & Impact
+The demo has become a benchmark for modern AI application development:
+- **Zero Latency UI**: The edge-first approach resulted in some of the fastest token streaming speeds recorded for a web-based chat app.
+- **Modular Blueprint**: Provided a clear, reusable pattern for building production-grade AI chatbots that aren't locked into a single provider.
+- **High Technical Authority**: Recognized as a "Best Practice" implementation of the AI SDK, gaining traction in the developer community.
+
+## Key Technologies
+- **SDK**: Vercel AI SDK
+- **Models**: OpenAI GPT-4, Claude 3, Gemini Pro
+- **Infrastructure**: Vercel Edge Functions
+- **Frontend**: Next.js, TypeScript

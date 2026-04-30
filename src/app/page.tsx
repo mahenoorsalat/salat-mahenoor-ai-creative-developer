@@ -10,11 +10,12 @@ import {
   Schema,
   Meta,
   Line,
+  Flex,
+  Icon,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { ContactCTA, VideoSlider, Services, ContactForm, FAQ, StructuredData } from "@/components";
-
-
+import { ContactCTA, Services, ContactForm, FAQ, StructuredData, Testimonials, Stats } from "@/components";
+import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
@@ -35,11 +36,9 @@ export async function generateMetadata() {
   };
 }
 
-
-
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
+    <Column maxWidth="m" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -93,75 +92,126 @@ export default function Home() {
                 name: item.question,
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: item.answerPlain || "",
+                  "text": item.answer,
                 },
               })),
             },
           ],
         }}
       />
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
-          {home.featured.display && (
-            <RevealFx
-              fillWidth
-              horizontal="center"
-              paddingTop="16"
-              paddingBottom="32"
-              paddingLeft="12"
-            >
+      
+      <Column fillWidth gap="l" paddingX="l" minHeight="100vh" vertical="center" horizontal="center" align="center" style={{ paddingTop: '40px' }}>
+        {home.featured.display && (
+          <RevealFx translateY="12" delay={0.1}>
+            <Row fillWidth horizontal="center">
               <Badge
-                background="brand-alpha-weak"
+                style={{ background: 'var(--brand-alpha-weak)', border: '1px solid var(--brand-alpha-medium)' }}
                 paddingX="12"
                 paddingY="4"
                 onBackground="neutral-strong"
                 textVariant="label-default-s"
-                arrow={false}
                 href={home.featured.href}
               >
-                <Row paddingY="2">{home.featured.title}</Row>
+                <Row paddingY="2" gap="8" vertical="center">
+                  <Flex
+                    radius="full"
+                    background="brand-strong"
+                    style={{ width: '6px', height: '6px', boxShadow: '0 0 8px var(--brand-strong)' }}
+                  />
+                  {home.featured.title}
+                </Row>
               </Badge>
-            </RevealFx>
-          )}
-          <RevealFx translateY="4" fillWidth horizontal="center" paddingBottom="16">
-            <Heading as="h1" wrap="balance" variant="display-strong-l">
-              {home.headline}
-            </Heading>
+            </Row>
           </RevealFx>
-          <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" paddingBottom="32">
-            <Text wrap="balance" onBackground="neutral-weak" variant="heading-default-xl">
+        )}
+        
+        <Flex direction="column" align="center" gap="16" fillWidth>
+          <Heading
+            as="h1"
+            variant="display-strong-s"
+            align="center"
+            style={{
+              maxWidth: '1000px',
+              lineHeight: '1.05',
+              letterSpacing: '-0.05em'
+            }}>
+            <RevealFx translateY="16" delay={0.2}>
+              {home.headline}
+            </RevealFx>
+          </Heading>
+          
+          <RevealFx translateY="16" delay={0.25}>
+            <Text
+              variant="heading-default-l"
+              onBackground="neutral-weak"
+              align="center"
+              style={{ maxWidth: '800px' }}>
               {home.subline}
             </Text>
           </RevealFx>
-          <RevealFx paddingTop="12" delay={0.4} horizontal="center" paddingLeft="12">
+        </Flex>
+        
+        <RevealFx translateY="24" delay={0.3}>
+          <Row gap="16" vertical="center" horizontal="center" fillWidth>
             <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              weight="default"
-              arrowIcon
-            >
-              <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Row>
+              href="mailto:salatmahenoor7.8.6@gmail.com"
+              variant="primary"
+              size="l"
+              prefixIcon="chevronRight">
+              Secure your edge
             </Button>
-          </RevealFx>
-        </Column>
+            <Button
+              href="/work"
+              variant="tertiary"
+              size="l">
+              View Blueprint
+            </Button>
+          </Row>
+        </RevealFx>
+
+        <RevealFx translateY="16" delay={0.35}>
+          <Stats />
+        </RevealFx>
+        <Row fillWidth paddingRight="64">
+          <Line maxWidth={48} />
+        </Row>
+        <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
+          <Row flex={1} paddingLeft="l" paddingTop="24">
+            <Heading as="h2" variant="display-strong-xs" wrap="balance">
+              Selected Work
+            </Heading>
+          </Row>
+          <Row flex={3}>
+            <Projects range={[1, 6]} />
+          </Row>
+        </Row>
       </Column>
-      <VideoSlider />
-      <RevealFx translateY="16" delay={0.8}>
+
+      <RevealFx translateY="16" delay={0.4}>
         <Services />
       </RevealFx>
+
+      <Column fillWidth gap="40" marginBottom="xl" paddingX="l">
+        <Column fillWidth gap="16">
+          <Row fillWidth horizontal="between" vertical="end">
+            <Heading as="h2" variant="display-strong-xs">
+              Reviews
+            </Heading>
+            <Text variant="body-default-s" onBackground="neutral-weak" s={{ hide: true }}>
+              100+ B2B companies trusted us...
+            </Text>
+          </Row>
+          <Row fillWidth horizontal="between" vertical="center" borderTop="neutral-alpha-weak" paddingTop="16">
+            <Text variant="body-default-s" onBackground="neutral-strong">
+              ©2026
+            </Text>
+          </Row>
+        </Column>
+        <Column fillWidth>
+          <Testimonials limit={2} />
+        </Column>
+      </Column>
+
       {routes["/blog"] && (
         <Column fillWidth gap="24" marginBottom="l">
           <Row fillWidth paddingRight="64">
@@ -177,16 +227,12 @@ export default function Home() {
               <Posts range={[1, 2]} columns="2" />
             </Row>
           </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
-          </Row>
         </Column>
       )}
+
       <ContactForm />
       <FAQ />
       <ContactCTA />
     </Column>
-
-
   );
 }

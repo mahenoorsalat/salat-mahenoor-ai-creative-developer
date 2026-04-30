@@ -1,6 +1,8 @@
-import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
+import { Column, Heading, Meta, Schema, RevealFx, Text } from "@once-ui-system/core";
 import { Mailchimp, StructuredData } from "@/components";
 import { Posts } from "@/components/blog/Posts";
+import { TrendingNews } from "@/components/blog/TrendingNews";
+import { NicheAggregator } from "@/components/blog/NicheAggregator";
 import { baseURL, blog, person, newsletter, home } from "@/resources";
 
 export async function generateMetadata() {
@@ -21,11 +23,9 @@ export async function generateMetadata() {
   };
 }
 
-
-
 export default function Blog() {
   return (
-    <Column maxWidth="m" paddingTop="24">
+    <Column fillWidth horizontal="center" paddingTop="l" paddingBottom="xl">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -59,17 +59,48 @@ export default function Blog() {
           ],
         }}
       />
-      <Heading as="h1" marginBottom="l" variant="heading-strong-xl" marginLeft="24">
-        {blog.title}
-      </Heading>
-      <Column fillWidth flex={1} gap="40">
-        <Posts range={[1, 1]} thumbnail />
-        <Posts range={[2, 3]} columns="2" thumbnail direction="column" />
-        <Mailchimp marginBottom="l" />
-        <Heading as="h2" variant="heading-strong-xl" marginLeft="l">
-          Earlier posts
-        </Heading>
-        <Posts range={[4]} columns="2" />
+      
+      <Column fillWidth maxWidth="m" paddingX="l" gap="64">
+        <Column gap="16">
+          <RevealFx translateY="12">
+            <Heading as="h1" variant="display-strong-xs">
+              {blog.title}
+            </Heading>
+          </RevealFx>
+          <RevealFx translateY="12" delay={0.1}>
+            <Text variant="body-default-l" onBackground="neutral-weak">
+              Deep insights on AI, high-performance engineering, and high-ticket strategy.
+            </Text>
+          </RevealFx>
+        </Column>
+
+        <Column fillWidth gap="xl">
+          <Column gap="32">
+            <Heading as="h2" variant="heading-strong-l">
+              Featured Insights
+            </Heading>
+            <Posts range={[1, 1]} thumbnail />
+          </Column>
+
+          <Column gap="32">
+            <Heading as="h2" variant="heading-strong-l">
+              Recent Analysis
+            </Heading>
+            <Posts range={[2, 5]} columns="2" thumbnail direction="column" />
+          </Column>
+
+          <Mailchimp padding="l" radius="xl" background="surface" border="neutral-alpha-weak" />
+
+          <Column gap="32">
+            <Heading as="h2" variant="heading-strong-l">
+              The Archive
+            </Heading>
+            <Posts range={[6]} columns="3" thumbnail={false} />
+          </Column>
+
+          <TrendingNews />
+          <NicheAggregator />
+        </Column>
       </Column>
     </Column>
   );

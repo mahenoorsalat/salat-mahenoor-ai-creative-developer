@@ -116,6 +116,13 @@ export interface Home extends BasePageConfig {
     answer: React.ReactNode;
     answerPlain?: string;
   }>;
+  /** Stats/Achievements section */
+  stats?: Array<{
+    label: string;
+    value: string;
+    platform: "Upwork" | "Fiverr" | "General";
+    link?: string;
+  }>;
 }
 
 
@@ -254,5 +261,12 @@ export interface Testimonials extends BasePageConfig {
     /** Testimonial text */
     content: React.ReactNode;
     contentPlain?: string;
+    /** Rating out of 5 */
+    rating?: number;
+    /** Performance metrics (e.g., '32% Lead Gen') */
+    metrics?: Array<{
+      label: string;
+      value: string;
+    }>;
   }>;
 }

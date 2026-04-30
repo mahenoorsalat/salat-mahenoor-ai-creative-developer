@@ -9,7 +9,7 @@ import {
     SmartLink,
     Text,
 } from "@once-ui-system/core";
-import { useEffect, useRef, useState } from "react";
+import React from "react";
 
 interface ProjectCardProps {
     href: string;
@@ -31,77 +31,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     description,
     avatars,
     link,
-    video,
-    priority = false, // Default to false if not provided
 }) => {
-    const videoRef = useRef<HTMLVideoElement>(null);
-    const [isIntersecting, setIsIntersecting] = useState(false);
-
-    useEffect(() => {
-        if (!video || priority) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsIntersecting(entry.isIntersecting);
-            },
-            { threshold: 0.25 } // Trigger when 25% valid
-        );
-
-        if (videoRef.current) {
-            observer.observe(videoRef.current);
-        }
-
-        return () => {
-            if (videoRef.current) {
-                observer.unobserve(videoRef.current);
-            }
-        };
-    }, [video, priority]);
-
-    // Handle playback based on visibility or priority
-    useEffect(() => {
-        if (!videoRef.current) return;
-
-        if (priority || isIntersecting) {
-            videoRef.current.play().catch(() => {
-                // Autoplay might be blocked, or user interaction required
-            });
-        } else {
-            videoRef.current.pause();
-        }
-    }, [priority, isIntersecting]);
-
     return (
         <Column fillWidth gap="m">
-            {video ? (
-                <video
-                    ref={videoRef}
-                    src={video}
-                    poster={images?.[0] || ""}
-                    title={`Video demonstration of ${title} project`}
-                    style={{
-                        borderRadius: "var(--radius-l)",
-                        border: "1px solid var(--neutral-alpha-weak)",
-                        display: "block",
-                        width: "100%",
-                        aspectRatio: "16/9",
-                        objectFit: "cover",
-                    }}
-                    loop
-                    muted
-                    playsInline
-                    preload={priority ? "auto" : "none"} // Optimized preload strategy
-                />
-
-            ) : (
-                <Carousel
-                    sizes="(max-width: 960px) 100vw, 960px"
-                    items={images.map((image, index) => ({
-                        slide: image,
-                        alt: `Preview of ${title} project - image ${index + 1}`,
-                    }))}
-                />
-            )}
+            <Carousel
+                sizes="(max-width: 960px) 100vw, 960px"
+                items={images.map((image, index) => ({
+                    slide: image,
+                    alt: `Preview of ${title} project - image ${index + 1}`,
+                }))}
+            />
             <Flex
                 s={{ direction: "column" }}
                 fillWidth

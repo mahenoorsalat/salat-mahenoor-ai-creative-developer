@@ -33,6 +33,7 @@ import {
   SiTailwindcss,
   SiMongodb,
   SiFiverr,
+  SiUpwork,
 } from "react-icons/si";
 
 import {
@@ -95,6 +96,7 @@ export const iconLibrary: Record<string, IconType> = {
   star: HiStar,
   dribbble: FaDribbble,
   fiverr: SiFiverr,
+  upwork: SiUpwork,
 };
 
 export type IconLibrary = typeof iconLibrary;

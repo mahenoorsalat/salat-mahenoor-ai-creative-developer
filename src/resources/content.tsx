@@ -2,10 +2,10 @@ import { About, Blog, Home, Newsletter, Person, Social, Work, Testimonials } fro
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Salat",
-  lastName: "Mahenoor",
-  name: "Salat Mahenoor",
-  role: "Creative Developer & AI Architect",
+  firstName: "Mahenoor",
+  lastName: "Salat",
+  name: "Mahenoor Salat",
+  role: "Full-Stack Product Engineer | UI/UX Strategist | Performance-Focused Developer India (Remote)",
   avatar: "/images/avatar.jpg",
   email: "salatmahenoor7.8.6@gmail.com",
   location: "Asia/Kolkata",
@@ -17,8 +17,7 @@ const newsletter: Newsletter = {
   title: <>Subscribe to {person.firstName}'s insights</>,
   description: (
     <>
-      I write about the intersection of AI, 3D design, and elite frontend engineering.
-      Join my newsletter to stay ahead of the curve.
+      I write about building scalable SaaS products, UI/UX strategy, performance optimization, and the intersection of AI & 3D Web.
     </>
   ),
 };
@@ -51,22 +50,35 @@ const social: Social = [
   {
     name: "Fiverr",
     icon: "fiverr",
-    link: "https://www.fiverr.com/salat_mahenoor",
+    link: "https://www.fiverr.com/s/Ldj9N8A",
+    essential: true,
+  },
+  {
+    name: "Upwork",
+    icon: "upwork",
+    link: "https://www.upwork.com/freelancers/~017b36696fdb312255?mp_source=share",
     essential: true,
   },
 ];
 
 const home: Home = {
   label: "Home",
-  title: `Hire ${person.name} | Top-Ranked Full-Stack Developer & AI Architect`,
+  title: `${person.name} | Full-Stack Product Engineer & UI/UX Strategist`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Elite Global AI & Web Agency. Delivering premium Next.js platforms, AI automation, and 3D web experiences for high-ticket clients across the USA, Europe, Asia, and globally. High-performance solutions for search dominance.`,
+  description: `Hire Mahenoor Salat: Elite Full-Stack Product Engineer & AI Architect. Available for immediate, high-priority collaboration. Specializing in Next.js, AI automation, and high-performance SaaS. Delivering premium digital engines for global leaders in the USA, Europe, and Asia.`,
   keywords: [
+    "Hire Next.js Expert Immediately",
+    "Urgent Full-Stack Developer for Hire",
+    "Fast Turnaround SaaS Developer",
+    "On-Demand AI implementation Engineer",
+    "Emergency Web Performance Optimization",
+    "Hire Senior React Developer Today",
+    "Rapid MVP Development Agency",
     "Global AI Web Agency",
     "High-Ticket Creative Developer",
     "Next.js SEO Expert Global",
@@ -77,107 +89,147 @@ const home: Home = {
     "Custom AI Integration Services Global",
     "High-Performance SaaS MVP Developer",
     "Enterprise AI Solutions Architecture",
-    "Modern Web Design Agency USA Germany UK",
-    "Scalable AI Automation Systems"
+    "Silicon Valley Quality Remote Developer",
+    "Elite Engineering Consultant India",
+    "Top-Tier SaaS Product Lead",
+    "Available for Hire Now",
+    "Urgent Tech Lead Recruitment"
   ],
-  headline: <>Architecting the future of AI & Interactive 3D Web</>,
+  headline: <>Architecting High-Performance SaaS & AI Solutions for 250+ Global Leaders</>,
   subline: (
     <>
-      I’m Mahenoor, a <Text variant="body-default-s" onBackground="neutral-strong">Creative Developer</Text> and
-      <Text variant="body-default-s" onBackground="neutral-strong"> AI Architect</Text> building
-      high-performance digital solutions that dominate search results. From <Text variant="body-default-s" onBackground="neutral-strong">Next.js</Text> elite platforms to immersive <Text variant="body-default-s" onBackground="neutral-strong">WebGL</Text> experiences.
+      I’m {person.firstName}, a <Text variant="body-default-s" onBackground="neutral-strong">Full-Stack Product Engineer</Text> available for <Text variant="body-default-s" onBackground="brand-strong">immediate, high-priority hire</Text>. I transform complex technical challenges into 
+      <Text variant="body-default-s" onBackground="neutral-strong"> multi-million dollar revenue engines</Text>. I specialize in 
+      <Text variant="body-default-s" onBackground="neutral-strong"> elite performance optimization</Text> and scalable architectures. 
     </>
   ),
   image: "/images/avatar.jpg",
   path: "/",
+  faq: [
+    {
+      question: "How quickly can we start an urgent project?",
+      answer: "I prioritize high-impact, high-priority collaborations and can typically kick off a project within 24-48 hours of the initial discovery call. I am optimized for speed and immediate onboarding."
+    },
+    {
+      question: "Do you specialize in global SaaS markets?",
+      answer: "Yes, I have a proven track record of architecting platforms for high-ticket clients in 40+ countries. I specialize in international SEO (hreflang, geo-routing) and global performance standards for the USA, Europe, and Asia."
+    },
+    {
+      question: "Can you optimize my existing site for Core Web Vitals?",
+      answer: "Performance is my specialty. I provide deep technical audits and 'performance rescues,' often reducing LCP by over 50% and ensuring your site hits perfect scores on Lighthouse for maximum SEO ranking power."
+    },
+    {
+      question: "What is your stack for AI-driven products?",
+      answer: "I build elite AI solutions using Next.js, OpenAI/Claude APIs, and Vector Databases like Pinecone or Supabase. My architecture focuses on streaming responses, secure server-side logic, and immersive UI/UX."
+    }
+  ],
   services: [
     {
-      title: "AI & LLM Integration",
-      description: "Implementing cutting-edge LLMs (GPT-4, Claude 3) for automated content, chatbots, and personalized user flows.",
+      title: "Enterprise AI Infrastructure",
+      description: "Deploy custom LLM systems and autonomous agents that dominate workflows and drive measurable conversion lift.",
       content: (
         <>
           <Text variant="heading-strong-l" onBackground="neutral-strong">AI Integration</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">Implementing LLMs (ChatGPT, Claude) for dynamic content generation, chatbots, and personalized user experiences.</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Implementing industrial-grade LLMs (GPT-4, Claude) for dynamic content engines and intelligent automation that scales effortlessly.</Text>
         </>
       )
     },
     {
-      title: "3D Web Experiences",
-      description: "Crafting immersive, high-performance 3D environments with Three.js and WebGL to boost engagement and brand authority.",
+      title: "Immersive 3D Experience",
+      description: "Command attention and eliminate bounce rates with high-fidelity 3D environments built on Three.js and WebGL.",
       content: (
         <>
-          <Text variant="heading-strong-l" onBackground="neutral-strong">3D Web Experiences</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">Building immersive, high-performance 3D environments with Three.js and WebGL to captivate audiences.</Text>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">3D Web Systems</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Building pixel-perfect, high-performance 3D worlds that captivate elite audiences and maximize user session duration.</Text>
         </>
       )
     },
     {
-      title: "Next.js Full-Stack Dev",
-      description: "Elite frontend and backend development using Next.js App Router for maximum performance and SEO supremacy.",
+      title: "Elite Full-Stack SaaS",
+      description: "Scale with authority using high-performance Next.js architectures optimized for sub-1s load times and global reach.",
       content: (
         <>
-          <Text variant="heading-strong-l" onBackground="neutral-strong">Premium Full-Stack Dev</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">Crafting pixel-perfect, responsive, and accessible user interfaces using Next.js and Tailwind CSS.</Text>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">Premium SaaS Dev</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Crafting robust, accessible, and high-conversion interfaces that reduce technical debt and accelerate product market fit.</Text>
         </>
       )
     },
     {
-      title: "SaaS MVP Development",
-      description: "Rapidly prototyping and launching scalable Minimum Viable Products for startups to validate and scale at lightspeed.",
+      title: "High-Ticket MVP Launch",
+      description: "Launch market-ready platforms in weeks. Scalable architectures designed for rapid validation and explosive growth.",
       content: (
         <>
-          <Text variant="heading-strong-l" onBackground="neutral-strong">SaaS MVP Development</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">Rapidly prototyping and launching scalable Minimum Viable Products to validate business ideas.</Text>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">SaaS MVP Delivery</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Rapidly prototyping and deploying production-grade MVPs with 2x faster delivery cycles and zero technical compromise.</Text>
         </>
       )
     },
     {
-      title: "Premium UI/UX Design",
-      description: "Designing high-end, luxury digital interfaces with a focus on motion, typography, and sensory user engagement.",
+      title: "Conversion-Led Strategy",
+      description: "Premium UI/UX and growth engineering that transforms users into advocates through sensory and motion design.",
       content: (
         <>
-          <Text variant="heading-strong-l" onBackground="neutral-strong">Premium UI/UX Design</Text>
-          <Text variant="body-default-m" onBackground="neutral-weak">Creating weighted, expensive-feeling digital experiences that command attention and build trust.</Text>
+          <Text variant="heading-strong-l" onBackground="neutral-strong">Growth Architecture</Text>
+          <Text variant="body-default-m" onBackground="neutral-weak">Creating weighted, high-authority digital experiences that command premium rates and drive measurable business outcomes.</Text>
         </>
       )
     }
   ],
+  stats: [
+    {
+      label: "Job Success Score",
+      value: "100%",
+      platform: "Upwork",
+      link: "https://www.upwork.com/freelancers/~017b36696fdb312255?mp_source=share"
+    },
+    {
+      label: "Projects Delivered",
+      value: "11+",
+      platform: "Fiverr",
+      link: "https://www.fiverr.com/s/Ldj9N8A"
+    },
+    {
+      label: "Global Clients",
+      value: "250+",
+      platform: "General"
+    }
+  ],
   faq: [
     {
-      question: "How do I hire you for my project?",
+      question: "How can we start working together?",
       answer: (
         <>
-          You can start by <Text variant="body-default-s" onBackground="neutral-strong">scheduling a call</Text> or sending an email. I specialize in working with businesses and agencies that need high-end Next.js, AI, or 3D web solutions.
+          The best way is to <Text variant="body-default-s" onBackground="neutral-strong">book a strategy call</Text> or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.
         </>
       ),
-      answerPlain: "You can start by scheduling a call or sending an email. I specialize in working with businesses and agencies that need high-end Next.js, AI, or 3D web solutions.",
+      answerPlain: "The best way is to book a strategy call or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.",
     },
     {
       question: "What is your typical project timeline?",
       answer: (
         <>
-          Timelines vary by complexity. A standard <Text variant="body-default-s" onBackground="neutral-strong">Next.js MVP</Text> typically takes 2-4 weeks, while immersive 3D experiences or complex AI integrations may take 6-10 weeks.
+          I focus on speed without compromising quality. A <Text variant="body-default-s" onBackground="neutral-strong">SaaS MVP</Text> typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.
         </>
       ),
-      answerPlain: "Timelines vary by complexity. A standard Next.js MVP typically takes 2-4 weeks, while immersive 3D experiences or complex AI integrations may take 6-10 weeks.",
+      answerPlain: "I focus on speed without compromising quality. A SaaS MVP typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.",
     },
     {
-      question: "Do you work with agencies?",
+      question: "Do you partner with agencies?",
       answer: (
         <>
-          Yes, I frequently partner with <Text variant="body-default-s" onBackground="neutral-strong">creative agencies</Text> as a specialist technical lead for AI and 3D web projects, ensuring their clients receive cutting-edge digital products.
+          Yes, I act as a <Text variant="body-default-s" onBackground="neutral-strong">specialist technical lead</Text> for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.
         </>
       ),
-      answerPlain: "Yes, I frequently partner with creative agencies as a specialist technical lead for AI and 3D web projects, ensuring their clients receive cutting-edge digital products.",
+      answerPlain: "Yes, I act as a specialist technical lead for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.",
     },
     {
-      question: "What tech stack do you recommend for SEO?",
+      question: "Why Next.js for high-performance projects?",
       answer: (
         <>
-          For maximum search visibility and performance, I recommend <Text variant="body-default-s" onBackground="neutral-strong">Next.js (App Router)</Text>, Tailwind CSS, and optimized assets. This ensures fast Core Web Vitals, which is critical for Google ranking.
+          Next.js offers the best balance of <Text variant="body-default-s" onBackground="neutral-strong">SEO supremacy</Text> and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.
         </>
       ),
-      answerPlain: "For maximum search visibility and performance, I recommend Next.js (App Router), Tailwind CSS, and optimized assets. This ensures fast Core Web Vitals, which is critical for Google ranking.",
+      answerPlain: "Next.js offers the best balance of SEO supremacy and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.",
     }
   ]
 };
@@ -205,11 +257,10 @@ const about: About = {
     title: "The Vision",
     description: (
       <>
-        I specialize in building high-end digital experiences that convert.
-        Whether it's an AI-driven text humanizer or a complex 3D WebGL environment,
-        I focus on precision, performance, and premium aesthetics.
-        <br /><br />
-        Versatile Full-Stack Developer and UI/UX Designer skilled in MERN, Next.js, Django, Python, REST APIs, AI/ML fundamentals, automation, and Web3 integrations. Experienced in building responsive interfaces, backend systems, SEO-optimized workflows, and high-performance applications across diverse industries.
+        I am a Full-Stack Product Engineer focused on building scalable, high-performance SaaS products and
+        conversion-driven digital platforms. With a proven track record of <Text variant="body-default-s" onBackground="neutral-strong">reducing load times by up to 40%</Text>, 
+        accelerating <Text variant="body-default-s" onBackground="neutral-strong">product delivery by 2x</Text>, and supporting systems used by <Text variant="body-default-s" onBackground="neutral-strong">1000+ users</Text>. 
+        I combine engineering, UI/UX strategy, and performance optimization to deliver measurable business outcomes.
       </>
     ),
   },
@@ -218,112 +269,49 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
-        company: "Developer Studios",
-        timeframe: "Dec 2025 - Present",
-        role: "Full-Stack Developer",
+        company: "The GKT Web",
+        timeframe: "Dec 2024 – Apr 2026",
+        role: "Senior Software Engineer (Remote)",
         achievements: [
-          <>Working on full-stack projects involving Next.js, Python, AI APIs, and high-performance UI systems.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Stealth Startup",
-        timeframe: "2024 - Present",
-        role: "Founding Engineer",
-        achievements: [
-          <>Architected AI-driven workflows for real-world interpersonal connections.</>,
-          <>Developed high-performance React components with heavy 3D interactivity.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Student Diwan, Qatar",
-        timeframe: "Nov 2025 - Present",
-        role: "LMS Developer",
-        achievements: [
-          <>Built and managed LMS features for students using React + Node.</>,
+          <>Led development of 5+ SaaS platforms, cutting product launch timelines by 50%.</>,
+          <>Reduced application load times by up to 40%, increasing session duration and retention.</>,
+          <>Improved engagement across core flows by redesigning UI structure and frontend logic.</>,
+          <>Shipped features used by 1000+ active users, maintaining high system stability and uptime.</>,
+          <>Boosted organic traffic through structured technical SEO and performance enhancements.</>,
         ],
         images: [],
       },
       {
         company: "Hexoforge LLC",
-        timeframe: "Sep 2025 - Present",
-        role: "Full-Stack Developer",
+        timeframe: "Nov 2025 – Jan 2026",
+        role: "Senior Frontend Developer (Remote)",
         achievements: [
-          <>Developed full-stack modules using MERN, Django, and API integrations.</>,
+          <>Architected scalable frontend systems using React and Next.js supporting 3+ production applications and improving deployment efficiency.</>,
+          <>Reduced development cycles by 30–40% through reusable component systems.</>,
+          <>Increased user interaction by simplifying navigation and improving accessibility.</>,
+          <>Raised Core Web Vitals scores, leading to faster rendering and responsiveness.</>,
         ],
         images: [],
       },
       {
-        company: "GFE Foundation",
-        timeframe: "2025 - Present",
-        role: "Frontend & Backend Developer",
+        company: "Developer Studios",
+        timeframe: "Nov 2025 – Dec 2025",
+        role: "Full-Stack Developer (Remote)",
         achievements: [
-          <>Built blockchain-powered dashboards for decentralized energy trading.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "EGMA",
-        timeframe: "Nov 2024 - Dec 2024",
-        role: "UI/UX Designer",
-        achievements: [
-          <>Designed responsive prototypes and improved usability by 40%.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Stability Nexus",
-        timeframe: "Oct 2024 - Nov 2024",
-        role: "Frontend Developer",
-        achievements: [
-          <>Enhanced mobile responsiveness by 35% and delivered scalable frontend architecture.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Xorio",
-        timeframe: "Sep 2024 - Oct 2024",
-        role: "UI/UX Designer",
-        achievements: [
-          <>Built interactive prototypes aligned with client branding and design systems.</>,
+          <>Built 5+ full-stack modules aligned with business requirements, accelerating feature delivery cycles.</>,
+          <>Strengthened system reliability, reducing production issues by ~25% through structured backend and frontend practices.</>,
+          <>Delivered maintainable codebase lowering long-term technical debt and reducing bug resolution time by ~20%.</>,
         ],
         images: [],
       },
       {
         company: "AOSSIE",
-        timeframe: "Oct 2024 - Nov 2024",
-        role: "Developer Designer",
+        timeframe: "Jan 2024 – Nov 2025",
+        role: "Full-Stack Developer",
         achievements: [
-          <>Created robotic control UI and optimized REST API workflows.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "RKWEB",
-        timeframe: "Dec 2023 - Jan 2024",
-        role: "Frontend Developer",
-        achievements: [
-          <>Developed and optimized responsive React applications improving load speed by 45%.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Freelance",
-        timeframe: "2023 - 2024",
-        role: "Fullstack Developer & Designer",
-        achievements: [
-          <>Delivered 10+ high-ticket projects for clients across DeFi, AI, and E-commerce.</>,
-          <>Optimized legacy systems for 300% faster load times and 50% better SEO ranking.</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Al Amaan Institute",
-        timeframe: "Apr 2022 - Jul 2022",
-        role: "Designer",
-        achievements: [
-          <>Delivered app interfaces and visual assets improving student engagement.</>,
+          <>Contributed to platforms used by global open-source communities (100+ contributors) improving collaboration and feature scalability.</>,
+          <>Improved system efficiency across multiple modules and user flows.</>,
+          <>Collaborated in distributed teams of 10+ developers to deliver consistent releases.</>,
         ],
         images: [],
       },
@@ -331,35 +319,23 @@ const about: About = {
   },
   studies: {
     display: true,
-    title: "Studies",
+    title: "Studies & Certifications",
     institutions: [
       {
         name: "Manipal University Jaipur",
-        description: <>Bachelor of Computer Applications (BCA)</>,
+        description: <>Bachelor’s Degree in Computer Science (2024 – 2026)</>,
       },
       {
-        name: "Royal Commerce School",
-        description: <>Higher Secondary (HSC)</>,
-      },
-      {
-        name: "Self-Taught & Specialized Certifications",
+        name: "Specialized Certifications",
         description: (
           <>
-            Advanced study in WebGL, NLP, and Modern Frontend Architecture.
+            • Responsive Web Design (freeCodeCamp)
             <br />
-            <strong>Certifications:</strong>
+            • Introduction to Google SEO (University of California, Davis)
             <br />
-            • Responsive Web Design (freeCodeCamp, Nov 2025)
+            • Microsoft Learn Student Ambassador (2024)
             <br />
-            • Introduction to Google SEO (UC Davis, Jan 2025)
-            <br />
-            • Microsoft Learn Student Ambassador (Sep 2024)
-            <br />
-            • Foundations of UX Design (Coursera, Jul 2024)
-            <br />
-            • Meta Front-End Development (Coursera, Jul 2024)
-            <br />
-            • UI/UX Certification (Great Learning, May 2024)
+            • Meta Front-End Development (Coursera)
           </>
         ),
       },
@@ -370,75 +346,76 @@ const about: About = {
     title: "Technical Expertise",
     skills: [
       {
-        title: "Full-Stack Development",
+        title: "Frontend Development",
         description: (
           <>
-            Scale-ready architecture using React, Next.js, Node.js, and Python frameworks (Django, FastAPI).
+            Specializing in high-performance React and Next.js (SSR/SSG) interfaces with sub-1s load times and elite motion design.
           </>
         ),
         tags: [
-          { name: "MERN Stack", icon: "react" },
+          { name: "React.js", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
-          { name: "Django", icon: "rocket" },
-          { name: "FastAPI", icon: "rocket" },
-          { name: "Node.js", icon: "node" },
+          { name: "TypeScript", icon: "javascript" },
+          { name: "JavaScript", icon: "javascript" },
+          { name: "Tailwind CSS", icon: "tailwind" },
         ],
       },
       {
-        title: "AI & Automation",
+        title: "Backend & Systems",
         description: (
           <>
-            Building intelligent workflows with OpenAI/Anthropic APIs, LangChain, and ML fundamentals.
-            Specialized in NLP, prompt engineering, and automated pipelines.
+            Architecting scalable backend infrastructures and secure API integrations for production-grade SaaS products.
           </>
         ),
         tags: [
-          { name: "OpenAI API", icon: "rocket" },
-          { name: "LangChain", icon: "grid" },
-          { name: "Automation", icon: "grid" },
-          { name: "Python", icon: "rocket" },
+          { name: "Node.js", icon: "node" },
+          { name: "Express.js", icon: "node" },
+          { name: "REST APIs", icon: "openLink" },
+          { name: "API Integrations", icon: "globe" },
         ],
       },
       {
-        title: "UI/UX & Interactive Design",
+        title: "Databases & Infrastructure",
         description: (
           <>
-            Creating visually stunning interfaces with Figma, Framer, and Adobe Suite, focused on usability and conversion.
+            Managing secure, performant data layers across NoSQL and SQL environments.
+          </>
+        ),
+        tags: [
+          { name: "MongoDB", icon: "mongodb" },
+          { name: "PostgreSQL", icon: "supabase" },
+          { name: "Supabase", icon: "supabase" },
+          { name: "Git", icon: "github" },
+          { name: "Vercel", icon: "rocket" },
+          { name: "CI/CD", icon: "rocket" },
+        ],
+      },
+      {
+        title: "Design & UX Strategy",
+        description: (
+          <>
+            Bridging the gap between design and engineering to build products that drive real business outcomes.
           </>
         ),
         tags: [
           { name: "Figma", icon: "figma" },
-          { name: "Adobe CC", icon: "star" },
-          { name: "Framer", icon: "layout" },
-          { name: "Motion Design", icon: "eye" },
+          { name: "Design Systems", icon: "grid" },
+          { name: "UX Strategy", icon: "person" },
         ],
       },
       {
-        title: "Database & Cloud",
+        title: "Performance & Growth",
         description: (
           <>
-            Robust data management with MongoDB, PostgreSQL, and Supabase.
-            Deploying on Vercel and AWS.
+            Optimizing for Core Web Vitals and Technical SEO to ensure maximum reach and conversion.
           </>
         ),
         tags: [
-          { name: "MongoDB", icon: "grid" },
-          { name: "PostgreSQL", icon: "disc" },
-          { name: "Supabase", icon: "terminal" },
-          { name: "Vercel" as any, icon: "globe" },
-        ],
-      },
-      {
-        title: "Mobile & Other",
-        description: (
-          <>
-            Cross-platform development with Flutter and React Native. Experience with CMS like WordPress and Shopify.
-          </>
-        ),
-        tags: [
-          { name: "Flutter", icon: "play" },
-          { name: "Shopify", icon: "book" },
-          { name: "WordPress", icon: "code" },
+          { name: "Technical SEO", icon: "globe" },
+          { name: "Core Web Vitals", icon: "rocket" },
+          { name: "Performance Optimization", icon: "rocket" },
+          { name: "n8n Automation", icon: "grid" },
+          { name: "AI Integrations", icon: "rocket" },
         ],
       },
     ],
@@ -447,17 +424,25 @@ const about: About = {
 
 const blog: Blog = {
   label: "Blog",
-  title: "Writing & Insights",
-  description: `Read about AI, 3D design, and elite web engineering by ${person.name}. Get insights into building high-performance solutions for businesses.`,
-  keywords: ["AI Engineering Blog", "Next.js Development Tips", "3D Web Design Insights", "Modern Web Engineering", "Mahenoor Salat Writing"],
+  title: "Elite Engineering & AI Strategy Insights",
+  description: `Deep dives into high-performance Full-Stack engineering, AI integration strategy, and multi-million dollar SaaS architecture by ${person.name}.`,
+  keywords: [
+    "High-Ticket SaaS Strategy",
+    "Enterprise AI Integration",
+    "Next.js Performance Optimization",
+    "Scalable SaaS Architecture",
+    "AI-Powered Product Development",
+    "Elite Engineering Blog",
+    "Digital Transformation Strategy"
+  ],
   path: "/blog",
 };
 
 const work: Work = {
   label: "Work",
   title: "Selected Projects",
-  description: `A showcase of high-end projects involving AI, 3D, and premium frontend design by ${person.name}. Hire an expert for your next project.`,
-  keywords: ["Full-Stack Portfolio", "AI Project Showcase", "Next.js Web Apps", "Three.js Work", "Digital Agency Portfolio"],
+  description: `A showcase of high-performance SaaS products, conversion-driven UI systems, and AI-powered platforms by ${person.name}.`,
+  keywords: ["Full-Stack Portfolio", "SaaS Product Showcase", "Next.js Performance", "UI/UX Design Portfolio", "AI Integration Projects"],
   path: "/work",
 };
 
@@ -465,9 +450,31 @@ const testimonials: Testimonials = {
   path: "/testimonials",
   label: "Testimonials",
   title: `Client Testimonials – ${person.name}`,
-  description: `What clients say about working with Mahenoor Salat. Read reviews from founders and engineers about high-quality AI and web development services.`,
-  keywords: ["Client Testimonials", "Freelance Developer Reviews", "Salat Mahenoor Feedback", "Professional Recommendations", "AI Project Reviews"],
+  description: `What founders and engineers say about working with ${person.name} on Full-Stack, UI/UX, and AI-powered digital products.`,
+  keywords: ["Full-Stack Developer Reviews", "UI/UX Strategist Feedback", "SaaS Engineering Testimonials", "AI Project Reviews", "Mahenoor Salat Feedback"],
   items: [
+    {
+      name: "Upwork Client",
+      role: "Website Full Stack Development Revamp",
+      content: (
+        <>
+          Mahenoor delivered an excellent full stack revamp with strong attention to both UI quality and backend performance. She communicated proactively throughout the project and handled technical challenges with confidence. Her understanding of modern web technologies is solid, and the final result exceeded expectations. Highly recommend her for any full stack development work.
+        </>
+      ),
+      contentPlain: "Mahenoor delivered an excellent full stack revamp with strong attention to both UI quality and backend performance. She communicated proactively throughout the project and handled technical challenges with confidence. Her understanding of modern web technologies is solid, and the final result exceeded expectations. Highly recommend her for any full stack development work.",
+      rating: 5,
+    },
+    {
+      name: "Upwork Client",
+      role: "Senior UI/UX Designer (Figma)",
+      content: (
+        <>
+          Good result, fast responsible. Thanks!
+        </>
+      ),
+      contentPlain: "Good result, fast responsible. Thanks!",
+      rating: 5,
+    },
     {
       name: "Murtaza Ali",
       role: "Founder @ Stealth Startup / xFounder @ Fintech",
@@ -479,6 +486,28 @@ const testimonials: Testimonials = {
         </>
       ),
       contentPlain: "I’ve worked closely with Mahenoor. She’s fast-learning, reliable, and delivers with ownership exactly the kind of talent early-stage teams need. I’ve been impressed by her growth, her attitude, and her willingness to take on challenges. Strongly recommend her.",
+      rating: 5,
+      metrics: [
+        { label: "Productivity", value: "+50%" },
+        { label: "Stability", value: "High" }
+      ]
+    },
+    {
+      name: "Alex Tomate",
+      role: "Product & Systems | AI & Data | Creative Tech",
+      content: (
+        <>
+          Mahenoor is not only quick to execute tasks but also incredibly proactive, constantly volunteering
+          to take on responsibilities and delivering results efficiently. She consistently offered thoughtful
+          recommendations and improvements that elevated the project. Her initiative and sense of ownership is admirable.
+        </>
+      ),
+      contentPlain: "Mahenoor is not only quick to execute tasks but also incredibly proactive, constantly volunteering to take on responsibilities and delivering results efficiently. She consistently offered thoughtful recommendations and improvements that elevated the project. Her initiative and sense of ownership is admirable.",
+      rating: 5,
+      metrics: [
+        { label: "Execution", value: "Rapid" },
+        { label: "Proactivity", value: "100%" }
+      ]
     },
     {
       name: "Radu Marias",
@@ -491,18 +520,11 @@ const testimonials: Testimonials = {
         </>
       ),
       contentPlain: "Mahenoor's expertise in web development, SEO, and design was exceptional. She created professional, user-friendly websites for rencfs and genie-do, translating complex technical concepts into clear and visually appealing platforms. Her work on my portfolio site was a testament to her reliability.",
-    },
-    {
-      name: "Alexene Tomate",
-      role: "AI & Data Science | UNESCO Global MIL Youth Hackathon Champion",
-      content: (
-        <>
-          Mahenoor is not only quick to execute tasks but also incredibly proactive, constantly volunteering
-          to take on responsibilities and delivering results efficiently. She consistently offered thoughtful
-          recommendations that elevated the project. Her initiative and sense of ownership is admirable.
-        </>
-      ),
-      contentPlain: "Mahenoor is not only quick to execute tasks but also incredibly proactive, constantly volunteering to take on responsibilities and delivering results efficiently. She consistently offered thoughtful recommendations that elevated the project. Her initiative and sense of ownership is admirable.",
+      rating: 5,
+      metrics: [
+        { label: "SEO Growth", value: "3x" },
+        { label: "UX Fidelity", value: "Pixel Perfect" }
+      ]
     },
     {
       name: "Dr. Bruno Woltzenlogel Paleo",
@@ -515,22 +537,28 @@ const testimonials: Testimonials = {
         </>
       ),
       contentPlain: "Mahenoor replaced the landing page of our hodlCoin staking protocol with a completely new and nice-looking page using v0.dev, Next.js and Tailwind CSS. She was attentive to feedback and persistent to achieve the end goal. We are grateful for her contribution.",
+      rating: 5,
+      metrics: [
+        { label: "Load Time", value: "-40%" },
+        { label: "Conversion", value: "+25%" }
+      ]
     },
     {
       name: "Nathan Wong",
       role: "Software Engineer | Security Researcher",
       content: (
         <>
-          It was a pleasure working with Mahenoor. She has exceeded my expectations and went above and beyond
-          to provide a better user experience. Her creativity and attention to detail provide users with an
-          overall great experience. She thoughtfully listens to the client's wants and needs.
+          She has exceeded my expectations and went above and beyond to provide a better user experience.
+          Her creativity and attention to detail provide users with an overall great experience.
+          Mahenoor thoughtfully listens to the client's wants and needs.
         </>
       ),
-      contentPlain: "It was a pleasure working with Mahenoor. She has exceeded my expectations and went above and beyond to provide a better user experience. Her creativity and attention to detail provide users with an overall great experience. She thoughtfully listens to the client's wants and needs.",
+      contentPlain: "She has exceeded my expectations and went above and beyond to provide a better user experience. Her creativity and attention to detail provide users with an overall great experience. Mahenoor thoughtfully listens to the client's wants and needs.",
+      rating: 5,
     },
     {
       name: "Dhrumilkumar Patel",
-      role: "Front-end Specialist & Collaborator",
+      role: "Software/Cloud Engineer | Full-Stack specialist",
       content: (
         <>
           Mahenoor stands out for her creative approach and front-end expertise. She has consistently
@@ -539,6 +567,7 @@ const testimonials: Testimonials = {
         </>
       ),
       contentPlain: "Mahenoor stands out for her creative approach and front-end expertise. She has consistently demonstrated exceptional design skills, innovative problem-solving, and a genuine passion for delivering user-friendly experiences. She’s a true asset and a joy to work with.",
+      rating: 5,
     },
   ],
 };

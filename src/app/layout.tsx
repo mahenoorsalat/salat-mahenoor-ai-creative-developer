@@ -125,8 +125,18 @@ export default async function RootLayout({
         founder: {
           "@id": `${baseURL}/#person`
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": home.faq.map((item) => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
       }
-
     ]
   };
 
