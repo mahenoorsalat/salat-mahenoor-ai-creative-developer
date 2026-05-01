@@ -70,26 +70,28 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { platform: string } }) {
-  const platform = platforms[params.platform as keyof typeof platforms];
+  const platformKey = params.platform.toLowerCase();
+  const platform = platforms[platformKey as keyof typeof platforms];
   if (!platform) return {};
 
   return Meta.generate({
     title: platform.title,
     description: platform.description,
     baseURL: baseURL,
-    path: `/solutions/${params.platform}`,
+    path: `/solutions/${platformKey}`,
     image: home.image,
   });
 }
 
 export default function PlatformSolutions({ params }: { params: { platform: string } }) {
-  const platform = platforms[params.platform as keyof typeof platforms];
+  const platformKey = params.platform.toLowerCase();
+  const platform = platforms[platformKey as keyof typeof platforms];
 
   if (!platform) {
     notFound();
   }
 
-  const socialLink = social.find(s => s.name.toLowerCase() === params.platform.toLowerCase());
+  const socialLink = social.find(s => s.name.toLowerCase() === platformKey);
 
   return (
     <Column fillWidth horizontal="center" paddingTop="xl" paddingBottom="160">
