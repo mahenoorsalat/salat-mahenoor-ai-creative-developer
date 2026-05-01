@@ -4,6 +4,8 @@ import { StructuredData } from "@/components";
 import React from "react";
 import { notFound } from "next/navigation";
 
+export const dynamicParams = true;
+
 interface PlatformData {
   title: string;
   description: string;
