@@ -72,8 +72,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ platform: string }> }) {
-  const { platform: platformParam } = await params;
-  const platformKey = platformParam.toLowerCase();
+  const awaitedParams = await params;
+  const platformParam = awaitedParams?.platform;
+  const platformKey = platformParam?.toLowerCase() || "";
   const platform = platforms[platformKey as keyof typeof platforms];
   if (!platform) return {};
 
@@ -87,15 +88,16 @@ export async function generateMetadata({ params }: { params: Promise<{ platform:
 }
 
 export default async function PlatformSolutions({ params }: { params: Promise<{ platform: string }> }) {
-  const { platform: platformParam } = await params;
-  const platformKey = platformParam.toLowerCase();
+  const awaitedParams = await params;
+  const platformParam = awaitedParams?.platform;
+  const platformKey = platformParam?.toLowerCase() || "";
   const platform = platforms[platformKey as keyof typeof platforms];
 
   if (!platform) {
     notFound();
   }
 
-  const socialLink = social.find(s => s.name.toLowerCase() === platformKey);
+  const socialLink = social.find(s => s?.name?.toLowerCase() === platformKey);
 
   return (
     <Column fillWidth horizontal="center" paddingTop="xl" paddingBottom="160">
@@ -104,7 +106,7 @@ export default async function PlatformSolutions({ params }: { params: Promise<{ 
         baseURL={baseURL}
         title={platform.title}
         description={platform.description}
-        path={`/solutions/${params.platform}`}
+        path={`/solutions/${platformKey}`}
         image={home.image}
       />
       <Column maxWidth="m" paddingX="l" gap="64">
@@ -145,7 +147,7 @@ export default async function PlatformSolutions({ params }: { params: Promise<{ 
         <Column fillWidth>
             <Column gap="32">
                 <Heading as="h2" variant="display-strong-xs">
-                    Why {params.platform.charAt(0).toUpperCase() + params.platform.slice(1)} Clients Choose Me
+                    Why {platformKey.charAt(0).toUpperCase() + platformKey.slice(1)} Clients Choose Me
                 </Heading>
                 <Row wrap gap="24">
                     {platform.benefits.map((benefit, index) => (
@@ -174,7 +176,7 @@ export default async function PlatformSolutions({ params }: { params: Promise<{ 
                 Ready to elevate your project beyond the platform?
             </Heading>
             <Text variant="body-default-l" onBackground="neutral-weak" align="center" style={{ maxWidth: '500px' }}>
-                Whether you found me on {params.platform} or Reddit, the quality remains the same: Elite.
+                Whether you found me on {platformKey} or Reddit, the quality remains the same: Elite.
             </Text>
             <Button size="l" href="https://calendly.com/salatmahenoor7-8-6/30min" label="Schedule a Strategy Call" prefixIcon="calendar" />
         </Column>
