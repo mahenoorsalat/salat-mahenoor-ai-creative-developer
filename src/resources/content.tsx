@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Mahenoor",
   lastName: "Salat",
   name: "Mahenoor Salat",
-  role: "Full-Stack Product Engineer | UI/UX Strategist | Performance-Focused Developer India (Remote)",
+  role: "Elite Full-Stack Product Engineer | Expert UI/UX Designer & Figma Specialist | AI Automation Expert",
   avatar: "/images/avatar.jpg",
   email: "salatmahenoor7.8.6@gmail.com",
   location: "Asia/Kolkata",
@@ -72,35 +72,29 @@ const home: Home = {
 
   description: `Hire Mahenoor Salat: Elite Full-Stack Product Engineer & AI Architect. Available for immediate, high-priority collaboration. Specializing in Next.js, AI automation, and high-performance SaaS. Delivering premium digital engines for global leaders in the USA, Europe, and Asia.`,
   keywords: [
-    "Hire Next.js Expert Immediately",
-    "Urgent Full-Stack Developer for Hire",
-    "Fast Turnaround SaaS Developer",
-    "On-Demand AI implementation Engineer",
-    "Emergency Web Performance Optimization",
-    "Hire Senior React Developer Today",
-    "Rapid MVP Development Agency",
-    "Global AI Web Agency",
-    "High-Ticket Creative Developer",
-    "Next.js SEO Expert Global",
-    "Elite Full-Stack Developer USA Europe Asia",
-    "Premium Web Design Agency Worldwide",
-    "AI Architect for Global Startups",
-    "Immersive 3D Web Experiences",
-    "Custom AI Integration Services Global",
-    "High-Performance SaaS MVP Developer",
-    "Enterprise AI Solutions Architecture",
-    "Silicon Valley Quality Remote Developer",
-    "Elite Engineering Consultant India",
-    "Top-Tier SaaS Product Lead",
-    "Available for Hire Now",
-    "Urgent Tech Lead Recruitment"
+    "Elite UI/UX Designer Portfolio 2026",
+    "Figma Expert for SaaS & App Design",
+    "Full-Stack MERN Product Engineer",
+    "Next.js 15 Performance Architecture",
+    "AI Agentic Workflow Automation n8n",
+    "Enterprise LLM Trainer & Annotator",
+    "High-Conversion Landing Page Design",
+    "Technical SEO for multi-million dollar platforms",
+    "SaaS MVP Development for Global Founders",
+    "AI-Driven Product Strategy 2025",
+    "Presentation & Pitch Deck Design Specialist",
+    "Scalable Mobile App Design & Figma Systems",
+    "Silicon Valley Standard Remote Developer",
+    "Senior Product Engineer for Hire",
+    "3D Web Experience Architecture",
+    "Hiring Elite Tech Leads Globally"
   ],
   headline: <>Architecting High-Performance SaaS & AI Solutions for 250+ Global Leaders</>,
   subline: (
     <>
-      I’m {person.firstName}, a <Text variant="body-default-s" onBackground="neutral-strong">Full-Stack Product Engineer</Text> available for <Text variant="body-default-s" onBackground="brand-strong">immediate, high-priority hire</Text>. I transform complex technical challenges into 
-      <Text variant="body-default-s" onBackground="neutral-strong"> multi-million dollar revenue engines</Text>. I specialize in 
-      <Text variant="body-default-s" onBackground="neutral-strong"> elite performance optimization</Text> and scalable architectures. 
+      I’m {person.firstName}, an <Text as="span" variant="body-default-s" onBackground="neutral-strong">Elite Full-Stack Engineer</Text> and <Text as="span" variant="body-default-s" onBackground="brand-strong">Expert UI/UX Designer</Text>. I specialize in 
+      <Text as="span" variant="body-default-s" onBackground="neutral-strong"> Figma Design Systems</Text>, <Text as="span" variant="body-default-s" onBackground="neutral-strong">MERN/Next.js Architecture</Text>, and building 
+      <Text as="span" variant="body-default-s" onBackground="neutral-strong"> multi-million dollar revenue engines</Text>. I bridge the gap between creative design and scalable engineering. 
     </>
   ),
   image: "/images/avatar.jpg",
@@ -130,7 +124,7 @@ const home: Home = {
       question: "How can we start working together?",
       answer: (
         <>
-          The best way is to <Text variant="body-default-s" onBackground="neutral-strong">book a strategy call</Text> or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.
+          The best way is to <Text as="span" variant="body-default-s" onBackground="neutral-strong">book a strategy call</Text> or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.
         </>
       ),
       answerPlain: "The best way is to book a strategy call or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.",
@@ -139,7 +133,7 @@ const home: Home = {
       question: "What is your typical project timeline?",
       answer: (
         <>
-          I focus on speed without compromising quality. A <Text variant="body-default-s" onBackground="neutral-strong">SaaS MVP</Text> typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.
+          I focus on speed without compromising quality. A <Text as="span" variant="body-default-s" onBackground="neutral-strong">SaaS MVP</Text> typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.
         </>
       ),
       answerPlain: "I focus on speed without compromising quality. A SaaS MVP typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.",
@@ -148,7 +142,7 @@ const home: Home = {
       question: "Do you partner with agencies?",
       answer: (
         <>
-          Yes, I act as a <Text variant="body-default-s" onBackground="neutral-strong">specialist technical lead</Text> for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.
+          Yes, I act as a <Text as="span" variant="body-default-s" onBackground="neutral-strong">specialist technical lead</Text> for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.
         </>
       ),
       answerPlain: "Yes, I act as a specialist technical lead for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.",
@@ -157,7 +151,7 @@ const home: Home = {
       question: "Why Next.js for high-performance projects?",
       answer: (
         <>
-          Next.js offers the best balance of <Text variant="body-default-s" onBackground="neutral-strong">SEO supremacy</Text> and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.
+          Next.js offers the best balance of <Text as="span" variant="body-default-s" onBackground="neutral-strong">SEO supremacy</Text> and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.
         </>
       ),
       answerPlain: "Next.js offers the best balance of SEO supremacy and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.",
@@ -241,7 +235,15 @@ const about: About = {
   label: "About",
   title: `Salat Mahenoor | About & Experience`,
   description: `View the portfolio and resume of ${person.name}, a Senior Freelance Full-Stack Developer and AI Expert. Specializing in MERN, Next.js, and scaling AI-driven businesses and agencies.`,
-  keywords: ["Hire Developer Resume", "Senior Freelance Portfolio", "AI Developer Experience", "Full-Stack Engineer for Hire", "Next.js Developer Rajkot"],
+  keywords: [
+    "Salat Mahenoor Resume 2026",
+    "Expert UI/UX Designer Figma",
+    "Senior Full-Stack MERN Engineer",
+    "AI Automation & n8n Specialist",
+    "SaaS Product Engineering Expert",
+    "App Design & Presentation Specialist",
+    "Full-Stack Developer for High-Ticket SaaS"
+  ],
   path: "/about",
   tableOfContent: {
     display: true,
@@ -260,8 +262,8 @@ const about: About = {
     description: (
       <>
         I am a Full-Stack Product Engineer focused on building scalable, high-performance SaaS products and
-        conversion-driven digital platforms. With a proven track record of <Text variant="body-default-s" onBackground="neutral-strong">reducing load times by up to 40%</Text>, 
-        accelerating <Text variant="body-default-s" onBackground="neutral-strong">product delivery by 2x</Text>, and supporting systems used by <Text variant="body-default-s" onBackground="neutral-strong">1000+ users</Text>. 
+        conversion-driven digital platforms. With a proven track record of <Text as="span" variant="body-default-s" onBackground="neutral-strong">reducing load times by up to 40%</Text>, 
+        accelerating <Text as="span" variant="body-default-s" onBackground="neutral-strong">product delivery by 2x</Text>, and supporting systems used by <Text as="span" variant="body-default-s" onBackground="neutral-strong">1000+ users</Text>. 
         I combine engineering, UI/UX strategy, and performance optimization to deliver measurable business outcomes.
       </>
     ),
@@ -358,7 +360,7 @@ const about: About = {
           { name: "React.js", icon: "react" },
           { name: "Next.js", icon: "nextjs" },
           { name: "TypeScript", icon: "javascript" },
-          { name: "JavaScript", icon: "javascript" },
+          { name: "MERN Stack", icon: "node" },
           { name: "Tailwind CSS", icon: "tailwind" },
         ],
       },
@@ -393,16 +395,33 @@ const about: About = {
         ],
       },
       {
-        title: "Design & UX Strategy",
+        title: "Expert UI/UX & Figma Strategy",
         description: (
           <>
-            Bridging the gap between design and engineering to build products that drive real business outcomes.
+            Building high-fidelity design systems, wireframes, and prototypes in Figma that bridge the gap between user experience and engineering.
           </>
         ),
         tags: [
-          { name: "Figma", icon: "figma" },
+          { name: "Figma Expert", icon: "figma" },
           { name: "Design Systems", icon: "grid" },
-          { name: "UX Strategy", icon: "person" },
+          { name: "UI/UX Strategy", icon: "person" },
+          { name: "App Design", icon: "grid" },
+          { name: "Presentation Design", icon: "document" },
+        ],
+      },
+      {
+        title: "AI & Automation Strategy",
+        description: (
+          <>
+            Specializing in n8n workflow automation, AI agent development, and high-fidelity LLM S2 annotation for enterprise applications.
+          </>
+        ),
+        tags: [
+          { name: "n8n Automation", icon: "grid" },
+          { name: "AI Agents", icon: "rocket" },
+          { name: "LLM Annotation", icon: "person" },
+          { name: "AI Training", icon: "rocket" },
+          { name: "OpenAI/Claude", icon: "rocket" },
         ],
       },
       {
@@ -416,8 +435,6 @@ const about: About = {
           { name: "Technical SEO", icon: "globe" },
           { name: "Core Web Vitals", icon: "rocket" },
           { name: "Performance Optimization", icon: "rocket" },
-          { name: "n8n Automation", icon: "grid" },
-          { name: "AI Integrations", icon: "rocket" },
         ],
       },
     ],

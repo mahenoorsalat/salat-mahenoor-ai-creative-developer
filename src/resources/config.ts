@@ -23,6 +23,9 @@ const routes: RoutesConfig = {
   "/work": true,
   "/blog": true,
   "/testimonials": true,
+  "/solutions/upwork": true,
+  "/solutions/reddit": true,
+  "/solutions/fiverr": true,
 };
 
 const display: DisplayConfig = {

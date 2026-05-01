@@ -22,6 +22,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date("2024-02-12").toISOString().split("T")[0],
   }));
 
-  return [...routes, ...blogs, ...works];
+  const platforms = ["upwork", "reddit", "fiverr"];
+  const solutionRoutes = platforms.map((platform) => ({
+    url: `${baseURL}/solutions/${platform}`,
+    lastModified: new Date().toISOString().split("T")[0],
+  }));
+
+  return [...routes, ...blogs, ...works, ...solutionRoutes];
 }
 

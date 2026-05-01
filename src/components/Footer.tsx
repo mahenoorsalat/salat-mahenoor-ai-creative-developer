@@ -21,6 +21,17 @@ export const Footer = () => {
           align: "center",
         }}
       >
+        <Row gap="16" wrap horizontal="center" marginBottom="16">
+          <SmartLink href="/solutions/upwork">
+            <Text variant="label-default-s" onBackground="neutral-weak">Upwork Specialist</Text>
+          </SmartLink>
+          <SmartLink href="/solutions/reddit">
+            <Text variant="label-default-s" onBackground="neutral-weak">Reddit Verified</Text>
+          </SmartLink>
+          <SmartLink href="/solutions/fiverr">
+            <Text variant="label-default-s" onBackground="neutral-weak">Fiverr Pro Alternative</Text>
+          </SmartLink>
+        </Row>
         <Text variant="body-default-s" onBackground="neutral-strong">
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
