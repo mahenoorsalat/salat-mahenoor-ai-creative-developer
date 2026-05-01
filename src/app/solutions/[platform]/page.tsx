@@ -71,8 +71,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { platform: string } }) {
-  const platformKey = params.platform.toLowerCase();
+export async function generateMetadata({ params }: { params: Promise<{ platform: string }> }) {
+  const { platform: platformParam } = await params;
+  const platformKey = platformParam.toLowerCase();
   const platform = platforms[platformKey as keyof typeof platforms];
   if (!platform) return {};
 
@@ -85,8 +86,9 @@ export async function generateMetadata({ params }: { params: { platform: string 
   });
 }
 
-export default function PlatformSolutions({ params }: { params: { platform: string } }) {
-  const platformKey = params.platform.toLowerCase();
+export default async function PlatformSolutions({ params }: { params: Promise<{ platform: string }> }) {
+  const { platform: platformParam } = await params;
+  const platformKey = platformParam.toLowerCase();
   const platform = platforms[platformKey as keyof typeof platforms];
 
   if (!platform) {
