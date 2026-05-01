@@ -1,4 +1,4 @@
-import { Column, Heading, Text, Row, Icon, Button, RevealFx, Meta, Schema, Section } from "@once-ui-system/core";
+import { Column, Heading, Text, Row, Icon, Button, RevealFx, Meta, Schema } from "@once-ui-system/core";
 import { baseURL, person, social, home, about } from "@/resources";
 import { StructuredData } from "@/components";
 import React from "react";
@@ -136,7 +136,7 @@ export default function PlatformSolutions({ params }: { params: { platform: stri
             </RevealFx>
         </Column>
 
-        <Section fillWidth>
+        <Column fillWidth>
             <Column gap="32">
                 <Heading as="h2" variant="display-strong-xs">
                     Why {params.platform.charAt(0).toUpperCase() + params.platform.slice(1)} Clients Choose Me
@@ -146,8 +146,8 @@ export default function PlatformSolutions({ params }: { params: { platform: stri
                         <Column 
                             key={index} 
                             flex={1} 
-                            minWidth="240" 
-                            padding="32" 
+                            minWidth={240} 
+                            padding="l" 
                             background="surface" 
                             radius="xl" 
                             border="neutral-alpha-weak"
@@ -161,9 +161,9 @@ export default function PlatformSolutions({ params }: { params: { platform: stri
                     ))}
                 </Row>
             </Column>
-        </Section>
+        </Column>
 
-        <Column fillWidth gap="32" padding="48" background="brand-alpha-weak" radius="2xl" border="brand-alpha-medium" horizontal="center">
+        <Column fillWidth gap="32" padding="xl" background="brand-alpha-weak" radius="xl" border="brand-alpha-medium" horizontal="center">
             <Heading as="h2" variant="display-strong-s" align="center">
                 Ready to elevate your project beyond the platform?
             </Heading>
