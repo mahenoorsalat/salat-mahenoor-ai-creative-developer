@@ -55,7 +55,12 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
           <Text variant="heading-strong-l" wrap="balance">
             {post.metadata.title}
           </Text>
-          <Text variant="body-default-m" onBackground="neutral-weak" lineClamp={2}>
+          <Text variant="body-default-m" onBackground="neutral-weak" style={{
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden'
+          }}>
             {post.metadata.summary}
           </Text>
         </Column>

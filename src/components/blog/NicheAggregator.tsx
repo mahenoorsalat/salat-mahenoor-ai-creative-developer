@@ -8,11 +8,10 @@ interface Article {
     title: string;
     description: string;
     url: string;
-    tag_list: string[];
-    user: {
-        name: string;
-    };
-    published_at: string;
+    source: string;
+    tags: string[];
+    author: string;
+    date: string;
 }
 
 export const NicheAggregator = () => {
@@ -94,7 +93,7 @@ export const NicheAggregator = () => {
                         </Text>
                     </Column>
                 </Row>
-                <Badge variant="outline" size="s">LIVE FEEDS</Badge>
+                <Badge style={{ background: 'var(--brand-alpha-weak)', border: '1px solid var(--brand-alpha-medium)' }} paddingX="8" paddingY="2">LIVE FEEDS</Badge>
             </Row>
             
             <Column gap="16" marginTop="16">
@@ -126,7 +125,7 @@ export const NicheAggregator = () => {
                                     {article.description}
                                 </Text>
                                 <Row gap="8" wrap marginTop="8" vertical="center">
-                                    <Badge variant="neutral" size="s">{article.source}</Badge>
+                                    <Badge style={{ background: 'var(--neutral-alpha-weak)', border: '1px solid var(--neutral-alpha-medium)' }} paddingX="8" paddingY="2">{article.source}</Badge>
                                     <Flex flex={1} />
                                     <Text variant="label-default-s" onBackground="neutral-weak">
                                         By {article.author} • {new Date(article.date).toLocaleDateString()}

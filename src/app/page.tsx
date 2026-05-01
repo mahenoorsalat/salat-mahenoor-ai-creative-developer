@@ -100,7 +100,7 @@ export default function Home() {
         }}
       />
       
-      <Column fillWidth gap="l" paddingX="l" minHeight="100vh" vertical="center" horizontal="center" align="center" style={{ paddingTop: '40px' }}>
+      <Column fillWidth gap="l" paddingX="l" vertical="center" horizontal="center" align="center" style={{ minHeight: '100vh', paddingTop: '40px' }}>
         {home.featured.display && (
           <RevealFx translateY="12" delay={0.1}>
             <Row fillWidth horizontal="center">
@@ -197,7 +197,7 @@ export default function Home() {
             <Heading as="h2" variant="display-strong-xs">
               Reviews
             </Heading>
-            <Text variant="body-default-s" onBackground="neutral-weak" s={{ hide: true }}>
+            <Text variant="body-default-s" onBackground="neutral-weak">
               100+ B2B companies trusted us...
             </Text>
           </Row>

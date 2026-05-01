@@ -108,19 +108,59 @@ const home: Home = {
   faq: [
     {
       question: "How quickly can we start an urgent project?",
-      answer: "I prioritize high-impact, high-priority collaborations and can typically kick off a project within 24-48 hours of the initial discovery call. I am optimized for speed and immediate onboarding."
+      answer: "I prioritize high-impact, high-priority collaborations and can typically kick off a project within 24-48 hours of the initial discovery call. I am optimized for speed and immediate onboarding.",
+      answerPlain: "I prioritize high-impact, high-priority collaborations and can typically kick off a project within 24-48 hours of the initial discovery call. I am optimized for speed and immediate onboarding."
     },
     {
       question: "Do you specialize in global SaaS markets?",
-      answer: "Yes, I have a proven track record of architecting platforms for high-ticket clients in 40+ countries. I specialize in international SEO (hreflang, geo-routing) and global performance standards for the USA, Europe, and Asia."
+      answer: "Yes, I have a proven track record of architecting platforms for high-ticket clients in 40+ countries. I specialize in international SEO (hreflang, geo-routing) and global performance standards for the USA, Europe, and Asia.",
+      answerPlain: "Yes, I have a proven track record of architecting platforms for high-ticket clients in 40+ countries. I specialize in international SEO (hreflang, geo-routing) and global performance standards for the USA, Europe, and Asia."
     },
     {
       question: "Can you optimize my existing site for Core Web Vitals?",
-      answer: "Performance is my specialty. I provide deep technical audits and 'performance rescues,' often reducing LCP by over 50% and ensuring your site hits perfect scores on Lighthouse for maximum SEO ranking power."
+      answer: "Performance is my specialty. I provide deep technical audits and 'performance rescues,' often reducing LCP by over 50% and ensuring your site hits perfect scores on Lighthouse for maximum SEO ranking power.",
+      answerPlain: "Performance is my specialty. I provide deep technical audits and 'performance rescues,' often reducing LCP by over 50% and ensuring your site hits perfect scores on Lighthouse for maximum SEO ranking power."
     },
     {
       question: "What is your stack for AI-driven products?",
-      answer: "I build elite AI solutions using Next.js, OpenAI/Claude APIs, and Vector Databases like Pinecone or Supabase. My architecture focuses on streaming responses, secure server-side logic, and immersive UI/UX."
+      answer: "I build elite AI solutions using Next.js, OpenAI/Claude APIs, and Vector Databases like Pinecone or Supabase. My architecture focuses on streaming responses, secure server-side logic, and immersive UI/UX.",
+      answerPlain: "I build elite AI solutions using Next.js, OpenAI/Claude APIs, and Vector Databases like Pinecone or Supabase. My architecture focuses on streaming responses, secure server-side logic, and immersive UI/UX."
+    },
+    {
+      question: "How can we start working together?",
+      answer: (
+        <>
+          The best way is to <Text variant="body-default-s" onBackground="neutral-strong">book a strategy call</Text> or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.
+        </>
+      ),
+      answerPlain: "The best way is to book a strategy call or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.",
+    },
+    {
+      question: "What is your typical project timeline?",
+      answer: (
+        <>
+          I focus on speed without compromising quality. A <Text variant="body-default-s" onBackground="neutral-strong">SaaS MVP</Text> typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.
+        </>
+      ),
+      answerPlain: "I focus on speed without compromising quality. A SaaS MVP typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.",
+    },
+    {
+      question: "Do you partner with agencies?",
+      answer: (
+        <>
+          Yes, I act as a <Text variant="body-default-s" onBackground="neutral-strong">specialist technical lead</Text> for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.
+        </>
+      ),
+      answerPlain: "Yes, I act as a specialist technical lead for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.",
+    },
+    {
+      question: "Why Next.js for high-performance projects?",
+      answer: (
+        <>
+          Next.js offers the best balance of <Text variant="body-default-s" onBackground="neutral-strong">SEO supremacy</Text> and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.
+        </>
+      ),
+      answerPlain: "Next.js offers the best balance of SEO supremacy and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.",
     }
   ],
   services: [
@@ -192,44 +232,6 @@ const home: Home = {
       label: "Global Clients",
       value: "250+",
       platform: "General"
-    }
-  ],
-  faq: [
-    {
-      question: "How can we start working together?",
-      answer: (
-        <>
-          The best way is to <Text variant="body-default-s" onBackground="neutral-strong">book a strategy call</Text> or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.
-        </>
-      ),
-      answerPlain: "The best way is to book a strategy call or send an email. I specialize in high-impact solutions for businesses that need to scale fast with Next.js and AI.",
-    },
-    {
-      question: "What is your typical project timeline?",
-      answer: (
-        <>
-          I focus on speed without compromising quality. A <Text variant="body-default-s" onBackground="neutral-strong">SaaS MVP</Text> typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.
-        </>
-      ),
-      answerPlain: "I focus on speed without compromising quality. A SaaS MVP typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.",
-    },
-    {
-      question: "Do you partner with agencies?",
-      answer: (
-        <>
-          Yes, I act as a <Text variant="body-default-s" onBackground="neutral-strong">specialist technical lead</Text> for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.
-        </>
-      ),
-      answerPlain: "Yes, I act as a specialist technical lead for creative agencies, delivering the high-end AI and 3D features that help them win and retain premium clients.",
-    },
-    {
-      question: "Why Next.js for high-performance projects?",
-      answer: (
-        <>
-          Next.js offers the best balance of <Text variant="body-default-s" onBackground="neutral-strong">SEO supremacy</Text> and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.
-        </>
-      ),
-      answerPlain: "Next.js offers the best balance of SEO supremacy and speed. By optimizing Core Web Vitals, I ensure your platform ranks higher and converts better.",
     }
   ]
 };
