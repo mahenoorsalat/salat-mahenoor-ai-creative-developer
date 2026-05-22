@@ -443,8 +443,8 @@ const about: About = {
 
 const blog: Blog = {
   label: "Blog",
-  title: "Elite Engineering & AI Strategy Insights",
-  description: `Deep dives into high-performance Full-Stack engineering, AI integration strategy, and multi-million dollar SaaS architecture by ${person.name}.`,
+  title: "Next.js, AI & SaaS Engineering Blog | Mahenoor Salat",
+  description: `Technical blog by Mahenoor Salat — freelance full-stack developer. Covers Next.js performance, AI automation, SaaS architecture, Figma design systems, and WebGL/Three.js. Updated regularly.`,
   keywords: [
     "nextjs saas development tutorial",
     "ai integration web development blog",
@@ -459,8 +459,8 @@ const blog: Blog = {
 
 const work: Work = {
   label: "Work",
-  title: "Selected Projects",
-  description: `A showcase of high-performance SaaS products, conversion-driven UI systems, and AI-powered platforms by ${person.name}.`,
+  title: `Mahenoor Salat | Full-Stack Developer Portfolio & Case Studies`,
+  description: `Explore Mahenoor Salat's portfolio of Next.js SaaS products, AI-powered platforms, Figma UI/UX design systems, and 3D web experiences. Real case studies with measurable results.`,
   keywords: ["nextjs developer portfolio projects", "saas product ui ux showcase", "react nextjs performance case study", "figma ui ux design portfolio", "ai integration project examples"],
   path: "/work",
 };
@@ -468,9 +468,9 @@ const work: Work = {
 const testimonials: Testimonials = {
   path: "/testimonials",
   label: "Testimonials",
-  title: `Client Testimonials – ${person.name}`,
-  description: `What founders and engineers say about working with ${person.name} on Full-Stack, UI/UX, and AI-powered digital products.`,
-  keywords: ["Full-Stack Developer Reviews", "UI/UX Strategist Feedback", "SaaS Engineering Testimonials", "AI Project Reviews", "Mahenoor Salat Feedback"],
+  title: `Mahenoor Salat Reviews | Client Testimonials & Feedback`,
+  description: `Read verified client reviews for Mahenoor Salat — freelance full-stack developer and UI/UX designer. Real testimonials from founders, engineers, and agencies across Upwork and global projects.`,
+  keywords: ["mahenoor salat reviews", "freelance developer upwork testimonials", "nextjs developer client feedback", "ui ux designer testimonials", "full stack developer reviews india"],
   items: [
     {
       name: "Upwork Client",

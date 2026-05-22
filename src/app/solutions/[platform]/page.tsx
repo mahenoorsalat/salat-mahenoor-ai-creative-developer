@@ -19,47 +19,47 @@ interface PlatformData {
 
 const platforms: Record<string, PlatformData> = {
   upwork: {
-    title: "Elite Upwork Full-Stack Developer",
-    description: "Looking for the top 1% of Upwork developers? Salat Mahenoor delivers enterprise-grade Next.js and AI solutions with a 100% Job Success Score.",
-    headline: "Skip the Upwork Queue: Direct Access to a Top-Rated Plus Engineer",
-    subline: "Get the reliability and quality of a Top-Rated Upwork developer without the platform overhead.",
+    title: "Hire Top-Rated Upwork Full-Stack Developer | Mahenoor Salat",
+    description: "Hire Mahenoor Salat — a Top-Rated Upwork Full-Stack Developer with 100% Job Success Score. Expert in Next.js, React, AI integration, and SaaS development. Start your project today.",
+    headline: "Skip the Queue: Direct Access to a Top-Rated Upwork Engineer",
+    subline: "Get enterprise-grade Next.js and AI solutions with the reliability of a Top-Rated Upwork developer — faster, direct, and without platform overhead.",
     icon: "upwork",
     accent: "brand",
     benefits: [
-      "100% Job Success Score (JSS) History",
-      "Expert in Next.js, AI, and Performance",
-      "Direct Communication & Rapid Onboarding",
-      "Enterprise-Grade Scalable Codebase"
+      "100% Job Success Score (JSS) — Verified",
+      "Expert in Next.js 15, React, AI & Performance",
+      "Direct Communication & Same-Day Onboarding",
+      "Production-Grade Scalable Codebase"
     ],
     cta: "Hire me on Upwork"
   },
   reddit: {
-    title: "Reddit's Choice for Full-Stack AI Development",
-    description: "Highly recommended across developer communities on Reddit for high-performance Next.js and AI agentic workflows.",
-    headline: "The 'Reddit Recommended' Engineer for Your Next Big Idea",
-    subline: "Building the products that r/webdev and r/startups talk about.",
+    title: "Full-Stack AI Developer for Startups | Recommended on Reddit",
+    description: "Mahenoor Salat is a full-stack AI developer highly recommended across developer communities. Expert in Next.js, AI agentic workflows, and building real products founders talk about.",
+    headline: "The Developer Founders on r/webdev & r/startups Trust",
+    subline: "Building the products that developer communities talk about — transparent process, no-BS engineering, real results.",
     icon: "reddit",
     accent: "orange",
     benefits: [
       "Community-Vetted Technical Expertise",
       "Transparent, No-BS Development Process",
-      "Specialist in AI Agentic Workflows",
-      "Active Contributor to Open Source"
+      "Specialist in AI Agentic Workflows (n8n, LangChain)",
+      "Open Source Contributor — GitHub Active"
     ],
     cta: "Connect on Reddit"
   },
   fiverr: {
-    title: "Premium Fiverr Pro Alternative for SaaS",
-    description: "Moving beyond basic gigs? Salat Mahenoor provides elite SaaS engineering and technical SEO that exceeds Fiverr Pro standards.",
-    headline: "Elite SaaS Engineering: Far Beyond a Standard 'Gig'",
-    subline: "For founders who need more than a template—I build multi-million dollar revenue engines.",
+    title: "Hire Freelance Full-Stack Developer on Fiverr | Mahenoor Salat",
+    description: "Looking beyond basic Fiverr gigs? Hire Mahenoor Salat for elite SaaS engineering, Next.js development, and Figma UI/UX design. 5-star delivery track record.",
+    headline: "Elite SaaS Engineering — Far Beyond a Standard Fiverr Gig",
+    subline: "For founders who need more than a template — I build production-grade Next.js platforms that scale to thousands of users.",
     icon: "fiverr",
     accent: "green",
     benefits: [
-      "5-Star Delivery Track Record",
-      "Premium Technical SEO Blueprint Included",
-      "Full-Stack Architecture & 3D Integration",
-      "Long-term Technical Partnership"
+      "5-Star Rated Delivery Track Record",
+      "Full-Stack Next.js + AI Architecture",
+      "Figma Design Systems & 3D Integration",
+      "Long-Term Technical Partnership Available"
     ],
     cta: "View Fiverr Profile"
   }
