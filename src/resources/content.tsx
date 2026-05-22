@@ -63,31 +63,31 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `${person.name} | Full-Stack Product Engineer & UI/UX Strategist`,
+  title: `Hire ${person.name} | Next.js & AI Developer | UI/UX Designer`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire Mahenoor Salat: Elite Full-Stack Product Engineer & AI Architect. Available for immediate, high-priority collaboration. Specializing in Next.js, AI automation, and high-performance SaaS. Delivering premium digital engines for global leaders in the USA, Europe, and Asia.`,
+  description: `Hire Mahenoor Salat, a top-rated Freelance Full-Stack Developer & AI Engineer. Expert in Next.js, React, MERN Stack, Figma UI/UX Design, and AI Automation (n8n/OpenAI). Available for SaaS MVPs, product engineering, and 3D web projects. Serving clients in USA, UK, Europe, and globally.`,
   keywords: [
-    "Elite UI/UX Designer Portfolio 2026",
-    "Figma Expert for SaaS & App Design",
-    "Full-Stack MERN Product Engineer",
-    "Next.js 15 Performance Architecture",
-    "AI Agentic Workflow Automation n8n",
-    "Enterprise LLM Trainer & Annotator",
-    "High-Conversion Landing Page Design",
-    "Technical SEO for multi-million dollar platforms",
-    "SaaS MVP Development for Global Founders",
-    "AI-Driven Product Strategy 2025",
-    "Presentation & Pitch Deck Design Specialist",
-    "Scalable Mobile App Design & Figma Systems",
-    "Silicon Valley Standard Remote Developer",
-    "Senior Product Engineer for Hire",
-    "3D Web Experience Architecture",
-    "Hiring Elite Tech Leads Globally"
+    "hire nextjs developer freelance",
+    "full stack developer for hire react nextjs",
+    "figma to nextjs developer",
+    "ai integration developer freelance",
+    "saas mvp developer nextjs india",
+    "freelance ui ux designer figma expert",
+    "nextjs performance optimization developer",
+    "n8n ai automation developer",
+    "hire mern stack developer",
+    "full stack ai developer for startup",
+    "nextjs developer upwork top rated",
+    "freelance product engineer nextjs react",
+    "webgl threejs developer freelance",
+    "ai saas developer india",
+    "nextjs developer for saas startup",
+    "hire remote developer next js typescript"
   ],
   headline: <>Architecting High-Performance SaaS & AI Solutions for 250+ Global Leaders</>,
   subline: (
@@ -233,16 +233,16 @@ const home: Home = {
 
 const about: About = {
   label: "About",
-  title: `Salat Mahenoor | About & Experience`,
-  description: `View the portfolio and resume of ${person.name}, a Senior Freelance Full-Stack Developer and AI Expert. Specializing in MERN, Next.js, and scaling AI-driven businesses and agencies.`,
+  title: `Mahenoor Salat | Full-Stack Developer & UI/UX Designer – Resume & Portfolio`,
+  description: `Portfolio and resume of Mahenoor Salat, a Freelance Full-Stack Developer and UI/UX Designer. Specializing in Next.js, React, MERN, Figma, and AI automation. 5+ years building SaaS products and digital platforms for global clients.`,
   keywords: [
-    "Salat Mahenoor Resume 2026",
-    "Expert UI/UX Designer Figma",
-    "Senior Full-Stack MERN Engineer",
-    "AI Automation & n8n Specialist",
-    "SaaS Product Engineering Expert",
-    "App Design & Presentation Specialist",
-    "Full-Stack Developer for High-Ticket SaaS"
+    "mahenoor salat developer portfolio",
+    "full stack developer resume india 2025",
+    "nextjs developer experience figma",
+    "ai automation developer n8n upwork",
+    "saas product engineer india freelance",
+    "figma ui ux designer developer portfolio",
+    "full stack developer for saas hire"
   ],
   path: "/about",
   tableOfContent: {
@@ -446,13 +446,13 @@ const blog: Blog = {
   title: "Elite Engineering & AI Strategy Insights",
   description: `Deep dives into high-performance Full-Stack engineering, AI integration strategy, and multi-million dollar SaaS architecture by ${person.name}.`,
   keywords: [
-    "High-Ticket SaaS Strategy",
-    "Enterprise AI Integration",
-    "Next.js Performance Optimization",
-    "Scalable SaaS Architecture",
-    "AI-Powered Product Development",
-    "Elite Engineering Blog",
-    "Digital Transformation Strategy"
+    "nextjs saas development tutorial",
+    "ai integration web development blog",
+    "nextjs performance optimization guide",
+    "how to build saas with nextjs react",
+    "ai powered product development tips",
+    "full stack developer engineering blog",
+    "webgl threejs web development tutorial"
   ],
   path: "/blog",
 };
@@ -461,7 +461,7 @@ const work: Work = {
   label: "Work",
   title: "Selected Projects",
   description: `A showcase of high-performance SaaS products, conversion-driven UI systems, and AI-powered platforms by ${person.name}.`,
-  keywords: ["Full-Stack Portfolio", "SaaS Product Showcase", "Next.js Performance", "UI/UX Design Portfolio", "AI Integration Projects"],
+  keywords: ["nextjs developer portfolio projects", "saas product ui ux showcase", "react nextjs performance case study", "figma ui ux design portfolio", "ai integration project examples"],
   path: "/work",
 };
 
