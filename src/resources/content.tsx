@@ -70,7 +70,7 @@ const home: Home = {
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire Mahenoor Salat, a top-rated Freelance Full-Stack Developer & AI Engineer. Expert in Next.js, React, MERN Stack, Figma UI/UX Design, and AI Automation (n8n/OpenAI). Available for SaaS MVPs, product engineering, and 3D web projects. Serving clients in USA, UK, Europe, and globally.`,
+  description: `Hire Mahenoor Salat, a top Freelance Next.js Developer & UI/UX Figma Specialist. Build high-performance SaaS, AI automation, and custom WebGL products.`,
   keywords: [
     "hire nextjs developer freelance",
     "full stack developer for hire react nextjs",
