@@ -92,7 +92,7 @@ export default function Home() {
                 name: item.question,
                 acceptedAnswer: {
                   "@type": "Answer",
-                  "text": item.answer,
+                  "text": typeof item.answer === 'string' ? item.answer : (item.answerPlain || ''),
                 },
               })),
             },
