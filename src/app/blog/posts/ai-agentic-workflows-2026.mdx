@@ -112,7 +112,7 @@ A major bottleneck in building scalable agentic systems is the context window. F
 ### RAG and Memory Indexing Pipeline
 When an agent takes action, it queries its episodic memory first using vector cosine similarity:
 
-$$\text{Similarity}(A, B) = \frac{A \cdot B}{\|A\| \|B\|}$$
+**Similarity(A, B) = (A · B) / (||A|| * ||B||)**
 
 This ensures that the agent pulls in only the relevant historical context. For example, if a developer asks a DevOps agent to fix a build error, the agent fetches vectors representing *similar past build fixes* on that repository, rather than reading the entire commit log.
 
