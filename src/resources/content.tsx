@@ -89,12 +89,10 @@ const home: Home = {
     "nextjs developer for saas startup",
     "hire remote developer next js typescript"
   ],
-  headline: <>Architecting High-Performance SaaS & AI Solutions for 250+ Global Leaders</>,
+  headline: <>I Build Production-Grade Next.js SaaS Platforms & Automate Operations with n8n AI Agents.</>,
   subline: (
     <>
-      I’m {person.firstName}, an <Text as="span" variant="body-default-s" onBackground="neutral-strong">Elite Full-Stack Engineer</Text> and <Text as="span" variant="body-default-s" onBackground="brand-strong">Expert UI/UX Designer</Text>. I specialize in 
-      <Text as="span" variant="body-default-s" onBackground="neutral-strong"> Figma Design Systems</Text>, <Text as="span" variant="body-default-s" onBackground="neutral-strong">MERN/Next.js Architecture</Text>, and building 
-      <Text as="span" variant="body-default-s" onBackground="neutral-strong"> multi-million dollar revenue engines</Text>. I bridge the gap between creative design and scalable engineering. 
+      Stop losing velocity to technical debt. I function as an <Text as="span" variant="body-default-s" onBackground="neutral-strong">elite plug-and-play contract engineer</Text> helping digital agencies and global tech startups ship high-fidelity products <Text as="span" variant="body-default-s" onBackground="brand-strong">2x faster</Text> with zero operational bottlenecks.
     </>
   ),
   image: "/images/avatar.jpg",

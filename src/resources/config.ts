@@ -26,6 +26,10 @@ const routes: RoutesConfig = {
   "/solutions/upwork": true,
   "/solutions/reddit": true,
   "/solutions/fiverr": true,
+  "/services/nextjs-ai-integration-engineer": true,
+  "/services/hire-contract-n8n-automation-expert": true,
+  "/services/saas-mvp-development-agency": true,
+  "/services/technical-seo-core-web-vitals-consultant": true,
 };
 
 const display: DisplayConfig = {

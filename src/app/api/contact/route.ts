@@ -7,7 +7,7 @@ export async function GET() {
 
 export async function POST(request: Request) {
     try {
-        const { name, email, message } = await request.json();
+        const { name, email, projectType, budget, timeline, message } = await request.json();
 
         if (!name || !email || !message) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -25,17 +25,20 @@ export async function POST(request: Request) {
         const ownerMailOptions = {
             from: process.env.EMAIL_USER,
             to: process.env.EMAIL_USER,
-            subject: `🚀 New Contact Form Submission from ${name}`,
+            subject: `🚀 New Lead Scoping Submission from ${name}`,
             html: `
                 <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 12px; background-color: #ffffff;">
                     <div style="text-align: center; padding-bottom: 20px;">
-                        <h2 style="color: #6366f1; margin: 0;">New Inquiry</h2>
-                        <p style="color: #666; font-size: 14px;">You have received a new message from your portfolio site.</p>
+                        <h2 style="color: #6366f1; margin: 0;">New Lead Inquiry Classified</h2>
+                        <p style="color: #666; font-size: 14px;">You have received a new qualified scoping inquiry from your portfolio site.</p>
                     </div>
                     <div style="background-color: #f9fafb; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
                         <p style="margin: 0 0 10px 0;"><strong>Name:</strong> ${name}</p>
                         <p style="margin: 0 0 10px 0;"><strong>Email:</strong> ${email}</p>
-                        <p style="margin: 0;"><strong>Message:</strong></p>
+                        <p style="margin: 0 0 10px 0;"><strong>Project Scope:</strong> ${projectType || 'Not specified'}</p>
+                        <p style="margin: 0 0 10px 0;"><strong>Budget Tier:</strong> ${budget || 'Not specified'}</p>
+                        <p style="margin: 0 0 10px 0;"><strong>Target Timeline:</strong> ${timeline || 'Not specified'}</p>
+                        <p style="margin: 0;"><strong>Message/Context:</strong></p>
                         <p style="white-space: pre-wrap; color: #374151; font-style: italic;">${message}</p>
                     </div>
                     <div style="text-align: center; color: #9ca3af; font-size: 12px;">
