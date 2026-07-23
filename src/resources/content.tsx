@@ -63,15 +63,19 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `Hire ${person.name} | Next.js & AI Developer | UI/UX Designer`,
+  title: `Hire Mahenoor Salat | AI & Next.js Creative Developer`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire Mahenoor Salat, a top Freelance Next.js Developer & UI/UX Figma Specialist. Build high-performance SaaS, AI automation, and custom WebGL products.`,
+  description: `Hire Mahenoor Salat – Top AI Creative Developer & Next.js Engineer. Specialized in Agentic AI, Next.js SaaS, n8n automation, and WebGL products.`,
   keywords: [
+    "hire ai creative developer",
+    "nextjs ai integration engineer",
+    "agentic ai developer langchain",
+    "full stack ai developer for hire",
     "hire nextjs developer freelance",
     "full stack developer for hire react nextjs",
     "figma to nextjs developer",
