@@ -63,14 +63,14 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `Hire Mahenoor Salat | AI & Next.js Creative Developer`,
+  title: `Hire Mahenoor Salat | AI & Next.js Developer [5.0★]`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire Mahenoor Salat – Top AI Creative Developer & Next.js Engineer. Specialized in Agentic AI, Next.js SaaS, n8n automation, and WebGL products.`,
+  description: `Hire Mahenoor Salat – Top AI Creative Developer & Next.js Engineer. Explore 15+ live SaaS projects & AI workflows. Available for contracts & full-time roles.`,
   keywords: [
     "hire ai creative developer",
     "nextjs ai integration engineer",
