@@ -11,7 +11,7 @@ export async function GET() {
 > Primary Website: ${baseURL}
 > Email: ${person.email}
 > Location: ${person.location}
-> Languages: ${person.languages.join(", ")}
+> Languages: ${person.languages?.join(", ") || "English"}
 
 ## Core Technical Competencies
 - Next.js 15 & React 19 Production Architecture
