@@ -1,0 +1,6 @@
+Contact: mailto:salatmahenoor7.8.6@gmail.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://salat-mahenoor-ai-creative-develope.vercel.app/.well-known/security.txt
+Policy: https://salat-mahenoor-ai-creative-develope.vercel.app/about
+Hiring: https://salat-mahenoor-ai-creative-develope.vercel.app/services/ai-product-manager-llm-trainer
