@@ -27,9 +27,46 @@ export async function generateMetadata() {
     image: home.image,
   });
 
+  const ogImageUrl = `${baseURL}/api/og/generate?title=${encodeURIComponent(home.title)}`;
+
   return {
     ...metadata,
     metadataBase: new URL(baseURL),
+    openGraph: {
+      title: home.title,
+      description: home.description,
+      url: baseURL,
+      siteName: person.name,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: home.title,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: home.title,
+      description: home.description,
+      creator: "@mahenoorsalat",
+      site: "@mahenoorsalat",
+      images: [ogImageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
   };
 }
 

@@ -65,7 +65,7 @@ export const ContactCTA: React.FC<React.ComponentProps<typeof Column>> = ({ ...f
             />
             <Column maxWidth="m" horizontal="center" align="center" gap="l" style={{ zIndex: 1 }}>
                 <Column horizontal="center" align="center" gap="s">
-                    <Heading align="center" variant="display-strong-xs">
+                    <Heading as="h2" align="center" variant="display-strong-xs">
                         Secure your competitive edge
                     </Heading>
                     <Text align="center" wrap="balance" variant="body-default-l" onBackground="neutral-weak">

@@ -13,7 +13,7 @@ export const FAQ = () => {
         <Column fillWidth paddingY="64" gap="48" horizontal="center">
             <Column horizontal="center" gap="16">
                 <RevealFx translateY="8">
-                    <Heading variant="display-strong-s" align="center">
+                    <Heading as="h2" variant="display-strong-s" align="center">
                         Frequently Asked Questions
                     </Heading>
                 </RevealFx>

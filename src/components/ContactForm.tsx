@@ -60,7 +60,7 @@ export const ContactForm = () => {
                 {/* Form Column */}
                 <Column flex={1} gap="24">
                     <Column gap="8">
-                        <Heading variant="display-strong-xs">Scope Your Project Architecture</Heading>
+                        <Heading as="h2" variant="display-strong-xs">Scope Your Project Architecture</Heading>
                         <Text variant="body-default-m" onBackground="neutral-weak">
                             Looking to outsource Next.js builds, automate heavy backend workflows via n8n, or build agentic AI systems? Classify your requirements below.
                         </Text>
@@ -207,7 +207,7 @@ export const ContactForm = () => {
                 {/* Calendar Column */}
                 <Column flex={1} gap="24" vertical="start">
                     <Column gap="8">
-                        <Heading variant="display-strong-xs">Instant Calendar Booking</Heading>
+                        <Heading as="h2" variant="display-strong-xs">Instant Calendar Booking</Heading>
                         <Text variant="body-default-m" onBackground="neutral-weak">
                             Want to bypass proposal waits? Use the interactive calendar below to secure your 15-minute scoping call slot instantly.
                         </Text>
