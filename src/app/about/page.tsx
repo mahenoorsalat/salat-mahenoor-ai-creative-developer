@@ -244,7 +244,7 @@ export default function About() {
             <Row paddingTop="16" horizontal="center">
               <Button
                 href="https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link"
-                prefixIcon="download"
+                prefixIcon="document"
                 variant="primary"
                 size="m"
                 weight="default"

@@ -30,6 +30,7 @@ const routes: RoutesConfig = {
   "/services/hire-contract-n8n-automation-expert": true,
   "/services/saas-mvp-development-agency": true,
   "/services/technical-seo-core-web-vitals-consultant": true,
+  "/services/ai-product-manager-llm-trainer": true,
 };
 
 const display: DisplayConfig = {

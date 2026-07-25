@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Mahenoor",
   lastName: "Salat",
   name: "Mahenoor Salat",
-  role: "Elite Full-Stack Product Engineer | Expert UI/UX Designer & Figma Specialist | AI Automation Expert",
+  role: "AI Product Manager (AIPM) | LLM Model Trainer & Evaluator | Senior Next.js Product Engineer",
   avatar: "/images/avatar.jpg",
   email: "salatmahenoor7.8.6@gmail.com",
   location: "Asia/Kolkata",
@@ -74,6 +74,12 @@ const home: Home = {
   keywords: [
     "hire ai creative developer",
     "nextjs ai integration engineer",
+    "hire ai product manager aipm",
+    "hire ai trainer llm model evaluator",
+    "rlhf prompt engineer for hire",
+    "turing llm annotator developer",
+    "high rate ai trainer contract",
+    "silicon valley ai evaluator remote",
     "agentic ai developer langchain",
     "full stack ai developer for hire",
     "hire nextjs developer freelance",
@@ -454,18 +460,19 @@ const about: About = {
         ],
       },
       {
-        title: "AI & Automation Strategy",
+        title: "LLM Model Training, RLHF & AI Product Management (AIPM)",
         description: (
           <>
-            Specializing in n8n workflow automation, AI agent development, and high-fidelity LLM S2 annotation for enterprise applications.
+            Specializing in high-rate LLM model evaluation (Turing S2 benchmark standards), prompt engineering, RLHF feedback alignment, and AI Product Management (AIPM) for Silicon Valley & global tech enterprises.
           </>
         ),
         tags: [
-          { name: "n8n Automation", icon: "grid" },
-          { name: "AI Agents", icon: "rocket" },
-          { name: "LLM Annotation", icon: "person" },
-          { name: "AI Training", icon: "rocket" },
-          { name: "OpenAI/Claude", icon: "rocket" },
+          { name: "LLM Model Trainer", icon: "rocket" },
+          { name: "AI Product Manager (AIPM)", icon: "person" },
+          { name: "RLHF & Prompt Alignment", icon: "document" },
+          { name: "Complex Code Reasoning", icon: "javascript" },
+          { name: "n8n AI Automations", icon: "grid" },
+          { name: "OpenAI / Claude / Gemini", icon: "rocket" },
         ],
       },
       {

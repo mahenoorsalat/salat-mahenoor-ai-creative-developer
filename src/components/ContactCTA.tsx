@@ -102,7 +102,7 @@ export const ContactCTA: React.FC<React.ComponentProps<typeof Column>> = ({ ...f
                     </Button>
                     <Button
                         href="https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link"
-                        prefixIcon="download"
+                        prefixIcon="document"
                         variant="secondary"
                         size="l"
                         weight="default"
