@@ -241,6 +241,18 @@ export default function About() {
                   )}
               </Row>
             )}
+            <Row paddingTop="16" horizontal="center">
+              <Button
+                href="https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link"
+                prefixIcon="download"
+                variant="primary"
+                size="m"
+                weight="default"
+                target="_blank"
+              >
+                Download Resume / CV (PDF)
+              </Button>
+            </Row>
           </Column>
 
           {about.intro.display && (
