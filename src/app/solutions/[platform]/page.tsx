@@ -19,47 +19,47 @@ interface PlatformData {
 
 const platforms: Record<string, PlatformData> = {
   upwork: {
-    title: "Hire Top-Rated Upwork Full-Stack Developer | Mahenoor Salat",
-    description: "Hire Mahenoor Salat — a Top-Rated Upwork Full-Stack Developer with 100% Job Success Score. Expert in Next.js, React, AI integration, and SaaS development. Start your project today.",
-    headline: "Skip the Queue: Direct Access to a Top-Rated Upwork Engineer",
-    subline: "Get enterprise-grade Next.js and AI solutions with the reliability of a Top-Rated Upwork developer — faster, direct, and without platform overhead.",
+    title: "Hire Top-Rated Upwork AI & Next.js Developer | Mahenoor Salat",
+    description: "Hire Mahenoor Salat — Top-Rated Upwork Full-Stack AI Product Engineer & AIPM with 100% Job Success Score. Serving high-ticket clients in US, UK, EU, UAE & Globally ($USD, €EUR, £GBP).",
+    headline: "Direct Access to a Top-Rated Upwork AI & Next.js Engineer",
+    subline: "Enterprise-grade Next.js 15, LLM model evaluation, and n8n AI solutions. Contracts available in USD ($), EUR (€), GBP (£), and AUD ($).",
     icon: "upwork",
     accent: "brand",
     benefits: [
-      "100% Job Success Score (JSS) — Verified",
-      "Expert in Next.js 15, React, AI & Performance",
-      "Direct Communication & Same-Day Onboarding",
-      "Production-Grade Scalable Codebase"
+      "100% Job Success Score (JSS) — Verified Top Rated",
+      "Specialist in LLM Training, AIPM & Next.js 15 Architecture",
+      "Trusted by US, UK, European & UAE Startups ($USD, €EUR, £GBP)",
+      "Direct Contracting & Same-Day Onboarding"
     ],
     cta: "Hire me on Upwork"
   },
   reddit: {
-    title: "Full-Stack AI Developer for Startups | Recommended on Reddit",
-    description: "Mahenoor Salat is a full-stack AI developer highly recommended across developer communities. Expert in Next.js, AI agentic workflows, and building real products founders talk about.",
-    headline: "The Developer Founders on r/webdev & r/startups Trust",
-    subline: "Building the products that developer communities talk about — transparent process, no-BS engineering, real results.",
+    title: "Full-Stack AI Developer & AIPM for Startups | Recommended on Reddit",
+    description: "Mahenoor Salat is a full-stack AI developer & AI Product Manager recommended across r/webdev, r/reactjs & r/startups. Expert in Next.js, LLMs, and agentic workflows.",
+    headline: "The AI Engineer Founders on r/webdev & r/startups Trust",
+    subline: "Building production AI platforms and LLM architectures that scaling startups talk about — transparent, fast, and high-converting.",
     icon: "reddit",
     accent: "orange",
     benefits: [
-      "Community-Vetted Technical Expertise",
-      "Transparent, No-BS Development Process",
-      "Specialist in AI Agentic Workflows (n8n, LangChain)",
-      "Open Source Contributor — GitHub Active"
+      "Community-Vetted Silicon Valley Technical Standards",
+      "Turing (San Francisco) LLM Evaluation Experience",
+      "Specialist in Agentic AI Workflows (n8n, OpenAI, Claude)",
+      "Open Source Contributor & GitHub Active"
     ],
     cta: "Connect on Reddit"
   },
   fiverr: {
-    title: "Hire Freelance Full-Stack Developer on Fiverr | Mahenoor Salat",
-    description: "Looking beyond basic Fiverr gigs? Hire Mahenoor Salat for elite SaaS engineering, Next.js development, and Figma UI/UX design. 5-star delivery track record.",
-    headline: "Elite SaaS Engineering — Far Beyond a Standard Fiverr Gig",
-    subline: "For founders who need more than a template — I build production-grade Next.js platforms that scale to thousands of users.",
+    title: "Hire Top-Rated Fiverr Pro AI & Next.js Developer | Mahenoor Salat",
+    description: "Looking for elite SaaS engineering on Fiverr? Hire Mahenoor Salat for Next.js AI development, LLM model training, and Figma UI/UX design. 5-star delivery track record.",
+    headline: "Elite SaaS & AI Engineering — Premium International Contracts",
+    subline: "For global founders who need production-grade Next.js platforms & AI workflows — trusted by clients across USA, Europe, and Asia.",
     icon: "fiverr",
     accent: "green",
     benefits: [
-      "5-Star Rated Delivery Track Record",
-      "Full-Stack Next.js + AI Architecture",
-      "Figma Design Systems & 3D Integration",
-      "Long-Term Technical Partnership Available"
+      "5-Star Rated Delivery Track Record — 100% On-Time",
+      "Full-Stack Next.js 15 + LLM & Vector Architecture",
+      "Figma Design Systems & High-Conversion UI/UX",
+      "International Contracts ($USD, €EUR, £GBP, $AUD)"
     ],
     cta: "View Fiverr Profile"
   }
@@ -78,13 +78,57 @@ export async function generateMetadata({ params }: { params: Promise<{ platform:
   const platform = platforms[platformKey as keyof typeof platforms];
   if (!platform) return {};
 
-  return Meta.generate({
+  const ogImageUrl = `${baseURL}/api/og/generate?title=${encodeURIComponent(platform.title)}`;
+
+  const meta = Meta.generate({
     title: platform.title,
     description: platform.description,
     baseURL: baseURL,
     path: `/solutions/${platformKey}`,
     image: home.image,
   });
+
+  return {
+    ...meta,
+    keywords: [
+      `hire ${platformKey} developer usd eur gbp`,
+      `top rated ${platformKey} nextjs ai developer`,
+      `freelance ${platformKey} ai engineer us uk client`,
+      `hire high rate ${platformKey} developer`,
+    ],
+    openGraph: {
+      title: platform.title,
+      description: platform.description,
+      url: `${baseURL}/solutions/${platformKey}`,
+      siteName: person.name,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: platform.title,
+        },
+      ],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: platform.title,
+      description: platform.description,
+      creator: "@mahenoorsalat",
+      images: [ogImageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
 }
 
 export default async function PlatformSolutions({ params }: { params: Promise<{ platform: string }> }) {
