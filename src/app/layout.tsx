@@ -89,7 +89,16 @@ export default async function RootLayout({
         url: baseURL,
         sameAs: social.map((s) => s.link),
         description: home.description,
-        knowsAbout: ["Full-Stack Development", "AI Integration", "Three.js", "Next.js", "Python", "Web Design", "SEO"],
+        worksFor: [
+          { "@type": "Organization", "name": "Turing (San Francisco, CA)", "url": "https://www.turing.com" },
+          { "@type": "Organization", "name": "OpenClaw" },
+          { "@type": "Organization", "name": "HeuristixAI" }
+        ],
+        alumniOf: [
+          { "@type": "EducationalOrganization", "name": "Manipal University Jaipur" },
+          { "@type": "Organization", "name": "AOSSIE Open Source" }
+        ],
+        knowsAbout: ["Full-Stack Development", "LLM Evaluation & RLHF", "Large Language Models", "AI Training", "Prompt Engineering", "Three.js", "Next.js 15", "n8n Automation", "Core Web Vitals", "Technical SEO"],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Rajkot",

@@ -263,10 +263,8 @@ const about: About = {
     title: "The Vision",
     description: (
       <>
-        I am a Full-Stack Product Engineer focused on building scalable, high-performance SaaS products and
-        conversion-driven digital platforms. With a proven track record of <Text as="span" variant="body-default-s" onBackground="neutral-strong">reducing load times by up to 40%</Text>, 
-        accelerating <Text as="span" variant="body-default-s" onBackground="neutral-strong">product delivery by 2x</Text>, and supporting systems used by <Text as="span" variant="body-default-s" onBackground="neutral-strong">1000+ users</Text>. 
-        I combine engineering, UI/UX strategy, and performance optimization to deliver measurable business outcomes.
+        I am an Elite Full-Stack Product Engineer & AI Evaluation Specialist with experience working at <Text as="span" variant="body-default-s" onBackground="neutral-strong">Turing (San Francisco)</Text>, <Text as="span" variant="body-default-s" onBackground="neutral-strong">OpenClaw</Text>, and <Text as="span" variant="body-default-s" onBackground="neutral-strong">HeuristixAI</Text>. 
+        I specialize in building production-grade Next.js SaaS platforms, training & evaluating LLM architectures, and <Text as="span" variant="body-default-s" onBackground="brand-strong">reducing load times by up to 40%</Text> for global clients across the USA, Europe, and Asia.
       </>
     ),
   },
@@ -274,6 +272,39 @@ const about: About = {
     display: true,
     title: "Experience",
     experiences: [
+      {
+        company: "Turing",
+        timeframe: "Mar 2026 – Jun 2026",
+        role: "LLM S2 Annotator & Evaluation Specialist (San Francisco, CA · Remote)",
+        achievements: [
+          <>Contributed to training, evaluation, and optimization of large language models (LLMs) for enterprise AI applications.</>,
+          <>Reviewed and annotated AI-generated code and responses for accuracy, complex reasoning, safety, and contextual relevance.</>,
+          <>Performed prompt engineering, response ranking, error detection, and reinforcement feedback (RLHF) to improve LLM accuracy.</>,
+          <>Collaborated with Silicon Valley AI research and engineering teams to refine evaluation pipelines and alignment standards.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "OpenClaw",
+        timeframe: "Mar 2026 – Jun 2026",
+        role: "CUA Trajectory Specialist (Remote)",
+        achievements: [
+          <>Utilized OpenClaw sandbox environments for technical data alignment, prompt engineering, and model trajectory refinement.</>,
+          <>Evaluated complex model agent behaviors to improve reasoning capabilities, coding safety, and task execution precision.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "HeuristixAI",
+        timeframe: "Nov 2025 – Apr 2026",
+        role: "Senior Software Engineer (Remote)",
+        achievements: [
+          <>Owned end-to-end full-stack SaaS product development — from UX strategy and system architecture to Next.js deployment.</>,
+          <>Collaborated with founders to transform early-stage concepts into production-ready platforms, optimizing speed and conversion rates.</>,
+          <>Implemented technical SEO and Core Web Vitals strategies to increase organic search reach and visibility.</>,
+        ],
+        images: [],
+      },
       {
         company: "The GKT Web",
         timeframe: "Dec 2024 – Apr 2026",
@@ -318,6 +349,17 @@ const about: About = {
           <>Contributed to platforms used by global open-source communities (100+ contributors) improving collaboration and feature scalability.</>,
           <>Improved system efficiency across multiple modules and user flows.</>,
           <>Collaborated in distributed teams of 10+ developers to deliver consistent releases.</>,
+        ],
+        images: [],
+      },
+      {
+        company: "RKWEB",
+        timeframe: "Jan 2023 – Dec 2023",
+        role: "Full Stack Engineer (Remote)",
+        achievements: [
+          <>Developed responsive user interfaces using React.js, Tailwind CSS, HTML, and JavaScript.</>,
+          <>Collaborated closely with design and backend teams to integrate front-end and back-end functionalities seamlessly.</>,
+          <>Converted design mockups into interactive web applications, focusing on performance optimization and UX enhancement.</>,
         ],
         images: [],
       },
