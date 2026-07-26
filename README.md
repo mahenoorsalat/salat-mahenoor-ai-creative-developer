@@ -1,61 +1,39 @@
-# Salat Mahenoor | Creative Developer & AI Architect
+# 🚀 Mahenoor Salat — AI Product Manager & Senior Next.js Product Engineer
 
-A premium portfolio showcasing expertise in Full-Stack Development, AI Architectures, and Interactive 3D Web Experiences.
+[![Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app)
+[![Download CV](https://img.shields.io/badge/Download_Resume_PDF-3399cc?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link)
+[![Upwork](https://img.shields.io/badge/Upwork-100%25_JSS-14a800?style=for-the-badge&logo=upwork&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app/solutions/upwork)
+[![Fiverr](https://img.shields.io/badge/Fiverr-5.0★_Top_Rated-1dbf73?style=for-the-badge&logo=fiverr&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app/solutions/fiverr)
 
-![Portfolio Preview](public/images/og/main-mockup.png)
+A production-grade portfolio and technical engineering showcase built with **Next.js 15**, **React 19**, **TypeScript**, and **Agentic AI Workflows**.
 
-## 🚀 Technical Stack
+---
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Styling**: Vanilla CSS & Custom Design System
-- **Animation**: Framer Motion
-- **3D**: Three.js / WebGL
-- **Backend**: Node.js / Python
-- **Database**: Supabase / MongoDB
+## ⚡ Core Technical Expertise
 
-## 📦 Getting Started
+- **AI Leadership & Model Training**: AI Product Manager (AIPM), Turing (San Francisco, CA) LLM S2 Annotator & Evaluator, RLHF Alignment, Prompt Engineering.
+- **Frontend Architecture**: Next.js 15 (App Router, Turbopack, RSC), React 19, TypeScript, Vanilla CSS, Framer Motion.
+- **AI & Systems Automation**: n8n Workflow Automation, OpenAI / Claude / Gemini API Integration, Pinecone / Supabase Vector Embeddings.
+- **UI/UX Strategy**: High-Fidelity Figma Design Systems, Micro-Animations, Core Web Vitals Optimization (100 Lighthouse).
 
-**1. Clone the repository**
-```bash
-git clone https://github.com/mahenoorsalat/salat-mahenoor-ai-creative-developer.git
-```
+---
 
-**2. Install dependencies**
-```bash
-npm install
-```
+## 🔗 Key Live Services & Solutions
 
-**3. Run dev server**
-```bash
-npm run dev
-```
+- 🤖 **[AI Product Manager (AIPM) & LLM Trainer Landing Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/ai-product-manager-llm-trainer)**
+- ⚡ **[Next.js AI Integration Engineering](https://salat-mahenoor-ai-creative-develope.vercel.app/services/nextjs-ai-integration-engineer)**
+- 🔄 **[n8n AI Workflow Automation Expert](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-contract-n8n-automation-expert)**
+- 🚀 **[SaaS MVP Development Agency](https://salat-mahenoor-ai-creative-develope.vercel.app/services/saas-mvp-development-agency)**
 
-**4. Production Build**
-```bash
-npm run build
-npm start
-```
+---
 
-## 🛠️ Configuration
+## 📄 Contact & Hiring
 
-The portfolio is highly customizable through the following files:
+- **Website**: [salat-mahenoor-ai-creative-develope.vercel.app](https://salat-mahenoor-ai-creative-develope.vercel.app)
+- **Direct Email**: [salatmahenoor7.8.6@gmail.com](mailto:salatmahenoor7.8.6@gmail.com)
+- **WhatsApp**: [+91 95109 44489](https://wa.me/919510944489)
+- **Download Full Resume**: [Google Drive Resume PDF](https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link)
 
-- **Site Config**: `src/resources/config.ts` (SEO, Fonts, Effects)
-- **Content**: `src/resources/content.tsx` (Bio, Projects, Experience, Testimonials)
-- **Icons**: `src/resources/icons.ts` (Social and UI icons)
+---
 
-## 📁 Directory Structure
-
-- `src/app`: Next.js pages and routing
-- `src/components`: Reusable UI components
-- `src/resources`: Configuration and static content
-- `src/utils`: Helper functions and formatting utilities
-- `public/`: Static assets (images, videos)
-
-## 📄 License
-
-This project is licensed under the CC BY-NC 4.0 License.
-- Attribution is required.
-- Commercial usage is not allowed.
-
-Created by [Salat Mahenoor](https://www.mahenoor.dev)
+Created with ❤️ by **Mahenoor Salat**. All rights reserved.
