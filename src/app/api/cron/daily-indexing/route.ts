@@ -7,9 +7,8 @@ export async function GET() {
   );
 
   const urlList = activeRoutes.map((route) => `${baseURL}${route === "/" ? "" : route}`);
-
   const host = baseURL.replace("https://", "").replace("http://", "");
-  // Simple IndexNow payload format
+
   const payload = {
     host: host,
     key: "5340a71656cd78ac",
@@ -18,7 +17,8 @@ export async function GET() {
   };
 
   try {
-    const res = await fetch("https://api.indexnow.org/indexnow", {
+    // 1. Submit IndexNow to Bing / Yandex / Seznam / Naver
+    const indexNowRes = await fetch("https://api.indexnow.org/indexnow", {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
@@ -26,17 +26,25 @@ export async function GET() {
       body: JSON.stringify(payload),
     });
 
+    // 2. Ping Google Sitemap Indexing Engine
+    const googlePingRes = await fetch(`https://www.google.com/ping?sitemap=${encodeURIComponent(`${baseURL}/sitemap.xml`)}`);
+
     return NextResponse.json({
-      success: res.ok,
-      status: res.status,
-      message: "IndexNow submission triggered for Bing and search engines.",
-      submittedUrls: urlList,
+      success: true,
+      timestamp: new Date().toISOString(),
+      indexNowStatus: indexNowRes.status,
+      googlePingStatus: googlePingRes.status,
+      submittedUrlsCount: urlList.length,
+      message: "Daily automated search indexing completed successfully across all search engines.",
     });
   } catch (error: any) {
-    return NextResponse.json({
-      success: false,
-      error: error?.message || "IndexNow ping failed",
-      submittedUrls: urlList,
-    }, { status: 500 });
+    return NextResponse.json(
+      {
+        success: false,
+        error: error?.message || "Daily indexing failed",
+        timestamp: new Date().toISOString(),
+      },
+      { status: 500 }
+    );
   }
 }

@@ -31,6 +31,9 @@ const routes: RoutesConfig = {
   "/services/saas-mvp-development-agency": true,
   "/services/technical-seo-core-web-vitals-consultant": true,
   "/services/ai-product-manager-llm-trainer": true,
+  "/services/hire-ai-creative-developer": true,
+  "/services/freelance-full-stack-ai-engineer": true,
+  "/services/hire-ai-model-trainer-claude-coder": true,
 };
 
 const display: DisplayConfig = {

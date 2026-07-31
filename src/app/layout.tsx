@@ -13,7 +13,7 @@ import {
   RevealFx,
   SpacingToken,
 } from "@once-ui-system/core";
-import { Footer, Header, Providers, StructuredData } from "@/components";
+import { Footer, Header, Providers, StructuredData, AiAssistantWidget } from "@/components";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { baseURL, effects, fonts, style, dataStyle, home, person, social } from "@/resources";
@@ -83,11 +83,35 @@ export default async function RootLayout({
       {
         "@type": "Person",
         "@id": `${baseURL}/#person`,
-        name: person.name,
-        jobTitle: person.role,
+        name: "Salat Mahenoor",
+        alternateName: [
+          "Mahenoor Salat",
+          "Salat Mahenoor AI",
+          "Mahenoor Salat AI",
+          "Salat Mahenoor AI Creative Developer",
+          "Mahenoor Salat AI Engineer",
+          "Salat Mahenoor Full Stack AI Engineer"
+        ],
+        givenName: "Mahenoor",
+        familyName: "Salat",
+        jobTitle: [
+          "AI Creative Developer",
+          "Senior Next.js Engineer",
+          "AI Product Manager",
+          "LLM Trainer & Evaluator",
+          "AI Automation Architect"
+        ],
         image: `${baseURL}${person.avatar}`,
         url: baseURL,
-        sameAs: social.map((s) => s.link),
+        mainEntityOfPage: baseURL,
+        sameAs: [
+          "https://github.com/mahenoorsalat",
+          "https://www.linkedin.com/in/salat-mahenoor/",
+          "https://x.com/mahenoorsalat",
+          "https://dribbble.com/salatmahenoor7-8-6",
+          "https://www.fiverr.com/salat_mahenoor",
+          "https://www.upwork.com/freelancers/~017b36696fdb312255"
+        ],
         description: home.description,
         worksFor: [
           { "@type": "Organization", "name": "Turing (San Francisco, CA)", "url": "https://www.turing.com" },
@@ -98,7 +122,7 @@ export default async function RootLayout({
           { "@type": "EducationalOrganization", "name": "Manipal University Jaipur" },
           { "@type": "Organization", "name": "AOSSIE Open Source" }
         ],
-        knowsAbout: ["Full-Stack Development", "LLM Evaluation & RLHF", "Large Language Models", "AI Training", "Prompt Engineering", "Three.js", "Next.js 15", "n8n Automation", "Core Web Vitals", "Technical SEO"],
+        knowsAbout: ["AI Creative Developer", "Full-Stack Development", "LLM Evaluation & RLHF", "Large Language Models", "AI Training", "Prompt Engineering", "Three.js", "Next.js 15", "n8n Automation", "Core Web Vitals", "Technical SEO"],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Rajkot",
@@ -107,9 +131,29 @@ export default async function RootLayout({
         }
       },
       {
+        "@type": "WebSite",
+        "@id": `${baseURL}/#website`,
+        url: baseURL,
+        name: "Salat Mahenoor | AI Creative Developer & Next.js Engineer",
+        alternateName: "Salat Mahenoor Portfolio",
+        publisher: {
+          "@id": `${baseURL}/#person`
+        },
+        inLanguage: "en-US"
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": `${baseURL}/#profilepage`,
+        url: baseURL,
+        name: "Salat Mahenoor - AI Creative Developer Profile",
+        mainEntity: {
+          "@id": `${baseURL}/#person`
+        }
+      },
+      {
         "@type": "ProfessionalService",
         "@id": `${baseURL}/#service`,
-        name: `${person.name} | Global AI & Web Development Agency`,
+        name: `Salat Mahenoor | Global AI Creative Developer & Agency`,
         url: baseURL,
         logo: `${baseURL}/images/avatar.jpg`,
         image: `${baseURL}/images/avatar.jpg`,
@@ -324,6 +368,7 @@ export default async function RootLayout({
             </Flex>
           </Flex>
           <Footer />
+          <AiAssistantWidget />
           <Analytics />
           <SpeedInsights />
         </Column>

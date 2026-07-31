@@ -66,10 +66,10 @@ export const ContactCTA: React.FC<React.ComponentProps<typeof Column>> = ({ ...f
             <Column maxWidth="m" horizontal="center" align="center" gap="l" style={{ zIndex: 1 }}>
                 <Column horizontal="center" align="center" gap="s">
                     <Heading as="h2" align="center" variant="display-strong-xs">
-                        Secure your competitive edge
+                        Ready to Build Your AI SaaS or Automate Operations?
                     </Heading>
                     <Text align="center" wrap="balance" variant="body-default-l" onBackground="neutral-weak">
-                        Scale with elite engineering and high-conversion UI systems.
+                        Book a free 15-minute discovery call or chat directly on WhatsApp to get started.
                     </Text>
                 </Column>
                 <Row gap="16" wrap horizontal="center">

@@ -55,7 +55,7 @@ export const ContactForm = () => {
     };
 
     return (
-        <Column fillWidth gap="40" padding="xl" radius="l" background="surface" border="neutral-alpha-weak">
+        <Column id="contact" fillWidth gap="40" padding="xl" radius="l" background="surface" border="neutral-alpha-weak">
             <Row fillWidth gap="40" s={{ direction: 'column' }}>
                 {/* Form Column */}
                 <Column flex={1} gap="24">
@@ -146,9 +146,10 @@ export const ContactForm = () => {
                                         onBlur={(e) => e.target.style.borderColor = 'var(--neutral-alpha-medium)'}
                                     >
                                         <option value="" style={{ background: '#0a0a0a' }}>Select budget range...</option>
-                                        <option value="$3,000 — $5,000" style={{ background: '#0a0a0a' }}>$3,000 — $5,000 (MVP builds)</option>
-                                        <option value="$5,000 — $10,000" style={{ background: '#0a0a0a' }}>$5,000 — $10,000 (Full Platform Scalability)</option>
-                                        <option value="$10,000+" style={{ background: '#0a0a0a' }}>$10,000+ (Enterprise Agent Orchestration)</option>
+                                        <option value="Under $1,000" style={{ background: '#0a0a0a' }}>Under $1,000 (Quick Audit / Fix)</option>
+                                        <option value="$1,000 — $3,000" style={{ background: '#0a0a0a' }}>$1,000 — $3,000 (Standard MVP / Automation)</option>
+                                        <option value="$3,000 — $5,000" style={{ background: '#0a0a0a' }}>$3,000 — $5,000 (Full MVP Build)</option>
+                                        <option value="$5,000 — $10,000+" style={{ background: '#0a0a0a' }}>$5,000+ (Enterprise Agent Systems)</option>
                                     </select>
                                 </div>
 

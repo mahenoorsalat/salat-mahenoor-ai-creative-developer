@@ -7,31 +7,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const blogs = getPosts(["src", "app", "blog", "posts"]).map((post) => ({
     url: `${baseURL}/blog/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    lastModified: post.metadata.publishedAt || today,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
   }));
 
   const works = getPosts(["src", "app", "work", "projects"]).map((post) => ({
     url: `${baseURL}/work/${post.slug}`,
-    lastModified: post.metadata.publishedAt,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    lastModified: post.metadata.publishedAt || today,
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
   }));
 
-  // Only include solution routes that are NOT already in routesConfig to avoid duplicates
   const activeRoutes = Object.keys(routesConfig).filter(
     (route) => routesConfig[route as keyof typeof routesConfig],
   );
 
-  const routes = activeRoutes.map((route) => ({
-    url: `${baseURL}${route !== "/" ? route : ""}`,
-    lastModified: today,
-    changeFrequency: route === '/' ? 'weekly' as const : 'monthly' as const,
-    priority: route === '/' ? 1.0 : route === '/about' ? 0.9 : 0.8,
-  }));
+  const routes = activeRoutes.map((route) => {
+    let priority = 0.8;
+    if (route === "/") priority = 1.0;
+    else if (route === "/about" || route.startsWith("/services/")) priority = 0.95;
+    else if (route === "/work" || route === "/blog") priority = 0.9;
 
-  // Deduplicate: only add solution routes not already in routesConfig
+    return {
+      url: `${baseURL}${route !== "/" ? route : ""}`,
+      lastModified: today,
+      changeFrequency: route === '/' ? 'daily' as const : 'weekly' as const,
+      priority: priority,
+    };
+  });
+
   const solutionPlatforms = ["upwork", "reddit", "fiverr"];
   const routeKeys = new Set(activeRoutes);
   const solutionRoutes = solutionPlatforms
@@ -39,10 +44,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((platform) => ({
       url: `${baseURL}/solutions/${platform}`,
       lastModified: today,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
     }));
 
   return [...routes, ...blogs, ...works, ...solutionRoutes];
 }
-

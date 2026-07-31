@@ -14,7 +14,7 @@ import {
   Icon,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { ContactCTA, Services, ContactForm, FAQ, StructuredData, Testimonials, Stats } from "@/components";
+import { ContactCTA, Services, ContactForm, FAQ, StructuredData, Testimonials, Stats, ComparisonTable, ProjectEstimatorWidget } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
@@ -152,19 +152,27 @@ export default function Home() {
         </Flex>
         
         <RevealFx translateY="24" delay={0.3}>
-          <Row gap="16" vertical="center" horizontal="center" fillWidth>
+          <Row gap="16" vertical="center" horizontal="center" fillWidth wrap>
             <Button
-              href="mailto:salatmahenoor7.8.6@gmail.com"
+              href="#contact"
               variant="primary"
               size="l"
-              prefixIcon="chevronRight">
-              Secure your edge
+              prefixIcon="calendar">
+              Book a 15-Min Call
+            </Button>
+            <Button
+              href="https://wa.me/919510944489"
+              variant="secondary"
+              size="l"
+              prefixIcon="whatsapp"
+              target="_blank">
+              Chat on WhatsApp
             </Button>
             <Button
               href="/work"
               variant="tertiary"
               size="l">
-              View Blueprint
+              View Work
             </Button>
           </Row>
         </RevealFx>
@@ -189,6 +197,14 @@ export default function Home() {
 
       <RevealFx translateY="16" delay={0.4}>
         <Services />
+      </RevealFx>
+
+      <RevealFx translateY="16" delay={0.45}>
+        <ComparisonTable />
+      </RevealFx>
+
+      <RevealFx translateY="16" delay={0.5}>
+        <ProjectEstimatorWidget />
       </RevealFx>
 
       <Column fillWidth gap="40" marginBottom="xl" paddingX="l">

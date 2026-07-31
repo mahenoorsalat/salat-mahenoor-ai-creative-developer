@@ -14,4 +14,6 @@ export { StructuredData } from "./StructuredData";
 export { FAQ } from "./FAQ";
 export { default as Testimonials } from "./testimonials/TestimonialsView";
 export { Stats } from "./Stats";
-
+export { AiAssistantWidget } from "./AiAssistantWidget";
+export { ComparisonTable } from "./ComparisonTable";
+export { ProjectEstimatorWidget } from "./ProjectEstimatorWidget";

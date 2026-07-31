@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Mahenoor",
   lastName: "Salat",
   name: "Mahenoor Salat",
-  role: "AI Product Manager (AIPM) | LLM Model Trainer & Evaluator | Senior Next.js Product Engineer",
+  role: "AI Product Manager (AIPM) | LLM Model Trainer & Evaluator | Claude Code Specialist | Senior Next.js AI Engineer",
   avatar: "/images/avatar.jpg",
   email: "salatmahenoor7.8.6@gmail.com",
   location: "Asia/Kolkata",
@@ -63,16 +63,20 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `Hire Mahenoor Salat | AI & Next.js Developer [5.0★]`,
+  title: `Salat Mahenoor | AI Creative Developer & Next.js AI Engineer`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Hire Mahenoor Salat – Top AI Creative Developer & Next.js Engineer. Explore 15+ live SaaS projects & AI workflows. Available for contracts & full-time roles.`,
+  description: `Salat Mahenoor is a top AI Creative Developer & Next.js Engineer building custom AI agents, RAG vector search, and WebGL SaaS apps. Available for hire.`,
   keywords: [
+    "salat mahenoor",
+    "mahenoor salat",
+    "salat mahenoor ai creative developer",
     "hire ai creative developer",
+    "freelance full stack ai engineer",
     "nextjs ai integration engineer",
     "hire ai product manager aipm",
     "hire ai trainer llm model evaluator",
@@ -241,11 +245,16 @@ const home: Home = {
 
 const about: About = {
   label: "About",
-  title: `Mahenoor Salat | Full-Stack Developer & UI/UX Designer – Resume & Portfolio`,
-  description: `Portfolio and resume of Mahenoor Salat, a Freelance Full-Stack Developer and UI/UX Designer. Specializing in Next.js, React, MERN, Figma, and AI automation. 5+ years building SaaS products and digital platforms for global clients.`,
+  title: `Salat Mahenoor (Mahenoor Salat) | AI Creative Developer & Full Stack AI Engineer`,
+  description: `Background and portfolio of Salat Mahenoor (Mahenoor Salat) – Senior AI Creative Developer & Freelance Full Stack AI Engineer. Specializing in Next.js 15, LLM evaluation, RAG pipelines, n8n AI agents, and high-performance WebGL UI/UX.`,
   keywords: [
+    "salat mahenoor",
+    "mahenoor salat",
+    "salat mahenoor ai creative developer",
     "mahenoor salat developer portfolio",
-    "full stack developer resume india 2025",
+    "freelance full stack ai engineer",
+    "hire ai creative developer",
+    "full stack developer resume india",
     "nextjs developer experience figma",
     "ai automation developer n8n upwork",
     "saas product engineer india freelance",
@@ -399,6 +408,22 @@ const about: About = {
     display: true,
     title: "Technical Expertise",
     skills: [
+      {
+        title: "AI Product Management & LLM Model Training",
+        description: (
+          <>
+            Specialized in AI Product Management (AIPM), Turing S2 LLM evaluation, RLHF prompt engineering, OpenClaw CUA trajectory alignment, and Claude Code automated AI development workflows.
+          </>
+        ),
+        tags: [
+          { name: "AI Product Manager (AIPM)", icon: "star" },
+          { name: "LLM Trainer & Evaluator", icon: "rocket" },
+          { name: "Claude Code / Cursor Specialist", icon: "openLink" },
+          { name: "OpenClaw Trajectory Specialist", icon: "globe" },
+          { name: "RLHF & Prompt Engineering", icon: "star" },
+          { name: "Turing S2 Annotator", icon: "rocket" },
+        ],
+      },
       {
         title: "Frontend Development",
         description: (
