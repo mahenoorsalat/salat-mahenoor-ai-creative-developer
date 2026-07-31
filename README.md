@@ -1,39 +1,69 @@
-# 🚀 Mahenoor Salat — AI Product Manager & Senior Next.js Product Engineer
+# 🚀 Salat Mahenoor (Mahenoor Salat) — AI Creative Developer & Next.js AI Engineer
 
-[![Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app)
 [![Download CV](https://img.shields.io/badge/Download_Resume_PDF-3399cc?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/salat-mahenoor/)
 [![Upwork](https://img.shields.io/badge/Upwork-100%25_JSS-14a800?style=for-the-badge&logo=upwork&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app/solutions/upwork)
 [![Fiverr](https://img.shields.io/badge/Fiverr-5.0★_Top_Rated-1dbf73?style=for-the-badge&logo=fiverr&logoColor=white)](https://salat-mahenoor-ai-creative-develope.vercel.app/solutions/fiverr)
 
-A production-grade portfolio and technical engineering showcase built with **Next.js 15**, **React 19**, **TypeScript**, and **Agentic AI Workflows**.
+> **Top-Ranked AI Creative Developer, AI Product Manager (AIPM), LLM Model Trainer & Senior Next.js Architect.** 
+> Building production-grade Next.js 15 apps, agentic AI workflows, RAG vector pipelines, and Claude 3.5 Sonnet integrations for clients across the USA, Europe, and Asia.
 
 ---
 
-## ⚡ Core Technical Expertise
+## ⚡ Core Technical Niche Capabilities
 
-- **AI Leadership & Model Training**: AI Product Manager (AIPM), Turing (San Francisco, CA) LLM S2 Annotator & Evaluator, RLHF Alignment, Prompt Engineering.
-- **Frontend Architecture**: Next.js 15 (App Router, Turbopack, RSC), React 19, TypeScript, Vanilla CSS, Framer Motion.
-- **AI & Systems Automation**: n8n Workflow Automation, OpenAI / Claude / Gemini API Integration, Pinecone / Supabase Vector Embeddings.
-- **UI/UX Strategy**: High-Fidelity Figma Design Systems, Micro-Animations, Core Web Vitals Optimization (100 Lighthouse).
-
----
-
-## 🔗 Key Live Services & Solutions
-
-- 🤖 **[AI Product Manager (AIPM) & LLM Trainer Landing Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/ai-product-manager-llm-trainer)**
-- ⚡ **[Next.js AI Integration Engineering](https://salat-mahenoor-ai-creative-develope.vercel.app/services/nextjs-ai-integration-engineer)**
-- 🔄 **[n8n AI Workflow Automation Expert](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-contract-n8n-automation-expert)**
-- 🚀 **[SaaS MVP Development Agency](https://salat-mahenoor-ai-creative-develope.vercel.app/services/saas-mvp-development-agency)**
+- 🤖 **AI Product Management & LLM Model Training**: AI Product Manager (AIPM), Turing (San Francisco, CA) LLM S2 Annotator & Evaluator, OpenClaw CUA Trajectory Specialist, RLHF & Prompt Engineering.
+- ⚡ **Frontend & Creative Architecture**: Next.js 15 (App Router, Turbopack, RSC), React 19, TypeScript, Once UI / Vanilla CSS, 3D WebGL / Canvas.
+- 🔄 **AI Agents & System Automations**: n8n Workflow Automation, LangChain / LlamaIndex Agentic Coding, Claude 3.5 Sonnet / OpenAI Operator / Cursor AI workflows.
+- 🗄️ **Databases & Vector Search**: Pinecone, Supabase Vector Embeddings, PostgreSQL, MongoDB, Node.js API Infrastructure.
 
 ---
 
-## 📄 Contact & Hiring
+## 🎯 Direct Hire & Service Landing Pages
 
-- **Website**: [salat-mahenoor-ai-creative-develope.vercel.app](https://salat-mahenoor-ai-creative-develope.vercel.app)
+| Specialty Niche | Target Service Page | Direct Action |
+| :--- | :--- | :--- |
+| **AI Creative Developer** | [Hire AI Creative Developer Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-ai-creative-developer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+| **Full Stack AI Engineer** | [Freelance Full Stack AI Engineer Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/freelance-full-stack-ai-engineer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+| **AI Model Trainer & Claude Code** | [Hire AI Model Trainer & Claude Specialist](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-ai-model-trainer-claude-coder) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+| **n8n Automation Expert** | [Hire n8n Automation Specialist](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-contract-n8n-automation-expert) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+| **Next.js AI Integration** | [Next.js AI Integration Engineer](https://salat-mahenoor-ai-creative-develope.vercel.app/services/nextjs-ai-integration-engineer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+| **SaaS MVP Agency** | [SaaS MVP Development Agency](https://salat-mahenoor-ai-creative-develope.vercel.app/services/saas-mvp-development-agency) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+
+---
+
+## 🛠️ Local Installation & Development
+
+```bash
+# Clone the repository
+git clone https://github.com/mahenoorsalat/salat-mahenoor-ai-creative-developer.git
+
+# Navigate into project directory
+cd salat-mahenoor-ai-creative-developer
+
+# Install dependencies
+npm install
+
+# Start local dev server
+npm run dev
+
+# Run 100/100 Technical SEO Sentinel Audit
+npm run seo
+
+# Execute Automated Multi-Engine Search Booster Bot
+npm run boost
+```
+
+---
+
+## 📄 Contact & Direct Engagement
+
+- **Live Website**: [salat-mahenoor-ai-creative-develope.vercel.app](https://salat-mahenoor-ai-creative-develope.vercel.app)
 - **Direct Email**: [salatmahenoor7.8.6@gmail.com](mailto:salatmahenoor7.8.6@gmail.com)
 - **WhatsApp**: [+91 95109 44489](https://wa.me/919510944489)
 - **Download Full Resume**: [Google Drive Resume PDF](https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link)
 
 ---
 
-Created with ❤️ by **Mahenoor Salat**. All rights reserved.
+Created with ❤️ by **Salat Mahenoor (Mahenoor Salat)**. All rights reserved.
