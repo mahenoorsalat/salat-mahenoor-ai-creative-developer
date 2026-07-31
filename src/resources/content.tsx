@@ -151,6 +151,16 @@ const home: Home = {
       answerPlain: "I focus on speed without compromising quality. A SaaS MVP typically launches in 2-4 weeks, while complex 3D or AI systems take 6-8 weeks.",
     },
     {
+      question: "Are you a simple API wrapper developer or do you build production AI architectures?",
+      answer: "I build production-grade AI systems with custom RAG pipelines, Supabase/Pinecone vector databases, RLHF prompt alignment, streaming LLM interfaces, and n8n automations. Verified experience at Turing (San Francisco) and OpenClaw.",
+      answerPlain: "I build production-grade AI systems with custom RAG pipelines, Supabase/Pinecone vector databases, RLHF prompt alignment, streaming LLM interfaces, and n8n automations. Verified experience at Turing (San Francisco) and OpenClaw."
+    },
+    {
+      question: "How do your rates compare to hiring a boutique US AI agency?",
+      answer: "Boutique US agencies charge $30,000-$150,000 with heavy account manager overhead. Working directly with me gives you Senior US-tier AI engineering quality 2x faster at transparent contract rates with zero agency markup.",
+      answerPlain: "Boutique US agencies charge $30,000-$150,000 with heavy account manager overhead. Working directly with me gives you Senior US-tier AI engineering quality 2x faster at transparent contract rates with zero agency markup."
+    },
+    {
       question: "Do you partner with agencies?",
       answer: (
         <>
