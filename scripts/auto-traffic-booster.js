@@ -3,10 +3,20 @@
  * Submits website landing pages, RSS feeds, and schemas to global search engines.
  */
 
+const fs = require('fs');
+const path = require('path');
 const https = require('https');
 const http = require('http');
 
 const baseURL = "https://salat-mahenoor-ai-creative-develope.vercel.app";
+
+function collectContentUrls(contentDir, prefix) {
+  const folder = path.join(__dirname, "..", ...contentDir);
+  if (!fs.existsSync(folder)) return [];
+  return fs.readdirSync(folder)
+    .filter((file) => path.extname(file) === ".mdx")
+    .map((file) => `${baseURL}/${prefix}/${path.basename(file, path.extname(file))}`);
+}
 
 const targetUrls = [
   `${baseURL}`,
@@ -17,9 +27,6 @@ const targetUrls = [
   `${baseURL}/services/hire-ai-creative-developer`,
   `${baseURL}/services/freelance-full-stack-ai-engineer`,
   `${baseURL}/services/hire-ai-model-trainer-claude-coder`,
-  `${baseURL}/services/hire-ai-agent-developer`,
-  `${baseURL}/services/hire-claude-3-5-sonnet-developer`,
-  `${baseURL}/services/hire-rag-vector-database-engineer`,
   `${baseURL}/services/nextjs-ai-integration-engineer`,
   `${baseURL}/services/hire-contract-n8n-automation-expert`,
   `${baseURL}/services/saas-mvp-development-agency`,
@@ -33,6 +40,8 @@ const targetUrls = [
   `${baseURL}/feed.xml`,
   `${baseURL}/rss.xml`,
   `${baseURL}/sitemap.xml`,
+  ...collectContentUrls(["src", "app", "blog", "posts"], "blog"),
+  ...collectContentUrls(["src", "app", "work", "projects"], "work"),
 ];
 
 // 1. IndexNow API Ping (Bing, Yandex, Seznam, Naver, Yahoo)
