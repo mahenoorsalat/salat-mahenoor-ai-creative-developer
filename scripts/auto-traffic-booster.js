@@ -89,10 +89,10 @@ function pingGoogle() {
   });
 }
 
-// 3. Ping-O-Matic & Feed Aggregators Ping
+/// 3. Ping-O-Matic & Feed Aggregators Ping
 function pingFeedAggregators() {
   return new Promise((resolve) => {
-    console.log("⚡ [3/3] Pinging Global RSS & Content Aggregators (Ping-O-Matic)...");
+    console.log("⚡ [3/4] Pinging Global RSS & Content Aggregators (Ping-O-Matic)...");
     const pingUrl = `http://pingomatic.com/ping/?title=${encodeURIComponent("Salat Mahenoor | AI Creative Developer")}&blogurl=${encodeURIComponent(baseURL)}&rssurl=${encodeURIComponent(`${baseURL}/rss.xml`)}&chk_blogs=on&chk_feedburner=on&chk_syndic8=on&chk_newsgator=on&chk_myyahoo=on`;
 
     http.get(pingUrl, (res) => {
@@ -100,6 +100,22 @@ function pingFeedAggregators() {
       resolve(true);
     }).on('error', (err) => {
       console.error(`❌ RSS Ping Warning: ${err.message}`);
+      resolve(false);
+    });
+  });
+}
+
+// 4. Bing sitemap ping
+function pingBingSitemap() {
+  return new Promise((resolve) => {
+    console.log("⚡ [4/4] Pinging Bing Sitemap Indexing Engine...");
+    const sitemapUrl = encodeURIComponent(`${baseURL}/sitemap.xml`);
+
+    https.get(`https://www.bing.com/webmaster/ping.aspx?siteMap=${sitemapUrl}`, (res) => {
+      console.log(`✅ Bing Sitemap Ping Status: ${res.statusCode}`);
+      resolve(true);
+    }).on('error', (err) => {
+      console.error(`❌ Bing Ping Error: ${err.message}`);
       resolve(false);
     });
   });
@@ -113,6 +129,7 @@ async function runTrafficBooster() {
   await pingIndexNow();
   await pingGoogle();
   await pingFeedAggregators();
+  await pingBingSitemap();
 
   console.log("\n=======================================================");
   console.log("🎉 HOURLY TRAFFIC BOOST COMPLETE across all Search Engines!");
