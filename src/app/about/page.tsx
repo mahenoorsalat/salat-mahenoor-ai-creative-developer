@@ -243,14 +243,13 @@ export default function About() {
             )}
             <Row paddingTop="16" horizontal="center">
               <Button
-                href="https://drive.google.com/file/d/1YTzfaQZ_dqv1yr8jUVbbY6m9kCiCMbCl/view?usp=drive_link"
+                href="/resume.pdf"
                 prefixIcon="document"
                 variant="primary"
                 size="m"
                 weight="default"
-                target="_blank"
               >
-                Download Resume / CV (PDF)
+                Download Resume (PDF)
               </Button>
             </Row>
           </Column>

@@ -190,7 +190,7 @@ export default function Home() {
             </Heading>
           </Row>
           <Row flex={3}>
-            <Projects range={[1, 6]} />
+            <Projects range={[1, 6]} exclude={["human-ink", "boutoo", "chatbot-demo"]} />
           </Row>
         </Row>
       </Column>
@@ -214,7 +214,7 @@ export default function Home() {
               Reviews
             </Heading>
             <Text variant="body-default-s" onBackground="neutral-weak">
-              100+ B2B companies trusted us...
+              References from founders, engineers and clients
             </Text>
           </Row>
           <Row fillWidth horizontal="between" vertical="center" borderTop="neutral-alpha-weak" paddingTop="16">

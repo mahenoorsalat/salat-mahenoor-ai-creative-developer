@@ -73,7 +73,7 @@ export default function Work() {
       <Heading as="h1" marginBottom="l" variant="heading-strong-xl" align="center">
         {work.title}
       </Heading>
-      <Projects />
+      <Projects exclude={["human-ink", "boutoo", "chatbot-demo"]} />
     </Column>
   );
 }

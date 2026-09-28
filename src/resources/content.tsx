@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Mahenoor",
   lastName: "Salat",
   name: "Mahenoor Salat",
-  role: "AI Product Manager (AIPM) | LLM Model Trainer & Evaluator | Claude Code Specialist | Senior Next.js AI Engineer",
+  role: "Senior Full-Stack Engineer — Next.js, TypeScript & AI Integration | Open to Full-Time Remote Roles",
   avatar: "/images/avatar.jpg",
   email: "salatmahenoor7.8.6@gmail.com",
   location: "Asia/Kolkata",
@@ -63,14 +63,14 @@ const social: Social = [
 
 const home: Home = {
   label: "Home",
-  title: `Salat Mahenoor | AI Creative Developer & Next.js AI Engineer`,
+  title: `Mahenoor Salat | Senior Full-Stack Engineer (Next.js + AI)`,
   featured: {
     display: true,
     title: "New: Technical SEO Blueprint for #1 Ranking",
     href: "/blog/technical-seo-blueprint",
   },
 
-  description: `Salat Mahenoor is a top AI Creative Developer & Next.js Engineer building custom AI agents, RAG vector search, and WebGL SaaS apps. Available for hire.`,
+  description: `Mahenoor Salat — Senior Full-Stack Engineer specializing in Next.js, TypeScript, and production AI integration. Open to full-time remote roles.`,
   keywords: [
     "salat mahenoor",
     "mahenoor salat",
@@ -103,10 +103,10 @@ const home: Home = {
     "nextjs developer for saas startup",
     "hire remote developer next js typescript"
   ],
-  headline: <>I Build Production-Grade Next.js SaaS Platforms & Automate Operations with n8n AI Agents.</>,
+  headline: <>Senior Full-Stack Engineer building production-grade Next.js + AI SaaS platforms.</>,
   subline: (
     <>
-      Stop losing velocity to technical debt. I function as an <Text as="span" variant="body-default-s" onBackground="neutral-strong">elite plug-and-play contract engineer</Text> helping digital agencies and global tech startups ship high-fidelity products <Text as="span" variant="body-default-s" onBackground="brand-strong">2x faster</Text> with zero operational bottlenecks.
+      3+ years shipping Next.js/TypeScript SaaS — from UX and system architecture to deployment, Core Web Vitals, and production AI integration. Open to full-time remote roles and high-ownership product teams.
     </>
   ),
   image: "/images/avatar.jpg",
@@ -233,21 +233,20 @@ const home: Home = {
   ],
   stats: [
     {
-      label: "Job Success Score",
+      label: "Years Experience",
+      value: "3+",
+      platform: "General"
+    },
+    {
+      label: "Production Projects Shipped",
+      value: "15+",
+      platform: "General"
+    },
+    {
+      label: "Upwork Job Success",
       value: "100%",
       platform: "Upwork",
       link: "https://www.upwork.com/freelancers/~017b36696fdb312255?mp_source=share"
-    },
-    {
-      label: "Projects Delivered",
-      value: "11+",
-      platform: "Fiverr",
-      link: "https://www.fiverr.com/s/Ldj9N8A"
-    },
-    {
-      label: "Global Clients",
-      value: "250+",
-      platform: "General"
     }
   ]
 };
@@ -255,8 +254,8 @@ const home: Home = {
 
 const about: About = {
   label: "About",
-  title: `Salat Mahenoor (Mahenoor Salat) | AI Creative Developer & Full Stack AI Engineer`,
-  description: `Background and portfolio of Salat Mahenoor (Mahenoor Salat) – Senior AI Creative Developer & Freelance Full Stack AI Engineer. Specializing in Next.js 15, LLM evaluation, RAG pipelines, n8n AI agents, and high-performance WebGL UI/UX.`,
+  title: `Mahenoor Salat | Senior Full-Stack Engineer (Next.js + AI)`,
+  description: `Background of Mahenoor Salat – Senior Full-Stack Engineer specializing in Next.js 15, TypeScript, SaaS platforms, and production AI integration. Open to full-time remote roles.`,
   keywords: [
     "salat mahenoor",
     "mahenoor salat",
@@ -288,8 +287,10 @@ const about: About = {
     title: "The Vision",
     description: (
       <>
-        I am an Elite Full-Stack Product Engineer & AI Evaluation Specialist with experience working at <Text as="span" variant="body-default-s" onBackground="neutral-strong">Turing (San Francisco)</Text>, <Text as="span" variant="body-default-s" onBackground="neutral-strong">OpenClaw</Text>, and <Text as="span" variant="body-default-s" onBackground="neutral-strong">HeuristixAI</Text>. 
-        I specialize in building production-grade Next.js SaaS platforms, training & evaluating LLM architectures, and <Text as="span" variant="body-default-s" onBackground="brand-strong">reducing load times by up to 40%</Text> for global clients across the USA, Europe, and Asia.
+        I am a Senior Full-Stack Engineer specializing in production-grade Next.js SaaS platforms and practical AI integration.
+        Previously with <Text as="span" variant="body-default-s" onBackground="neutral-strong">Turing, OpenClaw, and HeuristixAI</Text>, I focus on
+        clean architecture, <Text as="span" variant="body-default-s" onBackground="brand-strong">Core Web Vitals and measurable product impact</Text> for
+        remote product teams across the USA, Europe, and Asia. Open to full-time remote roles.
       </>
     ),
   },
@@ -299,8 +300,8 @@ const about: About = {
     experiences: [
       {
         company: "Turing",
-        timeframe: "Mar 2026 – Jun 2026",
-        role: "LLM S2 Annotator & Evaluation Specialist (San Francisco, CA · Remote)",
+        timeframe: "Mar 2026 – Jun 2026 · Contract",
+        role: "LLM Evaluation Specialist — Contract (San Francisco, CA · Remote)",
         achievements: [
           <>Contributed to training, evaluation, and optimization of large language models (LLMs) for enterprise AI applications.</>,
           <>Reviewed and annotated AI-generated code and responses for accuracy, complex reasoning, safety, and contextual relevance.</>,
@@ -311,8 +312,8 @@ const about: About = {
       },
       {
         company: "OpenClaw",
-        timeframe: "Mar 2026 – Jun 2026",
-        role: "CUA Trajectory Specialist (Remote)",
+        timeframe: "Mar 2026 – Jun 2026 · Contract",
+        role: "AI Trajectory Specialist — Contract (Remote)",
         achievements: [
           <>Utilized OpenClaw sandbox environments for technical data alignment, prompt engineering, and model trajectory refinement.</>,
           <>Evaluated complex model agent behaviors to improve reasoning capabilities, coding safety, and task execution precision.</>,
@@ -321,8 +322,8 @@ const about: About = {
       },
       {
         company: "HeuristixAI",
-        timeframe: "Nov 2025 – Apr 2026",
-        role: "Senior Software Engineer (Remote)",
+        timeframe: "Nov 2025 – Apr 2026 · Contract",
+        role: "Senior Software Engineer — Contract (Remote)",
         achievements: [
           <>Owned end-to-end full-stack SaaS product development — from UX strategy and system architecture to Next.js deployment.</>,
           <>Collaborated with founders to transform early-stage concepts into production-ready platforms, optimizing speed and conversion rates.</>,
@@ -332,8 +333,8 @@ const about: About = {
       },
       {
         company: "The GKT Web",
-        timeframe: "Dec 2024 – Apr 2026",
-        role: "Senior Software Engineer (Remote)",
+        timeframe: "Dec 2024 – Apr 2026 · Part-time",
+        role: "Senior Software Engineer — Part-time (Remote)",
         achievements: [
           <>Led development of 5+ SaaS platforms, cutting product launch timelines by 50%.</>,
           <>Reduced application load times by up to 40%, increasing session duration and retention.</>,
@@ -345,7 +346,7 @@ const about: About = {
       },
       {
         company: "Hexoforge LLC",
-        timeframe: "Nov 2025 – Jan 2026",
+        timeframe: "Nov 2025 – Jan 2026 · Contract",
         role: "Senior Frontend Developer (Remote)",
         achievements: [
           <>Architected scalable frontend systems using React and Next.js supporting 3+ production applications and improving deployment efficiency.</>,
@@ -357,7 +358,7 @@ const about: About = {
       },
       {
         company: "Developer Studios",
-        timeframe: "Nov 2025 – Dec 2025",
+        timeframe: "Nov 2025 – Dec 2025 · Contract",
         role: "Full-Stack Developer (Remote)",
         achievements: [
           <>Built 5+ full-stack modules aligned with business requirements, accelerating feature delivery cycles.</>,
@@ -368,7 +369,7 @@ const about: About = {
       },
       {
         company: "AOSSIE",
-        timeframe: "Jan 2024 – Nov 2025",
+        timeframe: "Jan 2024 – Nov 2025 · Open Source",
         role: "Full-Stack Developer",
         achievements: [
           <>Contributed to platforms used by global open-source communities (100+ contributors) improving collaboration and feature scalability.</>,
@@ -545,8 +546,8 @@ const blog: Blog = {
 
 const work: Work = {
   label: "Work",
-  title: `Mahenoor Salat | Full-Stack Developer Portfolio & Case Studies`,
-  description: `Explore Mahenoor Salat's portfolio of Next.js SaaS products, AI-powered platforms, Figma UI/UX design systems, and 3D web experiences. Real case studies with measurable results.`,
+  title: `Mahenoor Salat | Senior Full-Stack Engineer — Selected Work`,
+  description: `Selected production work by Mahenoor Salat — Next.js SaaS platforms, AI-integrated products, and high-performance web experiences with measurable results.`,
   keywords: ["nextjs developer portfolio projects", "saas product ui ux showcase", "react nextjs performance case study", "figma ui ux design portfolio", "ai integration project examples"],
   path: "/work",
 };
@@ -567,17 +568,6 @@ const testimonials: Testimonials = {
         </>
       ),
       contentPlain: "Mahenoor delivered an excellent full stack revamp with strong attention to both UI quality and backend performance. She communicated proactively throughout the project and handled technical challenges with confidence. Her understanding of modern web technologies is solid, and the final result exceeded expectations. Highly recommend her for any full stack development work.",
-      rating: 5,
-    },
-    {
-      name: "Upwork Client",
-      role: "Senior UI/UX Designer (Figma)",
-      content: (
-        <>
-          Good result, fast responsible. Thanks!
-        </>
-      ),
-      contentPlain: "Good result, fast responsible. Thanks!",
       rating: 5,
     },
     {
