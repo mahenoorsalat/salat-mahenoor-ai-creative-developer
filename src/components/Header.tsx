@@ -179,7 +179,7 @@ export const Header = () => {
                 <>
                   <Row s={{ hide: true }}>
                     <ToggleButton
-                      prefixIcon="briefcase"
+                      prefixIcon="rocket"
                       href="/hire"
                       label="Hire"
                       selected={pathname.startsWith("/hire")}
@@ -188,7 +188,7 @@ export const Header = () => {
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
                       aria-label="Hire"
-                      prefixIcon="briefcase"
+                      prefixIcon="rocket"
                       href="/hire"
                       selected={pathname.startsWith("/hire")}
                     />

@@ -157,7 +157,7 @@ export default function Home() {
               href="/hire"
               variant="primary"
               size="l"
-              prefixIcon="briefcase">
+              prefixIcon="rocket">
               Hire Me
             </Button>
             <Button
