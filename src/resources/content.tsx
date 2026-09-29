@@ -72,36 +72,14 @@ const home: Home = {
 
   description: `Mahenoor Salat — Senior Full-Stack Engineer specializing in Next.js, TypeScript, and production AI integration. Open to full-time remote roles.`,
   keywords: [
-    "salat mahenoor",
     "mahenoor salat",
-    "salat mahenoor ai creative developer",
-    "hire ai creative developer",
-    "freelance full stack ai engineer",
-    "nextjs ai integration engineer",
-    "hire ai product manager aipm",
-    "hire ai trainer llm model evaluator",
-    "rlhf prompt engineer for hire",
-    "turing llm annotator developer",
-    "high rate ai trainer contract",
-    "silicon valley ai evaluator remote",
-    "agentic ai developer langchain",
-    "full stack ai developer for hire",
-    "hire nextjs developer freelance",
-    "full stack developer for hire react nextjs",
-    "figma to nextjs developer",
-    "ai integration developer freelance",
-    "saas mvp developer nextjs india",
-    "freelance ui ux designer figma expert",
-    "nextjs performance optimization developer",
-    "n8n ai automation developer",
-    "hire mern stack developer",
-    "full stack ai developer for startup",
-    "nextjs developer upwork top rated",
-    "freelance product engineer nextjs react",
-    "webgl threejs developer freelance",
-    "ai saas developer india",
-    "nextjs developer for saas startup",
-    "hire remote developer next js typescript"
+    "salat mahenoor",
+    "mahenoor salat nextjs developer",
+    "senior full-stack engineer remote",
+    "nextjs typescript ai integration",
+    "hire remote full-stack developer",
+    "mern stack developer portfolio",
+    "core web vitals performance engineer"
   ],
   headline: <>Senior Full-Stack Engineer building production-grade Next.js + AI SaaS platforms.</>,
   subline: (
@@ -257,18 +235,11 @@ const about: About = {
   title: `Mahenoor Salat | Senior Full-Stack Engineer (Next.js + AI)`,
   description: `Background of Mahenoor Salat – Senior Full-Stack Engineer specializing in Next.js 15, TypeScript, SaaS platforms, and production AI integration. Open to full-time remote roles.`,
   keywords: [
-    "salat mahenoor",
     "mahenoor salat",
-    "salat mahenoor ai creative developer",
-    "mahenoor salat developer portfolio",
-    "freelance full stack ai engineer",
-    "hire ai creative developer",
-    "full stack developer resume india",
-    "nextjs developer experience figma",
-    "ai automation developer n8n upwork",
-    "saas product engineer india freelance",
-    "figma ui ux designer developer portfolio",
-    "full stack developer for saas hire"
+    "salat mahenoor",
+    "mahenoor salat nextjs developer",
+    "senior full-stack engineer resume",
+    "remote nextjs engineer india"
   ],
   path: "/about",
   tableOfContent: {
@@ -533,13 +504,10 @@ const blog: Blog = {
   title: "Next.js, AI & SaaS Engineering Blog | Mahenoor Salat",
   description: `Technical blog by Mahenoor Salat — freelance full-stack developer. Covers Next.js performance, AI automation, SaaS architecture, Figma design systems, and WebGL/Three.js. Updated regularly.`,
   keywords: [
-    "nextjs saas development tutorial",
-    "ai integration web development blog",
-    "nextjs performance optimization guide",
-    "how to build saas with nextjs react",
-    "ai powered product development tips",
-    "full stack developer engineering blog",
-    "webgl threejs web development tutorial"
+    "mahenoor salat blog",
+    "nextjs performance guide",
+    "saas architecture nextjs",
+    "ai integration web development"
   ],
   path: "/blog",
 };
@@ -548,7 +516,7 @@ const work: Work = {
   label: "Work",
   title: `Mahenoor Salat | Senior Full-Stack Engineer — Selected Work`,
   description: `Selected production work by Mahenoor Salat — Next.js SaaS platforms, AI-integrated products, and high-performance web experiences with measurable results.`,
-  keywords: ["nextjs developer portfolio projects", "saas product ui ux showcase", "react nextjs performance case study", "figma ui ux design portfolio", "ai integration project examples"],
+  keywords: ["mahenoor salat portfolio", "nextjs saas case studies", "full-stack engineer selected work"],
   path: "/work",
 };
 
@@ -557,7 +525,7 @@ const testimonials: Testimonials = {
   label: "Testimonials",
   title: `Mahenoor Salat Reviews | Client Testimonials & Feedback`,
   description: `Read verified client reviews for Mahenoor Salat — freelance full-stack developer and UI/UX designer. Real testimonials from founders, engineers, and agencies across Upwork and global projects.`,
-  keywords: ["mahenoor salat reviews", "freelance developer upwork testimonials", "nextjs developer client feedback", "ui ux designer testimonials", "full stack developer reviews india"],
+  keywords: ["mahenoor salat reviews", "full-stack developer client feedback"],
   items: [
     {
       name: "Upwork Client",

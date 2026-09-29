@@ -26,14 +26,7 @@ const routes: RoutesConfig = {
   "/solutions/upwork": true,
   "/solutions/reddit": true,
   "/solutions/fiverr": true,
-  "/services/nextjs-ai-integration-engineer": true,
-  "/services/hire-contract-n8n-automation-expert": true,
-  "/services/saas-mvp-development-agency": true,
-  "/services/technical-seo-core-web-vitals-consultant": true,
-  "/services/ai-product-manager-llm-trainer": true,
-  "/services/hire-ai-creative-developer": true,
-  "/services/freelance-full-stack-ai-engineer": true,
-  "/services/hire-ai-model-trainer-claude-coder": true,
+  "/hire": true,
 };
 
 const display: DisplayConfig = {
@@ -200,7 +193,7 @@ const schema: SchemaConfig = {
   logo: "/images/avatar.jpg",
   type: "Person",
   name: "Salat Mahenoor",
-  description: "Hire Salat Mahenoor, a top-ranked Freelance Full-Stack Developer and AI Architect specializing in high-performance Next.js apps and AI/3D interactive web solutions for businesses and agencies.",
+  description: "Mahenoor Salat — Senior Full-Stack Engineer specializing in Next.js, TypeScript, and production AI integration. Open to full-time remote roles.",
   email: "salatmahenoor7.8.6@gmail.com",
 };
 

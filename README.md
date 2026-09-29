@@ -31,16 +31,9 @@ Looking for **Developer Portfolio Inspiration**, **Awwwards-level Motion Design*
 
 ---
 
-## 🎯 Direct Hire & Service Landing Pages
+## 🎯 Hire Me
 
-| Specialty Niche | Target Service Page | Direct Action |
-| :--- | :--- | :--- |
-| **AI Creative Developer** | [Hire AI Creative Developer Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-ai-creative-developer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
-| **Full Stack AI Engineer** | [Freelance Full Stack AI Engineer Page](https://salat-mahenoor-ai-creative-develope.vercel.app/services/freelance-full-stack-ai-engineer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
-| **AI Model Trainer & Claude Code** | [Hire AI Model Trainer & Claude Specialist](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-ai-model-trainer-claude-coder) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
-| **n8n Automation Expert** | [Hire n8n Automation Specialist](https://salat-mahenoor-ai-creative-develope.vercel.app/services/hire-contract-n8n-automation-expert) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
-| **Next.js AI Integration** | [Next.js AI Integration Engineer](https://salat-mahenoor-ai-creative-develope.vercel.app/services/nextjs-ai-integration-engineer) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
-| **SaaS MVP Agency** | [SaaS MVP Development Agency](https://salat-mahenoor-ai-creative-develope.vercel.app/services/saas-mvp-development-agency) | [Book Call](https://calendly.com/salatmahenoor7-8-6/30min) |
+One page for roles and contracts: [Hire Mahenoor Salat](https://salat-mahenoor-ai-creative-develope.vercel.app/hire) — full-time remote, contract builds, and rescue audits, with case-study proof and direct contact.
 
 ---
 

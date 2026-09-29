@@ -6,7 +6,7 @@ Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: en
 Canonical: ${baseURL}/security.txt
 Policy: ${baseURL}/about
-Hiring: ${baseURL}/services/ai-product-manager-llm-trainer
+Hiring: ${baseURL}/hire
 `;
 
   return new Response(content, {

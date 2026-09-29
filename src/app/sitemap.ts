@@ -26,7 +26,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = activeRoutes.map((route) => {
     let priority = 0.8;
     if (route === "/") priority = 1.0;
-    else if (route === "/about" || route.startsWith("/services/")) priority = 0.95;
+    else if (route === "/about" || route === "/hire") priority = 0.95;
     else if (route === "/work" || route === "/blog") priority = 0.9;
 
     return {
