@@ -1,8 +1,8 @@
-name: Hourly Search Engine & Traffic Booster Bot
+name: Daily Search Engine & Traffic Booster Bot
 
 on:
   schedule:
-    - cron: '0 * * * *' # Runs hourly every single hour
+    - cron: '0 5 * * *' # Runs once daily (Vercel hobby + GitHub Actions friendly)
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
 
 jobs:
@@ -17,5 +17,5 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run Hourly Search Engine Traffic Booster Bot
+      - name: Run Daily Search Engine Traffic Booster Bot
         run: node scripts/auto-traffic-booster.js
