@@ -1,0 +1,125 @@
+---
+title: "Role-Based Auth in React + TypeScript: Seeker vs Company vs Admin"
+summary: "Build a three-role auth system step by step: typed user roles, protected routes, role gates, and demo logins — the pattern behind my Job Executive platform."
+publishedAt: "2026-09-30"
+tag: "Engineering"
+---
+
+Login is easy. *Who gets to see what* is where apps break. My [Job Executive](https://fullstack-task2.vercel.app) platform has three roles — Job Seeker, Company, Admin — each with its own screens and permissions. Here is the exact pattern, from the open-source [Fullstack-Task2 repo](https://github.com/mahenoorsalat/Fullstack-Task2).
+
+## 1. Type the roles first
+
+Everything flows from one union type. If a role can't be spelled here, it can't exist in the app:
+
+```typescript
+// types.ts
+export type UserRole = "seeker" | "company" | "admin";
+
+export interface SessionUser {
+  id: string;
+  name: string;
+  email: string;
+  role: UserRole;
+}
+
+export interface Session {
+  user: SessionUser;
+  token: string;
+}
+```
+
+TypeScript now rejects invalid roles at compile time — in route guards, in API calls, in conditional UI. One source of truth.
+
+## 2. Gate routes by role, not just login state
+
+A `ProtectedRoute` that only checks "logged in" lets a seeker open `/admin/users` by typing the URL. Gate on the role:
+
+```tsx
+function RequireRole({ roles, children }: { roles: UserRole[]; children: ReactNode }) {
+  const { session } = useAuth();
+
+  if (!session) return <Navigate to="/login" replace />;
+  if (!roles.includes(session.user.role)) return <Navigate to="/unauthorized" replace />;
+  return <>{children}</>;
+}
+
+// Usage
+<Route path="/jobs" element={
+  <RequireRole roles={["seeker", "admin"]}><JobBoard /></RequireRole>
+} />
+<Route path="/post-job" element={
+  <RequireRole roles={["company", "admin"]}><PostJob /></RequireRole>
+} />
+<Route path="/admin" element={
+  <RequireRole roles={["admin"]}><AdminPanel /></RequireRole>
+} />
+```
+
+Admin is included wherever oversight is needed; seekers can never reach company or admin screens, even by URL.
+
+## 3. Mirror the roles in the UI
+
+Don't render buttons the user can't use — it teaches them the feature exists and invites tampering:
+
+```tsx
+function Dashboard() {
+  const { session } = useAuth();
+  return (
+    <nav>
+      <Link to="/jobs">Browse Jobs</Link>
+      {(session.user.role === "company" || session.user.role === "admin") && (
+        <Link to="/post-job">Post a Job</Link>
+      )}
+      {session.user.role === "admin" && (
+        <Link to="/admin">Admin Panel</Link>
+      )}
+    </nav>
+  );
+}
+```
+
+UI gating is UX, not security — the route gate in step 2 and server-side checks are the real enforcement. All three layers together is the pattern.
+
+## 4. Demo logins for portfolios and interviews
+
+Hiring managers won't register to review your app. Ship one-click demo accounts per role:
+
+```tsx
+const DEMO_ACCOUNTS: Record<UserRole, { email: string; password: string }> = {
+  seeker: { email: "seeker@demo.dev", password: "demo1234" },
+  company: { email: "company@demo.dev", password: "demo1234" },
+  admin: { email: "admin@demo.dev", password: "demo1234" },
+};
+
+function QuickLogin({ role }: { role: UserRole }) {
+  const { login } = useAuth();
+  return (
+    <button onClick={() => login(DEMO_ACCOUNTS[role].email, DEMO_ACCOUNTS[role].password)}>
+      Continue as {role}
+    </button>
+  );
+}
+```
+
+This is why my live demo converts reviewers: three clicks show all three experiences. Seed these accounts in your dev database, never in production with real privileges.
+
+## 5. Server-side: never trust the role from the client
+
+The frontend role is convenience. The backend re-verifies on every request — same middleware shape as my [MERN JWT tutorial](/blog/mern-jwt-auth-tutorial):
+
+```typescript
+// token carries { sub, role }; verified per request
+app.post("/api/jobs",
+  requireAuth,
+  requireRole(["company", "admin"]),
+  createJob
+);
+```
+
+A user who edits localStorage to `"role": "admin"` gets a UI that *looks* admin and an API that still says 403. That gap is the whole point of the pattern.
+
+## Get the full code
+
+Working app with all three roles, demo logins, and live deploy: [Fullstack-Task2 on GitHub](https://github.com/mahenoorsalat/Fullstack-Task2) · [live demo](https://fullstack-task2.vercel.app) · [case study](/work/fullstack-task2).
+
+Building a multi-role platform? [Hire me](/hire) — send the brief, get a fixed quote in 48 hours.
