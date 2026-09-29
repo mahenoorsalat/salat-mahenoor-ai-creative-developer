@@ -1,0 +1,139 @@
+---
+title: "MERN JWT Authentication Tutorial: Secure Login from Scratch"
+summary: "Build production-style MERN authentication step by step: bcrypt hashing, JWT sessions, auth middleware, protected routes, and a React auth context — with open-source code."
+publishedAt: "2026-09-29"
+tag: "Engineering"
+---
+
+Most MERN auth tutorials stop at "it logs in on localhost." Production auth has to survive real users: hashed passwords, expiring sessions, protected routes, and role checks enforced on the server. Here is the exact pattern I use — the same one running in my open-source [mern-auth-app](https://github.com/mahenoorsalat/mern-auth-app).
+
+## 1. The architecture
+
+```
+[React form] → POST /api/auth/login → [Express: find user → bcrypt.compare]
+    → sign JWT (15-min expiry) → [React AuthContext stores session]
+    → every protected request carries the token → [auth middleware verifies]
+```
+
+Three rules that prevent 90% of auth bugs:
+
+1. **Never store plain-text passwords.** Hash with bcrypt (cost factor 10–12).
+2. **Never trust the client.** Every protected route re-verifies the token server-side.
+3. **Expire sessions.** Short-lived access tokens beat "remember me forever."
+
+## 2. Register and login (Express)
+
+```typescript
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import { User } from "./models/User";
+
+// POST /api/auth/register
+export async function register(req, res) {
+  const { name, email, password } = req.body;
+  if (!name || !email || !password) {
+    return res.status(400).json({ error: "All fields are required." });
+  }
+  const exists = await User.findOne({ email });
+  if (exists) return res.status(409).json({ error: "Email already registered." });
+
+  const passwordHash = await bcrypt.hash(password, 12);
+  const user = await User.create({ name, email, passwordHash });
+  return res.status(201).json({ id: user._id, name: user.name, email: user.email });
+}
+
+// POST /api/auth/login
+export async function login(req, res) {
+  const { email, password } = req.body;
+  const user = await User.findOne({ email });
+  const valid = user && (await bcrypt.compare(password, user.passwordHash));
+  if (!valid) return res.status(401).json({ error: "Invalid credentials." });
+
+  const token = jwt.sign(
+    { sub: user._id, role: user.role },
+    process.env.JWT_SECRET!,
+    { expiresIn: "15m" }
+  );
+  return res.json({ token, user: { id: user._id, name: user.name, role: user.role } });
+}
+```
+
+Note the login response is deliberately vague ("Invalid credentials") — never reveal whether the email exists.
+
+## 3. The auth middleware (the part most tutorials skip)
+
+```typescript
+import jwt from "jsonwebtoken";
+
+export function requireAuth(req, res, next) {
+  const header = req.headers.authorization || "";
+  const token = header.startsWith("Bearer ") ? header.slice(7) : null;
+  if (!token) return res.status(401).json({ error: "Missing token." });
+
+  try {
+    req.user = jwt.verify(token, process.env.JWT_SECRET!);
+    return next();
+  } catch {
+    return res.status(401).json({ error: "Invalid or expired token." });
+  }
+}
+
+// Role check composes on top — e.g. admin-only routes:
+export function requireRole(role: string) {
+  return (req, res, next) =>
+    req.user?.role === role
+      ? next()
+      : res.status(403).json({ error: "Forbidden." });
+}
+```
+
+Usage: `app.get("/api/admin/users", requireAuth, requireRole("admin"), handler)`. Roles live in the signed token, so they can't be forged client-side.
+
+## 4. React side: AuthContext + protected routes
+
+```tsx
+const AuthContext = createContext(null);
+
+export function AuthProvider({ children }) {
+  const [session, setSession] = useState(() => loadSession());
+
+  async function login(email, password) {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    if (!res.ok) throw new Error("Login failed.");
+    const data = await res.json();
+    saveSession(data); // token + user, never the password
+    setSession(data);
+  }
+
+  function logout() { clearSession(); setSession(null); }
+
+  return (
+    <AuthContext.Provider value={{ session, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export function ProtectedRoute({ children }) {
+  const { session } = useAuth();
+  return session ? children : <Navigate to="/login" />;
+}
+```
+
+## 5. Hardening checklist before production
+
+- `JWT_SECRET` is long, random, and only in server env — never shipped to the client.
+- Rate-limit `/login` and `/register` (brute-force protection).
+- HTTPS only; set `Secure`, `HttpOnly`, `SameSite` if you move tokens into cookies.
+- Add refresh tokens if 15-minute sessions annoy users — rotate them on every use.
+- Log failed logins; alert on spikes.
+
+## Get the full code
+
+The complete working app — Backend, frontend, and README setup — is open source: [mern-auth-app on GitHub](https://github.com/mahenoorsalat/mern-auth-app). It is also a portfolio case study with screenshots: [MERN Auth App](/work/mern-auth-app).
+
+Need authentication (or a full SaaS MVP) built for your product? [Hire me](/hire) — send the brief, get a fixed quote in 48 hours.

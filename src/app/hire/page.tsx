@@ -39,6 +39,33 @@ const proof = [
   { title: "VaultPay — ERC20 Escrow dApp", href: "/work/vaultpay-home-task", note: "Solidity + React/Wagmi. Contracts, tests, UI." },
 ];
 
+const faqs = [
+  {
+    question: "How do I hire a remote Next.js developer?",
+    answer: "Shortlist for production Next.js + TypeScript experience, check real code on GitHub, run a paid trial task, then start with a 2-week trial contract. My process: 15-minute scoping call, written scope in 48 hours, weekly staging demos. Email your job description to salatmahenoor7.8.6@gmail.com."
+  },
+  {
+    question: "Should we hire full-time or contract for a SaaS MVP?",
+    answer: "Contract if the scope is fixed and you need speed — a focused engineer ships an MVP in 2–4 weeks. Hire full-time when you need ongoing ownership after launch. I do both: fixed-scope contract builds and full-time remote roles."
+  },
+  {
+    question: "What does a senior full-stack engineer cost for an MVP?",
+    answer: "It depends on scope, integrations, and AI features — not on titles. Send a one-page brief and I return a fixed quote with milestones within 48 hours, so you compare price against a defined deliverable instead of an hourly guess."
+  },
+  {
+    question: "How do you handle JWT authentication securely in MERN apps?",
+    answer: "Hashed passwords with bcrypt, short-lived access tokens, httpOnly cookies or secure storage, auth middleware on every protected route, and role checks server-side — never trust the client. See my open-source implementation and tutorial: MERN Auth App case study on the Work page."
+  },
+  {
+    question: "Can you take over our existing codebase?",
+    answer: "Yes. I start with a paid audit: architecture map, bug and performance triage, dependency and security review. You get a prioritized fix list, then I work through it with weekly demos — no rewrite-first dogma."
+  },
+  {
+    question: "What are your timezone and communication hours?",
+    answer: "Based in India (IST) and overlapping with US, European, and Asian working hours. Async-first with written updates, plus weekly video demos and direct chat on agreed channels. Replies within 24 hours."
+  }
+];
+
 export default function HirePage() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -127,6 +154,18 @@ export default function HirePage() {
           </Row>
         </Column>
 
+        <Column gap="32">
+          <Heading as="h2" variant="display-strong-xs">Hiring questions, answered</Heading>
+          <Column gap="16">
+            {faqs.map((item, index) => (
+              <Column key={index} gap="8" padding="l" background="surface" radius="xl" border="neutral-alpha-weak">
+                <Heading as="h3" variant="heading-strong-m">{item.question}</Heading>
+                <Text variant="body-default-m" onBackground="neutral-weak">{item.answer}</Text>
+              </Column>
+            ))}
+          </Column>
+        </Column>
+
         <Column fillWidth gap="24" padding="xl" background="brand-alpha-weak" radius="xl" border="brand-alpha-medium" horizontal="center">
           <Heading as="h2" variant="display-strong-s" align="center">Have a role or a project in mind?</Heading>
           <Text variant="body-default-l" onBackground="neutral-weak" align="center" style={{ maxWidth: "520px" }}>
@@ -140,6 +179,17 @@ export default function HirePage() {
         </Column>
       </Column>
       <StructuredData data={jsonLd} />
+      <StructuredData
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        }}
+      />
       <ContactForm />
     </Column>
   );
