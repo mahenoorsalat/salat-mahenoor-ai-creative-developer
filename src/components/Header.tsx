@@ -175,6 +175,26 @@ export const Header = () => {
                   </Row>
                 </>
               )}
+              {routes["/hire"] && (
+                <>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton
+                      prefixIcon="briefcase"
+                      href="/hire"
+                      label="Hire"
+                      selected={pathname.startsWith("/hire")}
+                    />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton
+                      aria-label="Hire"
+                      prefixIcon="briefcase"
+                      href="/hire"
+                      selected={pathname.startsWith("/hire")}
+                    />
+                  </Row>
+                </>
+              )}
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />

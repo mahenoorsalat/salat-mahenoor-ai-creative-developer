@@ -91,10 +91,8 @@ export async function generateMetadata({ params }: { params: Promise<{ platform:
   return {
     ...meta,
     keywords: [
-      `hire ${platformKey} developer usd eur gbp`,
-      `top rated ${platformKey} nextjs ai developer`,
-      `freelance ${platformKey} ai engineer us uk client`,
-      `hire high rate ${platformKey} developer`,
+      `mahenoor salat ${platformKey}`,
+      `hire remote developer via ${platformKey}`,
     ],
     openGraph: {
       title: platform.title,
@@ -183,7 +181,7 @@ export default async function PlatformSolutions({ params }: { params: Promise<{ 
             <RevealFx translateY="12" delay={0.3}>
                 <Row gap="16">
                     <Button href={socialLink?.link || "/"} label={platform.cta} prefixIcon={platform.icon} />
-                    <Button variant="secondary" href="/work" label="View My Work" />
+                    <Button variant="secondary" href="/hire" label="Hire Me" />
                 </Row>
             </RevealFx>
         </Column>

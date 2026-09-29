@@ -85,22 +85,11 @@ export default async function RootLayout({
         "@id": `${baseURL}/#person`,
         name: "Salat Mahenoor",
         alternateName: [
-          "Mahenoor Salat",
-          "Salat Mahenoor AI",
-          "Mahenoor Salat AI",
-          "Salat Mahenoor AI Creative Developer",
-          "Mahenoor Salat AI Engineer",
-          "Salat Mahenoor Full Stack AI Engineer"
+          "Mahenoor Salat"
         ],
         givenName: "Mahenoor",
         familyName: "Salat",
-        jobTitle: [
-          "AI Creative Developer",
-          "Senior Next.js Engineer",
-          "AI Product Manager",
-          "LLM Trainer & Evaluator",
-          "AI Automation Architect"
-        ],
+        jobTitle: "Senior Full-Stack Engineer",
         image: `${baseURL}${person.avatar}`,
         url: baseURL,
         mainEntityOfPage: baseURL,
@@ -122,7 +111,7 @@ export default async function RootLayout({
           { "@type": "EducationalOrganization", "name": "Manipal University Jaipur" },
           { "@type": "Organization", "name": "AOSSIE Open Source" }
         ],
-        knowsAbout: ["AI Creative Developer", "Full-Stack Development", "LLM Evaluation & RLHF", "Large Language Models", "AI Training", "Prompt Engineering", "Three.js", "Next.js 15", "n8n Automation", "Core Web Vitals", "Technical SEO"],
+        knowsAbout: ["Full-Stack Development", "Next.js", "TypeScript", "React", "Node.js", "AI Integration", "Core Web Vitals", "Technical SEO"],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Rajkot",
@@ -134,8 +123,8 @@ export default async function RootLayout({
         "@type": "WebSite",
         "@id": `${baseURL}/#website`,
         url: baseURL,
-        name: "Salat Mahenoor | AI Creative Developer & Next.js Engineer",
-        alternateName: "Salat Mahenoor Portfolio",
+        name: "Salat Mahenoor | Senior Full-Stack Engineer (Next.js + AI)",
+        alternateName: "Mahenoor Salat Portfolio",
         publisher: {
           "@id": `${baseURL}/#person`
         },
@@ -145,64 +134,36 @@ export default async function RootLayout({
         "@type": "ProfilePage",
         "@id": `${baseURL}/#profilepage`,
         url: baseURL,
-        name: "Salat Mahenoor - AI Creative Developer Profile",
+        name: "Mahenoor Salat - Senior Full-Stack Engineer Profile",
         mainEntity: {
           "@id": `${baseURL}/#person`
         }
       },
       {
         "@type": "ProfessionalService",
-        "@id": `${baseURL}/#service`,
-        name: `Salat Mahenoor | Global AI Creative Developer & Agency`,
-        url: baseURL,
+        "@id": `${baseURL}/hire`,
+        name: `Mahenoor Salat | Senior Full-Stack Engineering (Next.js + AI)`,
+        url: `${baseURL}/hire`,
         logo: `${baseURL}/images/avatar.jpg`,
         image: `${baseURL}/images/avatar.jpg`,
-        description: "Elite Global AI & Web Agency. Delivering premium Next.js platforms, AI automation, and 3D web experiences for high-ticket clients across the USA, Europe, Asia, and globally. Specialized in high-performance digital solutions that dominate search results.",
-        priceRange: "$$$",
-        areaServed: [
-          { "@type": "Country", "name": "US" },
-          { "@type": "Country", "name": "DE" },
-          { "@type": "Country", "name": "AE" },
-          { "@type": "Country", "name": "GB" },
-          { "@type": "Country", "name": "CA" },
-          { "@type": "Country", "name": "AU" },
-          { "@type": "Country", "name": "CH" },
-          { "@type": "Country", "name": "FR" },
-          { "@type": "Country", "name": "NL" },
-          { "@type": "Country", "name": "SG" },
-          { "@type": "Country", "name": "SE" },
-          { "@type": "Country", "name": "NO" },
-          { "@type": "Country", "name": "DK" },
-          { "@type": "Country", "name": "Global" }
-        ],
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "5.0",
-          reviewCount: "87",
-        },
+        description: "Senior Full-Stack Engineer for remote roles and fixed-scope contracts: Next.js SaaS platforms, production AI integration, and performance remediation.",
+        priceRange: "$$",
+        areaServed: "Remote, worldwide",
         offers: [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Custom AI & LLM Integration",
-              "description": "Enterprise-grade AI solutions using GPT-4 and Claude 3."
+              "name": "Full-Time Remote Engineering",
+              "description": "Senior Full-Stack Engineer for product teams: Next.js, TypeScript, clean architecture."
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Elite Next.js Development",
-              "description": "High-performance, SEO-optimized full-stack platforms."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "3D Web Experiences",
-              "description": "Immersive WebGL and Three.js environments for premium brands."
+              "name": "Contract Builds & AI Integration",
+              "description": "Fixed-scope SaaS builds and production AI features with weekly demos."
             }
           }
         ],

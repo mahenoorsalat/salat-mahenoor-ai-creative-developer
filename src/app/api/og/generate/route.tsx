@@ -6,8 +6,8 @@ export const runtime = 'edge';
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const title = searchParams.get('title') || 'Mahenoor Salat | AI Creative Developer & Product Engineer';
-    const tag = searchParams.get('tag') || 'Next.js 15 • Agentic AI • 5.0★ Top Rated';
+    const title = searchParams.get('title') || 'Mahenoor Salat | Senior Full-Stack Engineer (Next.js + AI)';
+    const tag = searchParams.get('tag') || 'Next.js • TypeScript • Production AI';
 
     return new ImageResponse(
       (
@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
               }}
             />
             <span style={{ fontSize: '24px', fontWeight: 600, color: '#e0e0e0', letterSpacing: '-0.02em' }}>
-              Mahenoor Salat — AI Product Manager &amp; Senior Product Engineer
+              Mahenoor Salat — Senior Full-Stack Engineer
             </span>
           </div>
 
@@ -101,11 +101,11 @@ export async function GET(req: NextRequest) {
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
-              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Turing (SF) LLM Evaluator</span>
+              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Next.js + TypeScript SaaS</span>
               <span style={{ fontSize: '20px', color: '#404040' }}>•</span>
-              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Upwork 100% JSS</span>
+              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Production AI Integration</span>
               <span style={{ fontSize: '20px', color: '#404040' }}>•</span>
-              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Fiverr 5.0★</span>
+              <span style={{ fontSize: '20px', color: '#a0a0a0' }}>Open to Remote Roles</span>
             </div>
             <span style={{ fontSize: '22px', fontWeight: 700, color: '#3399cc' }}>
               salat-mahenoor-ai-creative-developer.vercel.app

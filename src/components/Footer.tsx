@@ -22,6 +22,9 @@ export const Footer = () => {
         }}
       >
         <Row gap="16" wrap horizontal="center" marginBottom="16">
+          <SmartLink href="/hire">
+            <Text variant="label-default-s" onBackground="neutral-weak">Hire Me</Text>
+          </SmartLink>
           <SmartLink href="/solutions/upwork">
             <Text variant="label-default-s" onBackground="neutral-weak">Upwork Specialist</Text>
           </SmartLink>

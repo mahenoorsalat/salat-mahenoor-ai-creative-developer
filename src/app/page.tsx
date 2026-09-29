@@ -154,11 +154,11 @@ export default function Home() {
         <RevealFx translateY="24" delay={0.3}>
           <Row gap="16" vertical="center" horizontal="center" fillWidth wrap>
             <Button
-              href="#contact"
+              href="/hire"
               variant="primary"
               size="l"
-              prefixIcon="calendar">
-              Book a 15-Min Call
+              prefixIcon="briefcase">
+              Hire Me
             </Button>
             <Button
               href="https://wa.me/919510944489"
