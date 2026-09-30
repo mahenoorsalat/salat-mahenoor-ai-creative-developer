@@ -124,7 +124,49 @@ export function ProtectedRoute({ children }) {
 }
 ```
 
-## 5. Hardening checklist before production
+## 5. JWT vs sessions: when each wins
+
+| | JWT (stateless) | Sessions (stateful) |
+|---|---|---|
+| Server storage | None — verified by signature | Session store (DB/Redis) |
+| Scaling | Any server verifies, no shared state | Needs shared store across servers |
+| Logout/revoke | Waits for expiry (use short lifetimes) | Instant (delete the session) |
+| Best for | Standard MERN SPAs, mobile APIs | Banking/healthcare, instant-revoke needs |
+
+For most MERN apps JWT wins on simplicity. If you need instant revocation, pair short access tokens (15 min) with rotating refresh tokens below.
+
+## 6. Refresh tokens: short sessions without annoying logins
+
+```typescript
+// POST /api/auth/refresh — body: { refreshToken }
+export async function refresh(req, res) {
+  const { refreshToken } = req.body;
+  const stored = await RefreshToken.findOne({ token: refreshToken });
+  // Rotate: single-use refresh tokens, delete after use
+  if (!stored) return res.status(401).json({ error: "Invalid refresh token." });
+  await RefreshToken.deleteOne({ token: refreshToken });
+
+  const accessToken = jwt.sign(
+    { sub: stored.userId, role: stored.role },
+    process.env.JWT_SECRET!,
+    { expiresIn: "15m" }
+  );
+  const next = await RefreshToken.create({
+    userId: stored.userId, role: stored.role, token: randomToken(),
+  });
+  return res.json({ token: accessToken, refreshToken: next.token });
+}
+```
+
+Client rule: on any 401, call `/refresh` once, retry the request, and only redirect to login if refresh also fails.
+
+## 7. Three mistakes that break MERN auth
+
+1. **Secrets in the JWT payload.** Payloads are Base64, not encrypted — anyone can decode them. Store only `sub` (user id) and `role`.
+2. **No expiry.** Always set `expiresIn`. A stolen never-expiring token is a permanent backdoor.
+3. **Trusting `localStorage` blindly.** XSS can read it. HttpOnly cookies are safer against XSS (pair with CSRF protection); Bearer headers avoid CSRF but not XSS. Pick based on your threat model — and never skip server-side verification either way.
+
+## 8. Hardening checklist before production
 
 - `JWT_SECRET` is long, random, and only in server env — never shipped to the client.
 - Rate-limit `/login` and `/register` (brute-force protection).

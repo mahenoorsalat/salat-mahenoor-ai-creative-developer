@@ -118,6 +118,53 @@ app.post("/api/jobs",
 
 A user who edits localStorage to `"role": "admin"` gets a UI that *looks* admin and an API that still says 403. That gap is the whole point of the pattern.
 
+## 6. Keep sessions alive: auto-refresh before expiry
+
+Fifteen-minute tokens cause mid-session logouts unless the client refreshes proactively. One hook at the app root handles it:
+
+```tsx
+function useTokenRefresh() {
+  const { session } = useAuth();
+
+  useEffect(() => {
+    if (!session) return;
+    const payload = JSON.parse(atob(session.token.split(".")[1]));
+    const msUntilExpiry = payload.exp * 1000 - Date.now();
+    const refreshIn = msUntilExpiry - 60_000; // 1 minute early
+    if (refreshIn <= 0) return void refreshSession();
+    const timer = setTimeout(refreshSession, refreshIn);
+    return () => clearTimeout(timer);
+  }, [session]);
+}
+```
+
+Decode is UI logic only — the server still re-verifies every request, as in section 5.
+
+## 7. Role-aware navigation
+
+One nav component that adapts to the role keeps UI and routes consistent:
+
+```tsx
+const NAV: { to: string; label: string; roles: UserRole[] }[] = [
+  { to: "/jobs", label: "Browse Jobs", roles: ["seeker", "company", "admin"] },
+  { to: "/post-job", label: "Post a Job", roles: ["company", "admin"] },
+  { to: "/admin", label: "Admin", roles: ["admin"] },
+];
+
+function RoleNav() {
+  const { session } = useAuth();
+  return (
+    <nav>
+      {NAV.filter((item) => item.roles.includes(session.user.role)).map((item) => (
+        <Link key={item.to} to={item.to}>{item.label}</Link>
+      ))}
+    </nav>
+  );
+}
+```
+
+Same `roles` arrays as the route gates — define them once and share between nav and router so they can never drift apart.
+
 ## Get the full code
 
 Working app with all three roles, demo logins, and live deploy: [Fullstack-Task2 on GitHub](https://github.com/mahenoorsalat/Fullstack-Task2) · [live demo](https://fullstack-task2.vercel.app) · [case study](/work/fullstack-task2).
