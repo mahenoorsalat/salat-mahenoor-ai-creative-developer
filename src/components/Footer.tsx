@@ -25,6 +25,9 @@ export const Footer = () => {
           <SmartLink href="/hire">
             <Text variant="label-default-s" onBackground="neutral-weak">Hire Me</Text>
           </SmartLink>
+          <SmartLink href="/freelance">
+            <Text variant="label-default-s" onBackground="neutral-weak">Freelance</Text>
+          </SmartLink>
           <SmartLink href="/solutions/upwork">
             <Text variant="label-default-s" onBackground="neutral-weak">Upwork Specialist</Text>
           </SmartLink>

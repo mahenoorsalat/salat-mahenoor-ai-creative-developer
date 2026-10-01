@@ -27,6 +27,7 @@ const routes: RoutesConfig = {
   "/solutions/reddit": true,
   "/solutions/fiverr": true,
   "/hire": true,
+  "/freelance": true,
 };
 
 const display: DisplayConfig = {
